@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sample_app.apps.SampleAppConfig',
+    'site_app.apps.SiteAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'field_up.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'field_up',
+        'NAME': 'system_site',
         'USER': 'root',
         #'PASSWORD': 'password',
         'HOST': 'localhost',
