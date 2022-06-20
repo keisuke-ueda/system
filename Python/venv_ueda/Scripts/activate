@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\xampp\htdocs\Django\system\Python\venv"
+VIRTUAL_ENV="C:\xampp\htdocs\Django\system\Python\venvvenv_ueda"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
