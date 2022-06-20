@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-rem set VIRTUAL_ENV=C:\Users\Yo Nakano\Python\venv
+rem set VIRTUAL_ENV=C:\xampp\htdocs\Django\system\Python\venv
 set VIRTUAL_ENV=C:\xampp\htdocs\Django\system\Python\venv
 
 if not defined PROMPT set PROMPT=$P$G
