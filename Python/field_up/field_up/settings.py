@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'site_app.apps.SiteAppConfig',
+    'site_app.apps.SiteAppConfig',#追記 nakano
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'field_up.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join('templates'),],#追記 ueda
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'system_site',
         'USER': 'root',
-        #'PASSWORD': 'gbw21ueda',
+        'PASSWORD': 'gbw21ueda',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
