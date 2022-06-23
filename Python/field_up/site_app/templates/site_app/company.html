@@ -5,8 +5,8 @@
 {% block title %}Company{% endblock %}
 
 {% block head %}
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Field-UPの事業内容を紹介します">
+    <meta name="keywords" content="プログラミング,開発,システム開発,Field-UP,フィールドアップ,FIELD-UP,アプリケーション,アプリ">
 {% endblock %}
 
 {% block header %}
@@ -18,29 +18,50 @@
 
     {% comment %} コンテンツ {% endcomment %}
     <div class="container">
-        <div class="row p-3">
-            <div class="col-4 bg-light">
-                <img class="m-3" src="{% static 'site_app/img/javaロゴ.png' %}" width="50%">
-            </div>
-            <div class="col-4">
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            </div>
-            <div class="col-4 bg-primary">
-                <img class="m-3" src="{% static 'site_app/img/swift.png' %}" width="50%">
-            </div>
-        </div>
-        <div class="row p-3">
-            <div class="col-4 bg-light">
-                <img class="m-3" src="{% static 'site_app/img/javaロゴ.png' %}" width="50%">
-            </div>
-            <div class="col-4">
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            </div>
-            <div class="col-4 bg-primary">
-                <img class="m-3" src="{% static 'site_app/img/swift.png' %}" width="50%">
+        <div class="row">
+            <h2>やりたいこと夢を目標、現実へ落とし込んでいくためのプロフェッショナル</h2>
+            <p>機械工学、内装業、心理学、システム開発、コンサルティングと複数の業界で
+                今もなお前線で活躍し続けています</p>
+            <p>だからこそ得られる新しい知見や、技術をそれぞれの現場で生かすことによって
+                新しい発想や、他では思いもつかないような業界シナジーを生み出すことが私たちの強みです</p>
+
+            <div class="text-center bg-white mt-3 p-3">
+                <p>会社名：Field-UP</p>
+                <p>所在地：〒114-0011 東京都北区昭和町1-4-7</p>
+                <p>代表者名：上田 敬介</p>
+                <p>設立年月日：2020年6月1日</p>
+                <p>従業員数：1名</p>
             </div>
         </div>
-        
+
+        <div class="row m-5">
+            <h1 class="text-center">Kind</h1>
+        </div>
+
+        <div class="row p-6">
+            <div class="col-6">
+                <div class="p-2 bg-light">
+                    <a href="https://www.field-up.work/"><img class="m-3 d-block mx-auto" src="{% static 'site_app/img/javaロゴ.png' %}" width="50%"></a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="p-2 bg-primary">
+                    <a href="https://www.field-up.work/officeinterior/"><img class="m-3 d-block mx-auto" src="{% static 'site_app/img/swift.png' %}" width="50%"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row p-6">
+            <div class="col-6">
+                <div class="p-2 bg-light">
+                    <a href="https://www.field-up.work/mental_field-up/"><img class="m-3 d-block mx-auto" src="{% static 'site_app/img/javaロゴ.png' %}" width="50%"></a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="p-2 bg-primary">
+                    <a href="{% url 'site_app:top' %}"><img class="m-3 d-block mx-auto" src="{% static 'site_app/img/swift.png' %}" width="50%"></a>
+                </div>
+            </div>
+        </div>
     </div>
 
 {% endblock %}

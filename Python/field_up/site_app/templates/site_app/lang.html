@@ -1,0 +1,60 @@
+{% extends 'site_app/base_2.html' %}
+
+{% load static %}
+
+{% block title %}プログラミングとは{% endblock %}
+
+{% block head %}
+    <meta name="description" content="プログラミング言語について解説します">
+    <meta name="keywords" content="プログラミング,開発,システム開発,Field-UP,フィールドアップ,FIELD-UP,アプリケーション,アプリ">
+{% endblock %}
+
+{% block header %}
+    <h1 class="text-center">プログラミングとは</h1>
+{% endblock %}
+
+{% block contents %}
+
+
+    {% comment %} コンテンツ {% endcomment %}
+    <div class="container">
+        <div class="row p-4">
+            <h2>プログラミング言語って何？</h2>
+            <div class="col-8 bg-light">
+                <p>2022-08-01 : システム事業サイト開設</p>
+            </div>
+            <div class="col-4">
+                <div class="p-2">
+                    <img class="m-3" src="{% static 'site_app/img/greg-rakozy-oMpAz-DN-9I-unsplash.jpg' %}" width="150%">
+                </div>
+            </div>
+        </div>
+
+        <div class="row p-4">
+            <h2>適正はあるが誰でも覚えられる</h2>
+            <div class="col-8 bg-light">
+                <p>2022-08-01 : システム事業サイト開設</p>
+            </div>
+            <div class="col-4">
+                <div class="p-2">
+                    <img class="m-3" src="{% static 'site_app/img/バーチャル.jpg' %}" width="150%">
+                </div>
+            </div>
+        </div>
+
+        <div class="row p-4">
+            <h2>アルゴリズム</h2>
+            <div class="col-8 bg-light">
+                <p>2022-08-01 : システム事業サイト開設</p>
+            </div>
+            <div class="col-4">
+                <div class="p-2">
+                    <img class="m-3" src="{% static 'site_app/img/convertkit-Ky2YPCpnmK0-unsplash.jpg' %}" width="150%">
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+{% endblock %}

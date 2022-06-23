@@ -24,7 +24,7 @@
   <body>
     <!-- ヘッダー -->
     <header id="header">
-      <div class="row bg-1">
+      <div class="row bg-1 header-inner">
         <div class="col-8">
           <a href="{% url 'site_app:top' %}"><img class="m-3" src="{% static 'site_app/img/logo.png' %}" width="25%"></a>
         </div>
@@ -40,7 +40,7 @@
       </div>
     </header>
 
-    <div class="container">
+    <div class="container  mt-3">
       {% block contents %}{% endblock %}
     </div>
 

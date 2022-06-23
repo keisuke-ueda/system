@@ -1,0 +1,52 @@
+{% extends 'site_app/base_2.html' %}
+
+{% load static %}
+
+{% block title %}システム開発とは{% endblock %}
+
+{% block head %}
+    <meta name="description" content="システム開発について解説します">
+    <meta name="keywords" content="プログラミング,開発,システム開発,Field-UP,フィールドアップ,FIELD-UP,アプリケーション,アプリ">
+{% endblock %}
+
+{% block header %}
+    <h1 class="text-center">システム開発とは</h1>
+{% endblock %}
+
+{% block contents %}
+
+
+    {% comment %} コンテンツ {% endcomment %}
+    <div class="container">
+        <div class="row p-4">
+            <h2>Dev-Opsってなに？</h2>
+            <div class="col-12">
+                <div class="p-2">
+                    <img class="m-3" src="{% static 'site_app/img/greg-rakozy-oMpAz-DN-9I-unsplash.jpg' %}" width="100%">
+                </div>
+            </div>
+        </div>
+
+        <div class="row p-4">
+            <h2>こんなことができる!!</h2>
+            <div class="col-4 bg-light">
+                {% comment %} idはfirld-up passwordはgbw21ueda {% endcomment %}
+                <a href="https://field-up.work/energy_test/index.html"><img class="m-3" src="{% static 'site_app/img/convertkit-Ky2YPCpnmK0-unsplash.jpg' %}" width="50%"></a>
+            </div>
+            <div class="col-4 bg-light">
+                <a href="{% url 'site_app:top' %}"><img class="m-3" src="{% static 'site_app/img/convertkit-Ky2YPCpnmK0-unsplash.jpg' %}" width="50%"></a>
+            </div>
+            <div class="col-4 bg-light">
+                <a href="{% url 'site_app:top' %}"><img class="m-3" src="{% static 'site_app/img/convertkit-Ky2YPCpnmK0-unsplash.jpg' %}" width="50%"></a>
+            </div>
+
+        </div>
+
+        
+
+
+        
+        
+    </div>
+
+{% endblock %}
