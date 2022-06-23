@@ -44,14 +44,14 @@
             <li class="p-3 has-child"><a href="#">Content</a>
               <ul>
                 <li class="p-1"><a href="{% url 'site_app:appeal' %}">デジタルの魅力</a></li>
-                <li class="p-1 has-child"><a href="#">システム開発とは</a>
+                <li class="p-1 has-child"><a href="{% url 'site_app:example' %}">システム開発とは</a>
                   <ul>
                     <li class="p-1"><a href="{% url 'site_app:example-1' %}">開発例:1</a></li>
                     <li class="p-1"><a href="{% url 'site_app:example-2' %}">開発例:2</a></li>
                     <li class="p-1"><a href="{% url 'site_app:example-3' %}">開発例:3</a></li>
                   </ul>
                 </li>
-                <li class="p-1 has-child"><a href="#">プログラミングとは</a>
+                <li class="p-1 has-child"><a href="{% url 'site_app:lang' %}">プログラミングとは</a>
                   <ul>
                     <li class="p-1"><a href="{% url 'site_app:python' %}">Python</a></li>
                     <li class="p-1"><a href="{% url 'site_app:java' %}">Java</a></li>
@@ -69,7 +69,7 @@
       </div>
     </header>
 
-    <div class="container">
+    <div class="container mt-3">
       {% block contents %}{% endblock %}
     </div>
 

@@ -4,8 +4,6 @@ from django.views import generic
 # from django.forms import InquiryForm
 
 # Create your views here.
-# def index(request):
-#     return render(request, 'site_app/index.html', {})
 
 # TOP
 class IndexView(generic.TemplateView):
@@ -29,6 +27,9 @@ class AppealView(generic.TemplateView):
 
 
 # システム開発とは
+class ExampleView(generic.TemplateView):
+    template_name = "site_app/example.html"
+
 class Example1View(generic.TemplateView):
     template_name = "site_app/examples/example-1.html"
 
@@ -40,6 +41,9 @@ class Example3View(generic.TemplateView):
 
 
 # プログラミングとは
+class langView(generic.TemplateView):
+    template_name = "site_app/lang.html"
+
 class PythonView(generic.TemplateView):
     template_name = "site_app/languages/python.html"
 
