@@ -1,0 +1,46 @@
+{% extends 'site_app/base_2.html' %}
+
+{% load static %}
+
+{% block title %}Company{% endblock %}
+
+{% block head %}
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+{% endblock %}
+
+{% block header %}
+    <h1 class="text-center">Company</h1>
+{% endblock %}
+
+{% block contents %}
+
+
+    {% comment %} コンテンツ {% endcomment %}
+    <div class="container">
+        <div class="row p-3">
+            <div class="col-4 bg-light">
+                <img class="m-3" src="{% static 'site_app/img/javaロゴ.png' %}" width="50%">
+            </div>
+            <div class="col-4">
+                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+            <div class="col-4 bg-primary">
+                <img class="m-3" src="{% static 'site_app/img/swift.png' %}" width="50%">
+            </div>
+        </div>
+        <div class="row p-3">
+            <div class="col-4 bg-light">
+                <img class="m-3" src="{% static 'site_app/img/javaロゴ.png' %}" width="50%">
+            </div>
+            <div class="col-4">
+                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+            <div class="col-4 bg-primary">
+                <img class="m-3" src="{% static 'site_app/img/swift.png' %}" width="50%">
+            </div>
+        </div>
+        
+    </div>
+
+{% endblock %}
