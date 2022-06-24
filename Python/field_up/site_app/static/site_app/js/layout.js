@@ -5,11 +5,6 @@ $(function(){
         $('.movie-2').removeClass('d-none');
         $('.movie-2').get(0).play();
     })
-    $('.movie-2').on('ended', function(){
-        $('.movie-2').addClass('d-none');
-        $('.movie-3').removeClass('d-none');
-        $('.movie-3').get(0).play();
-    })
 });
 
 //スクロールすると上部に固定させるための設定を関数でまとめる
@@ -42,3 +37,7 @@ function FixedAnime() {
     FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
   });
 
+  // ハンバーガーメニュー
+  $(".openbtn4").click(function () {
+    $(this).toggleClass('active');
+});
