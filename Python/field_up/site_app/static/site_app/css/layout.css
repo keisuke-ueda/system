@@ -151,3 +151,159 @@ nav li.has-child ul ul li a:hover,
 nav li.has-child ul ul li a:active{
   background:rgb(123, 169, 255);
 }
+
+/*========= パックマンページネーション ===============*/
+.pagination {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  --ddim: 10px;
+  --rd: 15px;
+  --rdim: calc(var(--rd)*2);
+  --pm: #1100ff;
+}
+
+label {
+  content: '';
+  margin: 0 10px;
+  height: var(--ddim);
+  width: var(--ddim);
+  background: #005004;
+  cursor: pointer;
+}
+
+label:first-child {margin-left: 0;}
+label:last-child {margin-right: 0;}
+input {display: none;}
+
+.pacman {
+  content: '';
+  position: absolute;
+  top: calc(-1*var(--ddim));
+  left: calc(-1*var(--ddim)/2);
+  height: var(--rdim);
+  width: var(--rdim);
+  transition: transform 250ms linear;
+}
+
+.pacman:before,
+.pacman:after {
+  content: '';
+  position: absolute;
+  height: var(--rd);
+  width: var(--rdim);
+  left: 0;
+  background: var(--pm);
+  transition: inherit;
+}
+
+.pacman:before {
+  top: 0;
+  border-top-left-radius: var(--rdim);
+  border-top-right-radius: var(--rdim);
+  transform-origin: bottom center;
+  transform: rotate(-45deg);
+}
+
+.pacman:after {
+  bottom: 0;
+  border-bottom-left-radius: var(--rdim);
+  border-bottom-right-radius: var(--rdim);
+  transform-origin: top center;
+  transform: rotate(45deg);
+}
+
+@keyframes waka {
+  0% {}
+  50% {transform: rotate(0);}
+  100% {}
+}
+
+input[type="radio"]:hover ~ .pacman:before,
+input[type="radio"]:hover ~ .pacman:after {
+  animation: waka 500ms infinite;
+}
+
+input[id="dot-1"]:checked ~ .pacman {transform: translateX(var(--ddim));}
+input[id="dot-2"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)));}
+input[id="dot-3"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*2));}
+input[id="dot-4"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*3));}
+input[id="dot-5"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*4));}
+input[id="dot-6"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*5));}
+input[id="dot-7"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*6));}
+input[id="dot-8"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*7));}
+
+
+
+/*========= ハンバーガーメニュー===============*/
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn4{
+  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  background:#3801ff;
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn4 span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    border-radius: 5px;
+  background: #fff;
+    width: 45%;
+  }
+
+
+.openbtn4 span:nth-of-type(1) {
+  top:13px; 
+}
+
+.openbtn4 span:nth-of-type(2) {
+  top:19px;
+}
+
+.openbtn4 span:nth-of-type(3) {
+  top:25px;
+}
+
+.openbtn4 span:nth-of-type(3)::after {
+  content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+  position: absolute;
+  top:5px;
+  left:-2px;
+  color: #fff;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
+.openbtn4.active span:nth-of-type(1) {
+    top: 14px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn4.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn4.active span:nth-of-type(3){
+    top: 26px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+.openbtn4.active span:nth-of-type(3)::after {
+  content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+    transform: translateY(0) rotate(-45deg);
+  top:5px;
+  left:4px;
+}
