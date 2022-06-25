@@ -21,6 +21,10 @@
     <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-2-5/js/5-2-5.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     
+    <!-- フォト -->
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
+
     <!-- 各種設定 -->
     <title>{% block title %}{% endblock %}</title>
     {% block head %}{% endblock %}
@@ -42,13 +46,12 @@
 
         <div class="openbtn4"><span></span><span></span><span></span></div>
         
-
-        {% block header %}{% endblock %}
-
       </div>
     </header>
 
     <div class="container  mt-3">
+      {% block header %}{% endblock %}
+
       {% block contents %}{% endblock %}
     </div>
 
