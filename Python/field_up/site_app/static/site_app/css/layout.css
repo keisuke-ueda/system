@@ -5,6 +5,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     background-color: rgb(234, 255, 255);
+    font-family: "M PLUS 1p";
 }
 
 .bg-1{
@@ -15,6 +16,36 @@ footer{
     background-color: rgb(123, 169, 255);
     
 }
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+h1{
+    font-family: 'M+ Type-1 (general-j) Black';
+    font-style: italic;
+    text-shadow:
+            3px 3px 0px rgb(0, 214, 214), -3px -3px 0px rgb(0, 214, 214),
+           -3px 3px 0px rgb(0, 214, 214),  3px -3px 0px rgb(0, 214, 214),
+            3px 0px 0px rgb(0, 214, 214), -3px -0px 0px rgb(0, 214, 214),
+            0px 3px 0px rgb(0, 214, 214),  0px -3px 0px rgb(0, 214, 214);
+  margin: 0;
+
+}
+
+h2 {
+  font-family: 'M+ Type-1 (general-j) Black';
+  background:linear-gradient(transparent 60%, rgb(152, 214, 243) 90%);
+  
+  font-style: italic;
+
+}
+
+h2:first-letter{
+  color:#344abb;
+  font-size:200%;
+}
+
 
 /*========= 上部固定させるためのCSS ===============*/
 #header{
@@ -75,7 +106,7 @@ nav ul li a:hover{
 nav ul li.has-child::before{
   content:'';
   position: absolute;
-  left:15px;
+  left:43px;
   top:40px;
   width:6px;
   height:6px;
@@ -88,13 +119,13 @@ nav ul li.has-child::before{
 nav ul ul li.has-child::before{
   content:'';
   position: absolute;
-  left:6px;
-  top:17px;
+  left:0px;
+  top:13px;
   width:6px;
   height:6px;
-    border-top: 2px solid #fff;
-    border-right:2px solid #fff;
-    transform: rotate(45deg);
+  border-top: 2px solid #fff;
+  border-right:2px solid #fff;
+  transform: rotate(45deg);
 }
 
 /*== 2・3階層目の共通設定 */
@@ -107,7 +138,7 @@ nav li.has-child ul{
   z-index: 4;
     /*形状を指定*/
   background:rgb(123, 169, 255);
-  width:180px;
+  width:200px;
     /*はじめは非表示*/
   visibility: hidden;
   opacity: 0;
@@ -143,7 +174,7 @@ nav li.has-child ul li a:active{
 /*3階層目の位置*/
 nav li.has-child ul ul{
   top:0;
-  left:148px;
+  left:168px;
   background:rgb(123, 169, 255);
 }
 
