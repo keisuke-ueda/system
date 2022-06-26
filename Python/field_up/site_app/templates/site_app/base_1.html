@@ -15,6 +15,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="{% static 'site_app/js/layout.js' %}"></script>
+    
+    <!-- フォト -->
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
 
     <!-- 各種設定 -->
     <title>{% block title %}{% endblock %}</title>
@@ -23,7 +27,7 @@
   </head>
   <body>
     <!-- ヘッダー -->
-    <header id="header">
+    <header id="header1">
       <div class="row bg-1">
         <div class="col-8">
           <a href="{% url 'site_app:top' %}"><img class="m-3" src="{% static 'site_app/img/logo.png' %}" width="25%"></a>
