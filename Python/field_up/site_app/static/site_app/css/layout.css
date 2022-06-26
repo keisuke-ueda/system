@@ -46,6 +46,12 @@ h2:first-letter{
   font-size:200%;
 }
 
+.btn-f{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-style: italic;
+  font-weight: 700 !important;
+}
+
 
 /*========= 上部固定させるためのCSS ===============*/
 #header{
@@ -342,11 +348,14 @@ input[id="dot-8"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + va
 
 /* 各言語のボタン ぽよよんと跳ねる */
 .lang-link-btn {
-  background: linear-gradient(to right, #362ae0 0%,#3b79cc 50%,#42d3ed 100%);
+  background:#a7c3f7;
   border-radius: 5px;
   color: white;
   text-decoration: none;
   padding: 10px;
+  width: 350px;
+  height: 180px;
+
 }
 .lang-link-btn {
   animation: bound 2.5s infinite;

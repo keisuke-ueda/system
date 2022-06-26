@@ -1,12 +1,78 @@
+{% load static %}
+
+<!-- フォト -->
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+
 <p class="text-center mt-5">各言語のボタンを配置予定</p>
 <div class="row mb-5">
     <div class="col-4">
-        <a class="d-block text-center lang-link-btn bound" href="{% url 'site_app:vba' %}">VBA</a>
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:vba' %}">VBA<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/vba-logo.png' %}" width="75%"></a>
+        </div>
     </div>
     <div class="col-4">
-        <a class="d-block text-center lang-link-btn" href="{% url 'site_app:python' %}">Python</a>
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:python' %}">Python<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/python_cover.png' %}" width="60%"></a>
+        </div>
     </div>
     <div class="col-4">
-        <a class="d-block text-center lang-link-btn" href="{% url 'site_app:java' %}">Java</a>
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:java' %}">Java<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/javaロゴ.png' %}" width="30%"></a>
+        </div>
+    </div>
+</div>
+<div class="row mb-5">
+    <div class="col-4">
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:vba' %}">PowerAutomateDesktop<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/pad.png' %}" width="100%"></a>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:python' %}">Ruby<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/ruby.png' %}" width="30%"></a>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:java' %}">CSS<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/CSS3.png' %}" width="25%"></a>
+        </div>
+    </div>
+</div>
+<div class="row mb-5">
+    <div class="col-4">
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:vba' %}">PHP<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/php_PNG43.png' %}" width="50%"></a>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:python' %}">Swift<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/swift.png' %}" width="30%"></a>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:java' %}">Perl<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/perl-logo.png' %}" width="70%"></a>
+        </div>
+    </div>
+</div>
+<div class="row mb-5">
+    <div class="col-4">
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:vba' %}">javascript<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/javascript-frameworks_1.png' %}" width="100%"></a>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:python' %}">Go<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/golang_neo.png' %}" width="80%"></a>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="d-block mx-auto">
+            <a class="d-block lang-link-btn bound text-center h3 btn-f" href="{% url 'site_app:java' %}">Perl<img class="m-3 d-block mx-auto" src="{% static 'site_app/img/perl-logo.png' %}" width="70%"></a>
+        </div>
     </div>
 </div>
