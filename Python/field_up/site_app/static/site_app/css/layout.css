@@ -480,3 +480,87 @@ a.btn1-flat:hover:before {
 .nav-2 ul li a:hover{
   color:rgb(251, 255, 43); 
 }
+
+
+/*下の階層のulや矢印の基点にするためliにrelativeを指定*/
+.nav-2 ul li{
+  position: relative;
+}
+
+
+/*==矢印の設定*/
+
+/*2階層目を持つliの矢印の設定*/
+.nav-2 ul li.has-child::before{
+  content:'';
+  position: absolute;
+  left:0px;
+  top:8px;
+  width:6px;
+  height:6px;
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right:2px solid rgb(255, 255, 255);
+  transform: rotate(135deg);
+}
+
+/*3階層目を持つliの矢印の設定*/
+.nav-2 ul ul li.has-child::before{
+  content:'';
+  position: absolute;
+  left:0px;
+  top:10px;
+  width:6px;
+  height:6px;
+  border-top: 2px solid #fff;
+  border-right:2px solid #fff;
+  transform: rotate(45deg);
+}
+
+/*== 2・3階層目の共通設定 */
+/*下の階層を持っているulの指定*/
+.nav-2 li.has-child ul{
+  width:200px;
+  display: none;
+  opacity: 0;
+  transition: all .3s;
+  z-index: 4;
+}
+.nav-2 li.has-child ul ul{
+  width: 150px;
+}
+
+/*hoverしたら表示*/
+.nav-2 li.has-child:hover > ul,
+.nav-2 li.has-child ul li:hover > ul,
+.nav-2 li.has-child:active > ul,
+.nav-2 li.has-child ul li:active > ul{
+  display: block;
+  opacity: 1;
+}
+
+
+/*ナビゲーションaタグの形状*/
+.nav-2 li.has-child ul ul li a{
+  border-bottom:solid 1px rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.nav-2 li.has-child ul li:last-child a{
+  
+}
+
+.nav-2 li.has-child ul li a:hover,
+.nav-2 li.has-child ul li a:active{
+}
+
+/*==3階層目*/
+/*3階層目の位置*/
+.nav-2 li.has-child ul ul{
+  /* position: absolute;
+  top:0;
+  left:140px; */
+}
+
+.nav-2 li.has-child ul ul li a:hover,
+.nav-2 li.has-child ul ul li a:active{
+}
