@@ -466,7 +466,7 @@ a.btn1-flat:hover:before {
   list-style: none;
 }
 .nav-2>ul {
-  margin: 100px 0 0 120px;
+  margin: 225px 0 0 60px;
 }
 
 /*ナビゲーションのリンク設定*/
@@ -524,9 +524,10 @@ a.btn1-flat:hover:before {
   opacity: 0;
   transition: all .3s;
   z-index: 4;
+  padding-left: 10px;
 }
 .nav-2 li.has-child ul ul{
-  width: 150px;
+  width: 130px;
 }
 
 /*hoverしたら表示*/
