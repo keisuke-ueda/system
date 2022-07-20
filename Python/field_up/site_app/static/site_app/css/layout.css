@@ -460,6 +460,7 @@ a.btn1-flat:hover:before {
 }
 .nav-2{
   background:rgba(0, 0, 0, 0.6);
+  width: 330px;
 }
 /*ナビゲーションを横並びに*/
 .nav-2 ul{
