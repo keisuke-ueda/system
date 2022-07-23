@@ -22,6 +22,7 @@ urlpatterns = [
     path('css/', views.CssView.as_view(), name='css'),
     path('swift/', views.SwiftView.as_view(), name='swift'),
 
+    # 管理者用ページへのパス
     path('contents_setting/login', views.ContentsSettingLoginView.as_view(), name='contents_setting_login'),
     path('contents_setting/index', views.ContentsSettingIndexView.as_view(), name='contents_setting_index'),
     path('contents_setting/edit', views.ContentsSettingEditView.as_view(), name='contents_setting_edit'),
