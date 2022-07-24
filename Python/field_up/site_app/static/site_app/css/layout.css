@@ -52,24 +52,40 @@ h2:first-letter{
   font-weight: 700 !important;
 }
 
+header{
+  width: 100%;
+}
+
+footer{
+  width: 100%;
+}
+
+/* .container div{
+  margin-top:-200px;
+  padding-top: 200px;
+} */
+
 
 /*========= 上部固定させるためのCSS ===============*/
+#header1{
+  height: 220px;
+  position: fixed;
+  z-index: 999;
+}
+
+.content1{
+  padding-top:220px;
+}
+
 #header{
-    width:100%;/*横幅指定*/
-    /*以下はレイアウトのためのCSS*/
-    justify-content: space-between;
-    align-items: center;
-  }
-  /*JSを使いfixedクラスが付与された際の設定*/
-  #header.fixed{
-    position: fixed;/*fixedを設定して固定*/
-    z-index: 999;/*最前面へ*/
-    top:0;/*位置指定*/
-    left:0;/*位置指定*/
-  }
+  height: 220px;
+  position: fixed;
+  z-index: 999;
+}
 
-
-
+.content{
+  padding-top:220px;
+}
 
 /*========= ナビゲーションドロップダウンのためのCSS ===============*/
 /*==ナビゲーション全体の設定*/
@@ -188,6 +204,7 @@ h2:first-letter{
 .nav-1 li.has-child ul ul li a:active{
   background:rgb(123, 169, 255);
 }
+
 
 /*========= パックマンページネーション ===============*/
 .pagination {
@@ -456,11 +473,12 @@ a.btn1-flat:hover:before {
 /*========= ナビゲーションドロップダウンのためのCSS（ハンバーガーメニュー） ===============*/
 /*==ナビゲーション全体の設定*/
 .hidden-menu {
+  position:relative;
   z-index: 99;
 }
 .nav-2{
   background:rgba(0, 0, 0, 0.6);
-  width: 330px;
+  width: 340px;
 }
 /*ナビゲーションを横並びに*/
 .nav-2 ul{
