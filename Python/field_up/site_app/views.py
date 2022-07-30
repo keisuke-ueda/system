@@ -1,7 +1,10 @@
 # from lib2to3.pgen2.pgen import generate_grammar
 from django.shortcuts import render
 from django.views import generic
-# from django.forms import InquiryForm
+from .forms import ContactForm
+from django.urls import reverse_lazy
+# from django.contrib import messages
+
 
 # Create your views here.
 
@@ -18,13 +21,27 @@ class NewsView(generic.TemplateView):
     template_name = "site_app/news.html"
 
 # Contacts & FAQ
-class ContactsFaqView(generic.TemplateView):
+class ContactsFaqView(generic.FormView):
     template_name = "site_app/contacts_faq.html"
+    form_class = ContactForm
+    success_url = reverse_lazy('site_app:contact_result')
+
+    def form_valid(self, form):
+        form.send_email()
+        return super().form_valid(form)
+
+# 送信完了ページ
+class ContactResultView(generic.TemplateView):
+    template_name = "site_app/contact_result.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['success'] = "お問い合わせは正常に送信されました。"
+        return context
 
 # デジタルの魅力
 class AppealView(generic.TemplateView):
     template_name = "site_app/appeal.html"
-
 
 # システム開発とは
 class ExampleView(generic.TemplateView):

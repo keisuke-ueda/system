@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -78,9 +77,9 @@ WSGI_APPLICATION = 'field_up.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'system_site',
+        'NAME': 'system_site1',
         'USER': 'root',
-        'PASSWORD': 'gbw21ueda',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
@@ -133,3 +132,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+# メール設定
+EMAIL_HOST = 'mail19.onamae.ne.jp'
+EMAIL_HOST_USER = 'keisuke.ueda@field-up.work'
+EMAIL_HOST_PASSWORD = '#Gbw21ueda'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
