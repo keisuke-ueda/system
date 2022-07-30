@@ -36,7 +36,7 @@ class ContactResultView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['success'] = "お問い合わせは正常に送信されました。"
+        context['success'] = "お問い合わせありがとうございます。折り返しご連絡いたします。"
         return context
 
 # デジタルの魅力
