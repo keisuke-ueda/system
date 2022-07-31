@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+from telnetlib import AUTHENTICATION
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'site_app.apps.SiteAppConfig',#追記 nakano
+
+    'accounts.apps.AccountConfig',#追記 ueda
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -120,7 +126,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
@@ -142,3 +147,34 @@ EMAIL_HOST_PASSWORD = '#Gbw21ueda'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+#サイト識別ID
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthenticationBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+# メールアドレス認証
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+
+# サインアップ設定
+ACCOUNT_EMAIL_VERIFICATION = 'mandatoy'
+ACCOUNT_EMAIL_REQUIRED = True
+
+# ログインログアウト
+LOGIN_REDIRECT_URL = 'site_app:top'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+
+# ログアウトリンク処理
+ACCOUNT_LOGOUT_ON_GET = True
+
+# ログインメール設定
+ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
+DEFAULT_FROM_EMAIL = 'keisuke.ueda@field-up.work'
+
+
