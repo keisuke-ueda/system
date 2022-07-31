@@ -13,10 +13,18 @@
 
 <div class="container content">
     <h1 class="text-center">システム事業<br>コンテンツログイン画面</h1>
-    <div class="mt-5 d-flex align-items-center">
-        <input type="password" class="form-control" style="width:200px;"  placeholder="password">
+    <form method="post" action="{% url 'index.html' %}">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}">
+        {% endif %}
+
         <button type="submit" class="btn btn-primary m-4">ログイン</button>
-    </div>
+
+    </form>
+    
 </div>
 
 {% endblock %}

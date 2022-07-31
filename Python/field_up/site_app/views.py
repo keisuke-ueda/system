@@ -39,10 +39,6 @@ class ContactResultView(generic.TemplateView):
         context['success'] = "お問い合わせありがとうございます。折り返しご連絡いたします。"
         return context
 
-
-
-
-
 # デジタルの魅力
 class AppealView(generic.TemplateView):
     template_name = "site_app/appeal.html"
@@ -83,13 +79,3 @@ class CssView(generic.TemplateView):
 class SwiftView(generic.TemplateView):
     template_name = "site_app/languages/swift.html"
 
-
-# コンテンツ管理画面
-class ContentsSettingLoginView(generic.TemplateView):
-    template_name = "site_app/contents_setting/login.html"
-
-class ContentsSettingIndexView(generic.TemplateView):
-    template_name = "site_app/contents_setting/index.html"
-
-class ContentsSettingEditView(generic.TemplateView):
-    template_name = "site_app/contents_setting/edit.html"
