@@ -7,10 +7,10 @@
 {% block head %}
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <script src="{% static 'site_app/js/mail.js' %}"></script>
 {% endblock %}
 
 {% block contents %}
-
 
     {% comment %} コンテンツ {% endcomment %}
     <div class="container content">
@@ -41,7 +41,7 @@
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">送信</button>
+                <button type="submit" class="btn btn-primary" id="mail_sub">送信</button>
             </form>
         </div>
     </div>

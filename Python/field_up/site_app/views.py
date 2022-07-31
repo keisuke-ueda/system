@@ -39,6 +39,10 @@ class ContactResultView(generic.TemplateView):
         context['success'] = "お問い合わせありがとうございます。折り返しご連絡いたします。"
         return context
 
+
+
+
+
 # デジタルの魅力
 class AppealView(generic.TemplateView):
     template_name = "site_app/appeal.html"
