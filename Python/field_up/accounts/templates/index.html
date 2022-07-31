@@ -11,43 +11,89 @@
 
 {% block contents %}
 
-<div class="container content">
-    <h1 class="text-center">システム事業<br>コンテンツ入力画面</h1>
-    <div>
-        <div class="btn-group">
-            <input type="text" class="form-control" style="width:200px;"  placeholder="category">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Action
-            </button>
-            <ul class="dropdown-menu">
-              <li>Python</li>
-              <li>VBA</li>
-              <li>Swift</li>
-              <li>Kotlin</li>
-              <li>PHP</li>
-            </ul>
-        </div>
-        <div class="mt-5 d-flex align-items-center">
-            <p>img</p>
-            <button type="submit" class="btn btn-primary m-4">参照</button>
-        </div>
-        <div class="mt-5 d-flex align-items-center">
-            <p>サマリーテキスト</p>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-    
-        <div class="mt-5 d-flex align-items-center">
-            <p>iframeコード</p>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-    
-        <div class="mt-5 d-flex align-items-center">
-        
-            <input type="password" class="form-control" style="width:200px;"  placeholder="password">
-            <button type="submit" class="btn btn-primary m-4">ログイン</button>
+<div class="container content mb-5">
+    <h1 class="text-center">システム事業<br>コンテンツ管理画面</h1>
+    <button type="submit" class="btn btn-primary m-4">新規コンテンツ追加</button>
+    <button onclick="location.href='{% url 'accounts:login' %}'" class="btn btn-primary m-4">ログアウト</button>
+
+    <table class="table table-hover">
+        <tr class="bg-info">
+            <th>カテゴリ</th>
+            <th>サムネ画像</th>
+            <th>サマリーテキスト</th>
+            <th>iframe</th>
+            <th>編集</th>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>画像表示</td>
+            <td>うんたらかんたら</td>
+            <td>https://xxxxxxxxx</td>
+            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>画像表示</td>
+            <td>うんたらかんたら</td>
+            <td>https://xxxxxxxxx</td>
+            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
+        </tr>
+        <tr>
+            <td>VBA</td>
+            <td>画像表示</td>
+            <td>うんたらかんたら</td>
+            <td>https://xxxxxxxxx</td>
+            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
+        </tr>
+        <tr>
+            <td>Kotrin</td>
+            <td>画像表示</td>
+            <td>うんたらかんたら</td>
+            <td>https://xxxxxxxxx</td>
+            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
+        </tr>
+        <tr>
+            <td>Kotrin</td>
+            <td>画像表示</td>
+            <td>うんたらかんたら</td>
+            <td>https://xxxxxxxxx</td>
+            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
+        </tr>
+        <tr>
+            <td>Swift</td>
+            <td>画像表示</td>
+            <td>うんたらかんたら</td>
+            <td>https://xxxxxxxxx</td>
+            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
+        </tr>
+    </table>
+
+    <div class="row p-3">
+        <div class="col-5"></div>
+        <div class="col-4">
+            <div class="pagination">
+                <input id="dot-1" type="radio" name="dots" checked="checked"> 
+                <label for="dot-1"></label> 
+                <input id="dot-2" type="radio" name="dots">
+                <label for="dot-2"></label> 
+                <input id="dot-3" type="radio" name="dots">
+                <label for="dot-3"></label> 
+                <input id="dot-4" type="radio" name="dots">
+                <label for="dot-4"></label> 
+                <input id="dot-5" type="radio" name="dots">
+                <label for="dot-5"></label> 
+                <input id="dot-6" type="radio" name="dots">
+                <label for="dot-6"></label> 
+                <input id="dot-7" type="radio" name="dots">
+                <label for="dot-7"></label> 
+                <input id="dot-8" type="radio" name="dots">
+                <label for="dot-8"></label>
+                <div class="pacman"></div>
+            </div>
+            <div class="col-3"></div>
         </div>
     </div>
-    
+
 </div>
 
 {% endblock %}

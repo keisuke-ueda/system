@@ -153,28 +153,9 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 #サイト識別ID
 SITE_ID = 1
 
-AUTHENTICATION_BACKENDS = (
-    'allauth.account.auth_backends.AuthenticationBackend',
-    'django.contrib.auth.backends.ModelBackend',
-)
-
-# メールアドレス認証
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_USERNAME_REQUIRED = False
-
-# サインアップ設定
-ACCOUNT_EMAIL_VERIFICATION = 'mandatoy'
-ACCOUNT_EMAIL_REQUIRED = True
-
 # ログインログアウト
-LOGIN_REDIRECT_URL = 'site_app:top'
-ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
-
-# ログアウトリンク処理
-ACCOUNT_LOGOUT_ON_GET = True
-
-# ログインメール設定
-ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
-DEFAULT_FROM_EMAIL = 'keisuke.ueda@field-up.work'
+LOGIN_URL = '/login'
+LOGIN_REDIRECT_URL = '/index'
+# ACCOUNT_LOGOUT_REDIRECT_URL = ''
 
 

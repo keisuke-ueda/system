@@ -9,11 +9,38 @@
     <meta name="keywords" content="">
 {% endblock %}
 
+{% block active_singup %}active{% endblock %}
+
 {% block contents %}
 
 <div class="container content">
     <h1 class="text-center">システム事業<br>コンテンツログイン画面</h1>
-    <form method="post" action="{% url 'index.html' %}">
+
+    <div class="login-box-body mt-2">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group has-feedback mt-3 mb-3">
+                {{ field }}
+            </div>
+            {% endfor %}
+            <div class="row">
+  
+                {% for error in form.non_field_errors %}
+                <div class="alert alert-danger" role="alert">
+                    <p>{{ error }}</p>
+                </div>
+                {% endfor %}
+
+                <div class="col-xs-4">
+                <button type="submit" class="btn btn-primary btn-block btn-flat">ログオン</button>
+                </div>
+            </div>
+        </form>
+      </div>
+  
+
+    {% comment %} <form method="post" >
         {% csrf_token %}
         {{form.as_p}}
 
@@ -23,7 +50,7 @@
 
         <button type="submit" class="btn btn-primary m-4">ログイン</button>
 
-    </form>
+    </form> {% endcomment %}
     
 </div>
 
