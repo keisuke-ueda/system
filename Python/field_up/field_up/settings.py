@@ -141,3 +141,4 @@ EMAIL_HOST_USER = 'keisuke.ueda@field-up.work'
 EMAIL_HOST_PASSWORD = '#Gbw21ueda'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
