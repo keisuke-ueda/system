@@ -7,17 +7,14 @@
 {% block head %}
     <meta name="description" content="">
     <meta name="keywords" content="">
-{% endblock %}
-
-{% block header %}
-    <h1 class="text-center">Contacts & FAQ</h1>
+    <script src="{% static 'site_app/js/mail.js' %}"></script>
 {% endblock %}
 
 {% block contents %}
 
-
     {% comment %} コンテンツ {% endcomment %}
-    <div class="container">
+    <div class="container content">
+        <h1 class="text-center">Contacts & FAQ</h1>
         <div class="row p-3">
             <h2>駆け出しエンジニアから寄せられた声</h2>
             <div class="col-8">
@@ -39,7 +36,14 @@
             </div>
         </div>
 
-        
+        <div class="row ">
+            <h2 class="mt-4">お問い合わせ</h2>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary" id="mail_sub">送信</button>
+            </form>
+        </div>
     </div>
 
 {% endblock %}

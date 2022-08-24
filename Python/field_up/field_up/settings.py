@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+from telnetlib import AUTHENTICATION
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'site_app.apps.SiteAppConfig',#追記 nakano
+
+    'accounts.apps.AccountConfig',#追記 ueda
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -78,9 +83,9 @@ WSGI_APPLICATION = 'field_up.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'system_site',
+        'NAME': 'system_site1',
         'USER': 'root',
-        'PASSWORD': 'gbw21ueda',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
@@ -121,7 +126,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
@@ -133,3 +137,25 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+# メール設定
+EMAIL_HOST = 'mail19.onamae.ne.jp'
+EMAIL_HOST_USER = 'keisuke.ueda@field-up.work'
+EMAIL_HOST_PASSWORD = '#Gbw21ueda'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+#サイト識別ID
+SITE_ID = 1
+
+# ログインログアウト
+LOGIN_URL = '/login'
+LOGIN_REDIRECT_URL = '/index'
+# ACCOUNT_LOGOUT_REDIRECT_URL = ''
+
+

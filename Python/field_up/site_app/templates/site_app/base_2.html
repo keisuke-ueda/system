@@ -48,13 +48,43 @@
         </div>
 
         <div class="openbtn4"><span></span><span></span><span></span></div>
+
+        <div class="hidden-menu row d-none position-fixed vh-100">
+          <nav class="nav-2">
+            <ul class="">
+              <li class="mb-4"><a href="{% url 'site_app:company' %}">Company</a></li>
+              {% comment %} <li class="mb-4"><a href="{% url 'site_app:news' %}">News</a></li> {% endcomment %}
+              <li class="mb-4 ps-3 has-child"><a href="#">Content</a>
+                <ul class="">
+                  <li class="my-3 ps-3"><a href="{% url 'site_app:appeal' %}">デジタルの魅力</a></li>
+                  <li class="pb-3 ps-3 has-child"><a href="{% url 'site_app:example' %}">システム開発とは</a>
+                    <ul>
+                      <li class="py-1"><a href="https://field-up.work/energy_test/index.html" target="_blank">開発例:1</a></li>
+                      <li class="pb-1"><a href="https://field-up.work/demo_room/main.html" target="_blank">開発例:2</a></li>
+                      <li class=""><a href="https://field-up.work/demo_room/main.html" target="_blank">開発例:3</a></li>
+                    </ul>
+                  </li>
+                  <li class="ps-3 has-child"><a href="{% url 'site_app:lang' %}">プログラミングとは</a>
+                    <ul>
+                      <li class="py-1"><a href="{% url 'site_app:python' %}">Python</a></li>
+                      <li class="pb-1"><a href="{% url 'site_app:java' %}">Java</a></li>
+                      <li class="pb-1"><a href="{% url 'site_app:vba' %}">VBA</a></li>
+                      <li class="pb-1"><a href="{% url 'site_app:html' %}">HTML</a></li>
+                      <li class="pb-1"><a href="{% url 'site_app:css' %}">CSS</a></li>
+                      <li class=""><a href="{% url 'site_app:swift' %}">Swift</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class=""><a href="{% url 'site_app:contacts_faq' %}">Contacts & FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
         
       </div>
     </header>
 
-    <div class="container  mt-3">
-      {% block header %}{% endblock %}
-
+    <div class="mt-3">
       {% block contents %}{% endblock %}
     </div>
 
