@@ -14,10 +14,19 @@ urlpatterns = [
     path('example/', views.ExampleView.as_view(), name='example'),
 
     path('lang/', views.langView.as_view(), name='lang'),
+    
+    path('vba/', views.VbaView.as_view(), name='vba'),
     path('python/', views.PythonView.as_view(), name='python'),
     path('java/', views.JavaView.as_view(), name='java'),
-    path('vba/', views.VbaView.as_view(), name='vba'),
-    path('html/', views.HtmlView.as_view(), name='html'),
+    path('powerautomate/', views.PowerAutomateView.as_view(), name='powerautomate'),
+    path('kotlin/', views.KotlinView.as_view(), name='kotlin'),
     path('css/', views.CssView.as_view(), name='css'),
+    path('php/', views.PhpView.as_view(), name='php'),
+    path('swift/', views.SwiftView.as_view(), name='swift'),
+    path('html/', views.HtmlView.as_view(), name='html'),
+    path('javascript/', views.JavaScriptView.as_view(), name='javascript'),
+    path('go/', views.GoView.as_view(), name='go'),
+    path('c#/', views.CsharpView.as_view(), name='c#'),
+    
     path('swift/', views.SwiftView.as_view(), name='swift'),
 ]

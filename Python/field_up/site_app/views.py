@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views import generic
 from .forms import ContactForm
 from django.urls import reverse_lazy
+from accounts.models import Main
 # from django.contrib import messages
 
 
@@ -61,21 +62,111 @@ class Example3View(generic.TemplateView):
 class langView(generic.TemplateView):
     template_name = "site_app/lang.html"
 
-class PythonView(generic.TemplateView):
-    template_name = "site_app/languages/python.html"
-
-class JavaView(generic.TemplateView):
-    template_name = "site_app/languages/java.html"
-
-class VbaView(generic.TemplateView):
+class VbaView(generic.ListView):
     template_name = "site_app/languages/vba.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 1)
+        return queryset
 
-class HtmlView(generic.TemplateView):
-    template_name = "site_app/languages/html.html"
+class PythonView(generic.ListView):
+    template_name = "site_app/languages/python.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 2)
+        return queryset
 
-class CssView(generic.TemplateView):
+class JavaView(generic.ListView):
+    template_name = "site_app/languages/java.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 3)
+        return queryset
+
+class PowerAutomateView(generic.ListView):
+    template_name = "site_app/languages/powerautomate.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 4)
+        return queryset
+
+class KotlinView(generic.ListView):
+    template_name = "site_app/languages/kotlin.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 5)
+        return queryset
+
+class CssView(generic.ListView):
     template_name = "site_app/languages/css.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 6)
+        return queryset
 
-class SwiftView(generic.TemplateView):
+class PhpView(generic.ListView):
+    template_name = "site_app/languages/php.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 7)
+        return queryset
+
+class SwiftView(generic.ListView):
     template_name = "site_app/languages/swift.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 8)
+        return queryset
+
+class HtmlView(generic.ListView):
+    template_name = "site_app/languages/html.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 9)
+        return queryset
+
+class JavaScriptView(generic.ListView):
+    template_name = "site_app/languages/javascript.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 10)
+        return queryset
+
+class GoView(generic.ListView):
+    template_name = "site_app/languages/go.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 11)
+        return queryset
+
+class CsharpView(generic.ListView):
+    template_name = "site_app/languages/c#.html"
+    model = Main
+    context_object_name = "main_list"
+    def get_queryset(self, **kwargs):
+        queryset = super().get_queryset(**kwargs)
+        queryset = queryset.filter(category_id = 12)
+        return queryset
 

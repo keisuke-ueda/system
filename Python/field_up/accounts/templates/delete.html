@@ -1,0 +1,10 @@
+<h1>本当に削除しますか?</h1>
+<form method="post">
+  {% csrf_token %}
+  <p>{{ main.category }}</p>
+  <p>{{ main.thumbnail }}</p>
+  <p>{{ main.summary_text }}</p>
+  <p>{{ main.iframe_code }}</p>
+  <input type="submit" class="btn btn-danger" value="削除">
+  <a href="{% url 'accounts:update' pk=main.pk %} ">キャンセル</a>
+</form>
