@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}ログイン画面{% endblock %}
+{% block title %}コンテンツ管理画面{% endblock %}
 
 {% block head %}
     <meta name="description" content="">
@@ -13,8 +13,8 @@
 
 <div class="container content mb-5">
     <h1 class="text-center">システム事業<br>コンテンツ管理画面</h1>
-    <button type="submit" class="btn btn-primary m-4">新規コンテンツ追加</button>
-    <button onclick="location.href='{% url 'accounts:login' %}'" class="btn btn-primary m-4">ログアウト</button>
+    <button onclick="location.href='{% url 'accounts:create' %}'" class="btn btn-primary m-4">新規コンテンツ追加</button>
+    <button onclick="location.href='{% url 'accounts:logout' %}'" class="btn btn-primary m-4">ログアウト</button>
 
     <table class="table table-hover">
         <tr class="bg-info">
@@ -22,50 +22,20 @@
             <th>サムネ画像</th>
             <th>サマリーテキスト</th>
             <th>iframe</th>
-            <th>編集</th>
+            <th></th>
+            <th></th>
         </tr>
+        {% for main in main_list %}
         <tr>
-            <td>Python</td>
-            <td>画像表示</td>
-            <td>うんたらかんたら</td>
-            <td>https://xxxxxxxxx</td>
-            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
+            <td>{{ main.category }}</td>
+            <td>{{ main.thumbnail }}</td>
+            <td>{{ main.summary_text }}</td>
+            <td>{{ main.iframe_code }}</td>
+            <td><button onclick="location.href='{% url 'accounts:update' pk=main.pk %}'" class="btn btn-primary m-4">編集</button></td>
+            <td><button onclick="location.href='{% url 'accounts:delete' pk=main.pk %}'" type="button" class="btn btn-danger m-4">削除</button></td>
         </tr>
-        <tr>
-            <td>Python</td>
-            <td>画像表示</td>
-            <td>うんたらかんたら</td>
-            <td>https://xxxxxxxxx</td>
-            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
-        </tr>
-        <tr>
-            <td>VBA</td>
-            <td>画像表示</td>
-            <td>うんたらかんたら</td>
-            <td>https://xxxxxxxxx</td>
-            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
-        </tr>
-        <tr>
-            <td>Kotrin</td>
-            <td>画像表示</td>
-            <td>うんたらかんたら</td>
-            <td>https://xxxxxxxxx</td>
-            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
-        </tr>
-        <tr>
-            <td>Kotrin</td>
-            <td>画像表示</td>
-            <td>うんたらかんたら</td>
-            <td>https://xxxxxxxxx</td>
-            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
-        </tr>
-        <tr>
-            <td>Swift</td>
-            <td>画像表示</td>
-            <td>うんたらかんたら</td>
-            <td>https://xxxxxxxxx</td>
-            <td><button type="submit" class="btn btn-primary m-4">編集</button></td>
-        </tr>
+        {% endfor %}
+        
     </table>
 
     <div class="row p-3">

@@ -1,0 +1,35 @@
+{% extends 'site_app/base_2.html' %}
+
+{% load static %}
+
+{% block title %}Kotlin{% endblock %}
+
+{% block head %}
+    <meta name="description" content="Kotlinとはどんなものか知ることのできるページです">
+    <meta name="keywords" content="プログラミング,開発,システム開発,Field-UP,フィールドアップ,FIELD-UP,アプリケーション,アプリ,Kotlin,AI,フレームワーク">
+{% endblock %}
+
+{% block contents %}
+
+    {% comment %} コンテンツ {% endcomment %}
+    <div class="container content">
+        <h1 class="text-center">Kotlin</h1>
+        
+        {% for main in main_list %}
+        <div class="row p-3">
+            <div class="col-4 bg-light">
+                <img class="m-3" src="{{ main.thumbnail.url }}" width="50%">
+            </div>
+            <div class="col-4">
+                <p>{{ main.summary_text }}</p>
+            </div>
+            <div class="col-4">
+                <iframe width="400" height="225" src="{{ main.iframe_code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        {% endfor %}
+        
+        {% include 'site_app/button.html' %}
+    </div>
+
+{% endblock %}
