@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-import os
+import os   
 from pathlib import Path
 from telnetlib import AUTHENTICATION
 
@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -83,9 +83,9 @@ WSGI_APPLICATION = 'field_up.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'system_site1',
+        'NAME': 'system_site',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'gbw21ueda',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
