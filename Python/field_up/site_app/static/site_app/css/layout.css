@@ -563,3 +563,18 @@ a.btn1-flat:hover:before {
   border-bottom:solid 1px rgba(255, 255, 255, 1);
   text-align: center;
 }
+
+
+
+/* コンテンツ登録・更新フォーム */
+.content_form input {
+  display: inline-block;
+}
+
+.content_form label {
+  background: none;
+}
+
+.content_form .helptext {
+  display: none;
+}
