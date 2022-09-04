@@ -18,6 +18,7 @@ class IndexView(LoginRequiredMixin, generic.ListView):
     model = models.Main
     context_object_name = "main_list"
     template_name = "index.html"
+    paginate_by = 5
 
 class CreateView(LoginRequiredMixin, generic.CreateView):
     model = models.Main

@@ -66,12 +66,7 @@ class VbaView(generic.ListView):
     template_name = "site_app/languages/vba.html"
     model = Main
     context_object_name = "main_list"
-
-    # def get_context_data(self):
-    #     ctx = super().get_context_data()
-    #     ctx = self.replace("embed/","watch?v=")
-    #     return ctx
-    
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 1)
@@ -82,6 +77,7 @@ class PythonView(generic.ListView):
     template_name = "site_app/languages/python.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 2)
@@ -91,6 +87,7 @@ class JavaView(generic.ListView):
     template_name = "site_app/languages/java.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 3)
@@ -100,6 +97,7 @@ class PowerAutomateView(generic.ListView):
     template_name = "site_app/languages/powerautomate.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 4)
@@ -109,6 +107,7 @@ class KotlinView(generic.ListView):
     template_name = "site_app/languages/kotlin.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 5)
@@ -118,6 +117,7 @@ class CssView(generic.ListView):
     template_name = "site_app/languages/css.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 6)
@@ -127,6 +127,7 @@ class PhpView(generic.ListView):
     template_name = "site_app/languages/php.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 7)
@@ -136,6 +137,7 @@ class SwiftView(generic.ListView):
     template_name = "site_app/languages/swift.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 8)
@@ -145,6 +147,7 @@ class HtmlView(generic.ListView):
     template_name = "site_app/languages/html.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 9)
@@ -154,6 +157,7 @@ class JavaScriptView(generic.ListView):
     template_name = "site_app/languages/javascript.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 10)
@@ -163,6 +167,7 @@ class GoView(generic.ListView):
     template_name = "site_app/languages/go.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 11)
@@ -172,6 +177,7 @@ class CsharpView(generic.ListView):
     template_name = "site_app/languages/c#.html"
     model = Main
     context_object_name = "main_list"
+    paginate_by = 5
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 12)
