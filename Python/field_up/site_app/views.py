@@ -66,9 +66,16 @@ class VbaView(generic.ListView):
     template_name = "site_app/languages/vba.html"
     model = Main
     context_object_name = "main_list"
+
+    # def get_context_data(self):
+    #     ctx = super().get_context_data()
+    #     ctx = self.replace("embed/","watch?v=")
+    #     return ctx
+    
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 1)
+        # queryset = queryset.replace("embed/","watch?v=")
         return queryset
 
 class PythonView(generic.ListView):

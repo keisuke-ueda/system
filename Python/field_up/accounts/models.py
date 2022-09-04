@@ -1,9 +1,9 @@
+from inspect import isframe
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
 
 # Create your models here.
-
 class CustomUser(AbstractUser):
     class Meta:
         verbose_name_plural = 'CustomUser'
@@ -25,7 +25,11 @@ class Main(models.Model):
     iframe_code = models.TextField(help_text='iframeコード')
     create_date = models.DateTimeField(auto_now_add=True, help_text='作成日')
     update_date = models.DateTimeField(auto_now=True, help_text='更新日')
-
+    
     def __str__(self):
+        self.iframe_code.replace("embed/","watch?v=")
         return str(self.id)
 
+    def iframe(text):
+        text = text.replace("embed/","watch?v=")
+        return text

@@ -27,6 +27,5 @@ urlpatterns = [
     path('javascript/', views.JavaScriptView.as_view(), name='javascript'),
     path('go/', views.GoView.as_view(), name='go'),
     path('c#/', views.CsharpView.as_view(), name='c#'),
-    
     path('swift/', views.SwiftView.as_view(), name='swift'),
 ]
