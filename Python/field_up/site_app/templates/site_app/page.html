@@ -1,0 +1,15 @@
+{% if page_obj.paginator.page_range > 1 %}
+<div class="row p-3">
+    <div class="col-5"></div>
+    <div class="col-4">
+        <div class="pagination">
+            {% for num in page_obj.paginator.page_range %}
+            <input id="dot-{{num}}" type="radio" name="dots" class="dots" data-num="{{ num }}">
+            <label for="dot-{{num}}"></label>
+            {% endfor %}
+            <div class="pacman"></div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+{% endif %}

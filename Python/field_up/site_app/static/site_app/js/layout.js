@@ -21,6 +21,27 @@ $(function(){
     return false;//リンクの無効化
   });
 
+
+  $('.dots').on('click', function () {
+    // ページ番号取得
+    var num = $(this).data('num');
+    //パックマン移動
+    $('.pacman').animate({'left':3+30*num-30}, 250)
+    console.log(num)
+    // ページ遷移
+    setTimeout(function(){
+      window.location.href = "/index/?page=" + String(num);
+    },250);
+  })
+});
+
+// ページ遷移後のパックマン位置設定
+$(window).on('load', function () {
+  if($('input').hasClass('dots')) {
+    var url = location.href;
+    num = url.slice(-1)
+    $('.pacman').css('left',3+30*num-30)
+  }
 });
 
 
