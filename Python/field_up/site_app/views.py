@@ -70,6 +70,7 @@ class VbaView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 1)
+        # queryset = queryset.replace("embed/","watch?v=")
         return queryset
 
 class PythonView(generic.ListView):
