@@ -26,8 +26,12 @@ SECRET_KEY = 'django-insecure-w+4^8=&_9mo1+(hqf61_^&22haj)5s=!v^7*vr7pg!=e$0t@xm
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# 本番
+# DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1']
+# 本番
+# ALLOWED_HOSTS = ['150.95.219.20']
 
 # Application definition
 
@@ -83,15 +87,27 @@ WSGI_APPLICATION = 'field_up.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'system_site1',
+        'NAME': 'system_site',
         'USER': 'root',
-        #'PASSWORD': 'gbw21ueda',
+        'PASSWORD': 'gbw21ueda',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
         },
+        # 本番
+        # 'default': {
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': '0i38d_system',
+        # 'USER': '0i38d_env',
+        # 'PASSWORD': '#Gbw21ueda',
+        # 'HOST': 'mysql18.onamae.ne.jp',
+        # 'PORT': '3306',
+        # 'OPTIONS': {
+        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        #     'charset': 'utf8mb4',
+        # },
     }
 }
 
