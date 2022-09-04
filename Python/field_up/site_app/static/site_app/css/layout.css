@@ -234,7 +234,7 @@ input {display: none;}
   content: '';
   position: absolute;
   top: calc(-1*var(--ddim));
-  left: calc(-1*var(--ddim)/2);
+  /* left: calc(-1*var(--ddim)/2); */
   height: var(--rdim);
   width: var(--rdim);
   transition: transform 250ms linear;
@@ -246,7 +246,7 @@ input {display: none;}
   position: absolute;
   height: var(--rd);
   width: var(--rdim);
-  left: 0;
+  /* left: 0; */
   background: var(--pm);
   transition: inherit;
 }
@@ -278,14 +278,14 @@ input[type="radio"]:hover ~ .pacman:after {
   animation: waka 500ms infinite;
 }
 
-input[id="dot-1"]:checked ~ .pacman {transform: translateX(var(--ddim));}
+/* input[id="dot-1"]:checked ~ .pacman {transform: translateX(var(--ddim));}
 input[id="dot-2"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)));}
 input[id="dot-3"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*2));}
 input[id="dot-4"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*3));}
 input[id="dot-5"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*4));}
 input[id="dot-6"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*5));}
 input[id="dot-7"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*6));}
-input[id="dot-8"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*7));}
+input[id="dot-8"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*7));} */
 
 
 
