@@ -30,7 +30,7 @@ $(function(){
     console.log(num)
     // ページ遷移
     setTimeout(function(){
-      window.location.href = "/index/?page=" + String(num);
+      window.location.href = "./?page=" + String(num);
     },250);
   })
 });
