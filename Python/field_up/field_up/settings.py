@@ -83,9 +83,9 @@ WSGI_APPLICATION = 'field_up.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'system_site',
+        'NAME': 'system_site1',
         'USER': 'root',
-        'PASSWORD': 'gbw21ueda',
+        #'PASSWORD': 'gbw21ueda',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
