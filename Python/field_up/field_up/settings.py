@@ -13,10 +13,20 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os   
 from pathlib import Path
 from telnetlib import AUTHENTICATION
+# 本番
+# import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+# 本番
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# env = environ.Env()
+# env.read_env(os.path.join(BASE_DIR, '.env'))
+# SECRET_KEY = env('django-insecure-w+4^8=&_9mo1+(hqf61_^&22haj)5s=!v^7*vr7pg!=e$0t@xm')
+# if not DEBUG:
+#     ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+#     STATIC_ROOT = '/usr/share/nginx/html/static'
+#     MEDIA_ROOT = '/usr/share/nginx/html/media'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
