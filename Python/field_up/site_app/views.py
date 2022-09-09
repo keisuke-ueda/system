@@ -70,7 +70,8 @@ class VbaView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 1)
-        # queryset = queryset.replace("embed/","watch?v=")
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class PythonView(generic.ListView):
@@ -81,6 +82,8 @@ class PythonView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 2)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class JavaView(generic.ListView):
@@ -91,6 +94,8 @@ class JavaView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 3)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class PowerAutomateView(generic.ListView):
@@ -101,6 +106,8 @@ class PowerAutomateView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 4)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class KotlinView(generic.ListView):
@@ -111,6 +118,8 @@ class KotlinView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 5)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class CssView(generic.ListView):
@@ -121,6 +130,8 @@ class CssView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 6)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class PhpView(generic.ListView):
@@ -131,6 +142,8 @@ class PhpView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 7)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class SwiftView(generic.ListView):
@@ -141,6 +154,8 @@ class SwiftView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 8)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class HtmlView(generic.ListView):
@@ -151,6 +166,8 @@ class HtmlView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 9)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class JavaScriptView(generic.ListView):
@@ -161,6 +178,8 @@ class JavaScriptView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 10)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class GoView(generic.ListView):
@@ -171,6 +190,8 @@ class GoView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 11)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
 class CsharpView(generic.ListView):
@@ -181,5 +202,7 @@ class CsharpView(generic.ListView):
     def get_queryset(self, **kwargs):
         queryset = super().get_queryset(**kwargs)
         queryset = queryset.filter(category_id = 12)
+        for set in queryset:
+            set.iframe_code = set.iframe_code.replace("watch?v=","embed/")
         return queryset
 
