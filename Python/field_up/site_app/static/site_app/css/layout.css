@@ -60,6 +60,10 @@ footer{
   width: 100%;
 }
 
+.img-1{
+  display: flex;
+  align-items: center;
+}
 
 /*========= 上部固定させるためのCSS ===============*/
 #header1{
