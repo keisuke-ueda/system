@@ -14,7 +14,6 @@ body{
 
 footer{
     background-color: rgb(255, 255, 255);
-    
 }
 
 .font-weight-bold {
@@ -22,18 +21,19 @@ footer{
 }
 
 h1{
-    font-family: 'M+ Type-1 (general-j) Black';
-    font-style: italic;
-    text-shadow:
+  font-size:3vw;
+  font-family: 'M+ Type-1 (general-j) Black';
+  font-style: italic;
+  text-shadow:
             3px 3px 0px rgb(0, 214, 214), -3px -3px 0px rgb(0, 214, 214),
            -3px 3px 0px rgb(0, 214, 214),  3px -3px 0px rgb(0, 214, 214),
             3px 0px 0px rgb(0, 214, 214), -3px -0px 0px rgb(0, 214, 214),
             0px 3px 0px rgb(0, 214, 214),  0px -3px 0px rgb(0, 214, 214);
   margin: 0;
-
 }
 
 h2 {
+  font-size:3vw;
   font-family: 'M+ Type-1 (general-j) Black';
   background:linear-gradient(transparent 60%, rgb(152, 214, 243) 90%);
   
@@ -45,6 +45,15 @@ h2:first-letter{
   color:#344abb;
   font-size:200%;
 }
+
+h3 {
+  font-size:3vw;
+}
+
+p {
+  font-size:1.3vw;
+}
+
 
 .btn-f{
   font-family: 'M PLUS Rounded 1c', sans-serif;
