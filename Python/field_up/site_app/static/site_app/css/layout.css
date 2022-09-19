@@ -47,6 +47,11 @@ p {
 span {
   font-size:1.4vw;
 }
+table {
+  font-size:1.2vw;
+}
+
+
 .btn-f{
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-style: italic;
