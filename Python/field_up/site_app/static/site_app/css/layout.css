@@ -29,10 +29,9 @@ h1{
   margin: 0;
 }
 h2 {
-  font-size:2.5vw;
+  font-size:2.2vw;
   font-family: 'M+ Type-1 (general-j) Black';
   background:linear-gradient(transparent 60%, rgb(152, 214, 243) 90%);
-  
   font-style: italic;
 }
 h2:first-letter{
@@ -40,10 +39,10 @@ h2:first-letter{
   font-size:200%;
 }
 h3 {
-  font-size:3vw;
+  font-size:2.4vw;
 }
 p {
-  font-size:1.3vw;
+  font-size:1.2vw;
 }
 span {
   font-size:1.7vw;
@@ -95,14 +94,14 @@ footer{
 }
 /*ナビゲーションを横並びに*/
 .nav-1 ul{
-  font-size:1.5vw;
+  font-size:1.2vw;
   list-style: none;
   display: flex;
   justify-content: center;
 }
 /*2階層目以降は横並びにしない*/
 .nav-1 ul ul{
-  font-size:1.3vw;
+  font-size:1.05vw;
   display: block;
 }
 
@@ -121,34 +120,6 @@ footer{
 
 .nav-1 ul li a:hover{
   color:rgb(251, 255, 43); 
-}
-
-/*==矢印の設定*/
-
-/*2階層目を持つliの矢印の設定*/
-.nav-1 ul li.has-child::before{
-  content:'';
-  position: absolute;
-  left:43px;
-  top:40px;
-  width:6px;
-  height:6px;
-  border-top: 2px solid rgb(255, 255, 255);
-    border-right:2px solid rgb(255, 255, 255);
-    transform: rotate(135deg);
-}
-
-/*3階層目を持つliの矢印の設定*/
-.nav-1 ul ul li.has-child::before{
-  content:'';
-  position: absolute;
-  left:0px;
-  top:13px;
-  width:6px;
-  height:6px;
-  border-top: 2px solid #fff;
-  border-right:2px solid #fff;
-  transform: rotate(45deg);
 }
 
 /*== 2・3階層目の共通設定 */
@@ -471,7 +442,7 @@ a.btn1-flat:hover:before {
   z-index: 99;
 }
 .nav-2{
-  font-size:1.5vw;
+  font-size:1vw;
   background:rgba(0, 0, 0, 0.6);
   width: 340px;
 }
