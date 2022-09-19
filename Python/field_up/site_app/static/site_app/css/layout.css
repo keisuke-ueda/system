@@ -7,21 +7,18 @@ body{
     background-color: rgb(234, 255, 255);
     font-family: "M PLUS 1p";
 }
-
+/* font関連 */
 .bg-1{
     background-color: rgb(234, 255, 255);
 }
-
 footer{
     background-color: rgb(255, 255, 255);
 }
-
 .font-weight-bold {
   font-weight: 700 !important;
 }
-
 h1{
-  font-size:3vw;
+  font-size:4vw;
   font-family: 'M+ Type-1 (general-j) Black';
   font-style: italic;
   text-shadow:
@@ -31,48 +28,37 @@ h1{
             0px 3px 0px rgb(0, 214, 214),  0px -3px 0px rgb(0, 214, 214);
   margin: 0;
 }
-
 h2 {
-  font-size:3vw;
+  font-size:2.5vw;
   font-family: 'M+ Type-1 (general-j) Black';
   background:linear-gradient(transparent 60%, rgb(152, 214, 243) 90%);
   
   font-style: italic;
-
 }
-
 h2:first-letter{
   color:#344abb;
   font-size:200%;
 }
-
 h3 {
   font-size:3vw;
 }
-
 p {
   font-size:1.3vw;
 }
-
-
+span {
+  font-size:1.7vw;
+}
 .btn-f{
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-style: italic;
   font-weight: 700 !important;
 }
-
 header{
   width: 100%;
 }
-
 footer{
   width: 100%;
 }
-
-/* .container div{
-  margin-top:-200px;
-  padding-top: 200px;
-} */
 
 
 /*========= 上部固定させるためのCSS ===============*/
@@ -105,12 +91,14 @@ footer{
 }
 /*ナビゲーションを横並びに*/
 .nav-1 ul{
+  font-size:1.5vw;
   list-style: none;
   display: flex;
   justify-content: center;
 }
 /*2階層目以降は横並びにしない*/
 .nav-1 ul ul{
+  font-size:1.3vw;
   display: block;
 }
 
@@ -375,14 +363,14 @@ input[id="dot-8"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + va
 
 /* 各言語のボタン ぽよよんと跳ねる */
 .lang-link-btn {
+  font-size:2vw;
   background:#a7c3f7;
   border-radius: 5px;
   color: white;
   text-decoration: none;
   padding: 10px;
-  width: 350px;
-  height: 180px;
-
+  width: 20vw;
+  height: 100%;
 }
 .lang-link-btn {
   animation: bound 2.5s infinite;
@@ -417,14 +405,13 @@ input[id="dot-8"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + va
 
 /* 特殊btn 1 */
 .btn1,
-a.btn1,
-button.btn1 {
-  font-size: 1.6rem;
+a.btn1 {
+  font-size: 2.5vw;
   font-weight: 700;
   line-height: 1.5;
   position: relative;
   display: inline-block;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -442,9 +429,6 @@ button.btn1 {
 
 a.btn1-flat {
   overflow: hidden;
-
-  padding: 1.5rem 6rem;
-
   color: #fff;
   border-radius: 0;
   background: #505d6b;
@@ -459,10 +443,8 @@ a.btn1-flat:before {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 150%;
   height: 500%;
-
   content: "";
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -485,6 +467,7 @@ a.btn1-flat:hover:before {
   z-index: 99;
 }
 .nav-2{
+  font-size:1.5vw;
   background:rgba(0, 0, 0, 0.6);
   width: 340px;
 }
