@@ -195,7 +195,7 @@ class GoView(generic.ListView):
         return queryset
 
 class CsharpView(generic.ListView):
-    template_name = "site_app/languages/c#.html"
+    template_name = "site_app/languages/c_sharp.html"
     model = Main
     context_object_name = "main_list"
     paginate_by = 5
