@@ -335,17 +335,6 @@ input[type="radio"]:hover ~ .pacman:after {
   animation: waka 500ms infinite;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /*========= ハンバーガーメニュー===============*/
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
 .openbtn4{
@@ -516,6 +505,7 @@ a.btn1-flat:hover:before {
 }
 
 
+/* 各ページ用 */
 /*========= ナビゲーションドロップダウンのためのCSS（ハンバーガーメニュー） ===============*/
 /*==ナビゲーション全体の設定*/
 .hidden-menu {
@@ -523,17 +513,32 @@ a.btn1-flat:hover:before {
   z-index: 99;
 }
 .nav-2{
-  font-size:1vw;
+  font-size:16px;
   background:rgba(0, 0, 0, 0.6);
-  width: 340px;
+  width: 250px;
 }
+
 /*ナビゲーションを横並びに*/
 .nav-2 ul{
   list-style: none;
 }
+
 .nav-2>ul {
-  margin: 225px 0 0 60px;
+  margin: 225px 0 0 10px;
 }
+
+@media screen and (min-width:300px) and ( max-width:780px) {
+  .nav-2{
+    font-size:13px;
+    background:rgba(0, 0, 0, 0.6);
+    width: 200px;
+  }
+
+  .nav-2>ul {
+    margin: 150px 0 0 10px;
+  }
+}
+
 
 /*ナビゲーションのリンク設定*/
 .nav-2 ul li a{
@@ -611,7 +616,6 @@ a.btn1-flat:hover:before {
 }
 
 
-
 /* コンテンツ登録・更新フォーム */
 .content_form input {
   display: inline-block;
@@ -635,8 +639,6 @@ a.btn1-flat:hover:before {
   margin: 0;
   padding: 0;
 }
-
-
 
 
 /* SP用 */
