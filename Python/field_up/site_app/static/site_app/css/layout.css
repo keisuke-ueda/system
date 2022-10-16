@@ -1,22 +1,55 @@
 @charset "utf-8";
 
+*{
+  margin:0;
+  padding:0;
+}
+
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: rgb(234, 255, 255);
     font-family: "M PLUS 1p";
+    font-size:16px;
 }
+
+@media screen and (min-width:300px) and ( max-width:780px) {
+  body p {
+    font-size:14px;
+  }
+}
+
+
 /* font関連 */
 .bg-1{
     background-color: rgb(234, 255, 255);
 }
-footer{
+
+footer {
     background-color: rgb(255, 255, 255);
+    width: 100%;
+    font-size:16px;
 }
+
+@media screen and (min-width:300px) and ( max-width:780px) {
+  footer p {
+    font-size:18px;
+  }
+}
+
+
+
+
+
 .font-weight-bold {
   font-weight: 700 !important;
 }
+
+
+
+
+
 h1{
   font-size:4vw;
   font-family: 'M+ Type-1 (general-j) Black';
@@ -28,22 +61,60 @@ h1{
             0px 3px 0px rgb(0, 214, 214),  0px -3px 0px rgb(0, 214, 214);
   margin: 0;
 }
+
+
+@media screen and (min-width:300px) and ( max-width:780px) {
+  
+
+}
+
+
+
 h2 {
   font-size:2.2vw;
   font-family: 'M+ Type-1 (general-j) Black';
   background:linear-gradient(transparent 60%, rgb(152, 214, 243) 90%);
   font-style: italic;
 }
+
 h2:first-letter{
   color:#344abb;
   font-size:200%;
 }
+
+
+.kind{
+  font-size:50px;
+  font-family: 'M+ Type-1 (general-j) Black';
+  font-style: italic;
+  text-shadow:
+            3px 3px 0px rgb(0, 214, 214), -3px -3px 0px rgb(0, 214, 214),
+           -3px 3px 0px rgb(0, 214, 214),  3px -3px 0px rgb(0, 214, 214),
+            3px 0px 0px rgb(0, 214, 214), -3px -0px 0px rgb(0, 214, 214),
+            0px 3px 0px rgb(0, 214, 214),  0px -3px 0px rgb(0, 214, 214);
+  margin: 0;
+}
+
+@media screen and (min-width:300px) and ( max-width:780px) {
+  .kind {
+    font-size:40px;
+  }
+}
+
 h3 {
-  font-size:2.0vw;
+  font-size:20px;
 }
-p {
-  font-size:1.0vw;
+
+@media screen and (min-width:300px) and ( max-width:780px) {
+  h3 {
+    font-size:25px;
+  }
 }
+
+
+
+
+
 span {
   font-size:1.4vw;
 }
@@ -58,9 +129,6 @@ table {
   font-weight: 700 !important;
 }
 header{
-  width: 100%;
-}
-footer{
   width: 100%;
 }
 
@@ -255,16 +323,6 @@ input[type="radio"]:hover ~ .pacman:after {
   animation: waka 500ms infinite;
 }
 
-/* input[id="dot-1"]:checked ~ .pacman {transform: translateX(var(--ddim));}
-input[id="dot-2"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)));}
-input[id="dot-3"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*2));}
-input[id="dot-4"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*3));}
-input[id="dot-5"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*4));}
-input[id="dot-6"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*5));}
-input[id="dot-7"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*6));}
-input[id="dot-8"]:checked ~ .pacman {transform: translateX(calc(var(--ddim) + var(--rdim)*7));} */
-
-
 
 /*========= ハンバーガーメニュー===============*/
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
@@ -439,7 +497,6 @@ a.btn1-flat:hover:before {
 }
 
 
-
 /*========= ナビゲーションドロップダウンのためのCSS（ハンバーガーメニュー） ===============*/
 /*==ナビゲーション全体の設定*/
 .hidden-menu {
@@ -470,7 +527,6 @@ a.btn1-flat:hover:before {
 .nav-2 ul li a:hover{
   color:rgb(55, 10, 255); 
 }
-
 
 /*下の階層のulや矢印の基点にするためliにrelativeを指定*/
 .nav-2 ul li{
@@ -549,4 +605,37 @@ a.btn1-flat:hover:before {
 
 .content_form .helptext {
   display: none;
+}
+
+
+/* バグどり */
+.bag01{
+  margin: 0
+}
+
+
+/* SP用 */
+@media screen and (min-width:300px) and ( max-width:780px) {
+  .flexbox {
+      display: block;
+  }
+  .flexbox .box1 {
+      width: 100%;
+      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .flexbox .box2 {
+      width: 100%;
+      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .flexbox .box3 {
+    width: 100%;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
