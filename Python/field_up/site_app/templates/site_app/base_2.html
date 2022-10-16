@@ -35,6 +35,17 @@
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="{% static 'site_app/img/ファビコン1.png' %}">
 
+    {% comment %} GA4 {% endcomment %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167968304-8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-167968304-8');
+    </script>
+
   </head>
   <body>
     <!-- ヘッダー -->
@@ -44,7 +55,7 @@
           <a href="{% url 'site_app:top' %}"><img class="m-3 sp-logo" src="{% static 'site_app/img/logo.png' %}" width="350px"></a>
           <video autoplay muted loop src="{% static 'site_app/img/mini_anime.mp4' %}" width="250px" class="float-end anime01">
         </div>
-        
+
         <div class="openbtn4"><span></span><span></span><span></span></div>
 
         <div class="hidden-menu row d-none position-fixed vh-100">
