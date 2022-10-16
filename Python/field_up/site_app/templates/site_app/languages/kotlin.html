@@ -16,15 +16,15 @@
         <h1 class="text-center">Kotlin</h1>
         
         {% for main in main_list %}
-        <div class="row p-3">
-            <div class="col-4 bg-light">
-                <img class="m-3" src="{{ main.thumbnail.url }}" width="50%">
+        <div class="row p-3 flexbox">
+            <div class="col-4 bg-light box1">
+                <img class="m-3" class="d-block mx-auto" alt="サムネイル" src="{{ main.thumbnail.url }}" width="50%">
             </div>
-            <div class="col-4">
+            <div class="col-4 box2">
                 <p>{{ main.summary_text }}</p>
             </div>
-            <div class="col-4">
-                <iframe width="400" height="225" src="{{ main.iframe_code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="col-4 box3">
+                <iframe width="400" height="225" class="d-block mx-auto" src="{{ main.iframe_code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         {% endfor %}

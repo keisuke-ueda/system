@@ -40,16 +40,11 @@
     <!-- ヘッダー -->
     <header id="header">
       <div class="row bg-1 header-inner">
-        <div class="col-8">
-          <a href="{% url 'site_app:top' %}"><img class="m-3" src="{% static 'site_app/img/logo.png' %}" width="25%"></a>
+        <div class="col-12">
+          <a href="{% url 'site_app:top' %}"><img class="m-3 sp-logo" src="{% static 'site_app/img/logo.png' %}" width="350px"></a>
+          <video autoplay muted loop src="{% static 'site_app/img/mini_anime.mp4' %}" width="250px" class="float-end anime01">
         </div>
-        <div class="col-1">
-          
-        </div>
-        <div class="col-3">
-          <video autoplay muted loop src="{% static 'site_app/img/mini_anime.mp4' %}" width="70%">
-        </div>
-
+        
         <div class="openbtn4"><span></span><span></span><span></span></div>
 
         <div class="hidden-menu row d-none position-fixed vh-100">

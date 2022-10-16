@@ -36,17 +36,12 @@
     <!-- ヘッダー -->
     <header id="header1">
       <div class="row bg-1">
-        <div class="col-8">
-          <a href="{% url 'site_app:top' %}"><img class="m-3" als="屋号ロゴ" src="{% static 'site_app/img/logo.png' %}" width="25%"></a>
+        <div class="col-12">
+          <a href="{% url 'site_app:top' %}"><img class="m-3 sp-logo" als="屋号ロゴ" src="{% static 'site_app/img/logo.png' %}" width="350px"></a>
+          <video autoplay muted loop src="{% static 'site_app/img/mini_anime.mp4' %}" width="250px" class="float-end anime01">
         </div>
-        <div class="col-1">
-          
-        </div>
-        <div class="col-3">
-          <video autoplay muted loop src="{% static 'site_app/img/mini_anime.mp4' %}" width="70%">
-        </div>
-
       </div>
+
       <div class="row">
         <nav class="nav-1">
           <ul class="bag02">

@@ -16,44 +16,18 @@
         <h1 class="text-center">Python</h1>
         
         {% for main in main_list %}
-        <div class="row p-3">
-            <div class="col-4 bg-light">
-                <img class="m-3" src="{{ main.thumbnail.url }}" width="50%">
+        <div class="row p-3 flexbox">
+            <div class="col-4 bg-light box1">
+                <img class="m-3" class="d-block mx-auto" alt="サムネイル" src="{{ main.thumbnail.url }}" width="50%">
             </div>
-            <div class="col-4">
+            <div class="col-4 box2">
                 <p>{{ main.summary_text }}</p>
             </div>
-            <div class="col-4">
-                <iframe width="400" height="225" src="{{ main.iframe_code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="col-4 box3">
+                <iframe width="400" height="225" class="d-block mx-auto" src="{{ main.iframe_code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         {% endfor %}
-
-        <!-- <div class="row p-3">
-            <div class="col-5"></div>
-            <div class="col-4">
-                <div class="pagination">
-                    <input id="dot-1" type="radio" name="dots" checked="checked"> 
-                    <label for="dot-1"></label> 
-                    <input id="dot-2" type="radio" name="dots">
-                    <label for="dot-2"></label> 
-                    <input id="dot-3" type="radio" name="dots">
-                    <label for="dot-3"></label> 
-                    <input id="dot-4" type="radio" name="dots">
-                    <label for="dot-4"></label> 
-                    <input id="dot-5" type="radio" name="dots">
-                    <label for="dot-5"></label> 
-                    <input id="dot-6" type="radio" name="dots">
-                    <label for="dot-6"></label> 
-                    <input id="dot-7" type="radio" name="dots">
-                    <label for="dot-7"></label> 
-                    <input id="dot-8" type="radio" name="dots">
-                    <label for="dot-8"></label>
-                    <div class="pacman"></div>
-                </div>
-                <div class="col-3"></div>
-            </div>
-        </div> -->
 
         {% include 'site_app/page.html' %}
 
