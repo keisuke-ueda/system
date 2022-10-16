@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}デジタルの魅力{% endblock %}
+{% block title %}デジタルの魅力|Field-UP{% endblock %}
 
 {% block head %}
     <meta name="description" content="">
@@ -18,7 +18,7 @@
             <h2>人の夢を目標に変えてくれる</h2>
             <div class="col-12">
                 <div class="p-2">
-                    <img class="d-block mx-auto" src="{% static 'site_app/img/greg-rakozy-oMpAz-DN-9I-unsplash.jpg' %}" width="50%">
+                    <img class="d-block mx-auto sp-img" alt="人に夢を与えてくれる" src="{% static 'site_app/img/greg-rakozy-oMpAz-DN-9I-unsplash.jpg' %}" width="50%">
                 </div>
             </div>
             <div class="col-12 bg-white mt-3 p-3">
@@ -48,7 +48,7 @@
             <h2>リアルでできないことでもデジタル(バーチャル)なら実現できる</h2>
             <div class="col-12">
                 <div class="p-2">
-                    <img class="d-block mx-auto" src="{% static 'site_app/img/バーチャル.jpg' %}" width="50%">
+                    <img class="d-block mx-auto sp-img" alt="バーチャル空間" src="{% static 'site_app/img/バーチャル.jpg' %}" width="50%">
                 </div>
             </div>
             <div class="col-12 bg-white mt-3 p-3">
@@ -71,7 +71,7 @@
             <h2>多くの人がクリエーターになれる可能性が増えた</h2>
             <div class="col-12">
                 <div class="p-2">
-                    <img class="d-block mx-auto" src="{% static 'site_app/img/convertkit-Ky2YPCpnmK0-unsplash.jpg' %}" width="50%">
+                    <img class="d-block mx-auto sp-img" alt="クリエーター" src="{% static 'site_app/img/convertkit-Ky2YPCpnmK0-unsplash.jpg' %}" width="50%">
                 </div>
             </div>
             <div class="col-12 bg-white mt-3 p-3">
@@ -95,11 +95,11 @@
             </div>
         </div>
 
-        <div class="row p-4">
-            <div class="col-6">
+        <div class="row p-4 flexbox">
+            <div class="col-6 box1 mt-3">
                 <a href="{% url 'site_app:lang' %}" class="btn1 btn1-flat d-flex align-items-center"><span>プログラミング</span></a>
             </div>
-            <div class="col-6">
+            <div class="col-6 box2 mt-3">
                 <a href="{% url 'site_app:example' %}" class="btn1 btn1-flat d-flex align-items-center"><span>システム開発</span></a>
             </div>
         </div>

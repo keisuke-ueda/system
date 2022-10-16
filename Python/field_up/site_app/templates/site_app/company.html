@@ -2,10 +2,10 @@
 
 {% load static %}
 
-{% block title %}Company{% endblock %}
+{% block title %}事業概要|Field-UP{% endblock %}
 
 {% block head %}
-    <meta name="description" content="Field-UPの事業内容を紹介します">
+    <meta name="description" content="Field-UPのシステム事業がどんなことをしているかお伝えします。サイトや、アプリの開発だけでなく、エンジニアの育成やオンライン講座、サーバー周りの業務など幅広く展開しております。システム事業以外にも違った事業も展開しているので是非ご覧ください。">
     <meta name="keywords" content="プログラミング,開発,システム開発,Field-UP,フィールドアップ,FIELD-UP,アプリケーション,アプリ">
 {% endblock %}
 
@@ -34,25 +34,25 @@
             <h3 class="text-center kind">Kind</h3>
         </div>
 
-        <div class="row p-2">
-            <div class="col-6">
+        <div class="row flexbox">
+            <div class="col-6 box1">
                 <div class="">
                     <a href="https://www.field-up.work/energy/" target="_blank"><img class="m-3 d-block mx-auto border border-5 border-danger" src="{% static 'site_app/img/energy_business_rev2.jpg' %}" width="100%"></a>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 box2">
                 <div class="">
                     <a href="https://www.field-up.work/mental_field-up/" target="_blank"><img class="m-3 d-block mx-auto border border-5 border-success" src="{% static 'site_app/img/mental_business_rev2.jpg' %}" width="100%"></a>
                 </div>
             </div>
         </div>
-        <div class="row p-2">
-            <div class="col-6">
+        <div class="row flexbox">
+            <div class="col-6 box1">
                 <div class="">
                     <a href="https://www.field-up.work/officeinterior/ " target="_blank"><img class="m-3 d-block mx-auto border border-5 border-warning" src="{% static 'site_app/img/construction_business_rev2.jpg' %}" width="100%"></a>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 box2">
                 <div class="">
                     <a href="{% url 'site_app:top' %}"><img class="m-3 d-block mx-auto border border-5 border-info" src="{% static 'site_app/img/system_business_rev1.jpg' %}" width="100%"></a>
                 </div>

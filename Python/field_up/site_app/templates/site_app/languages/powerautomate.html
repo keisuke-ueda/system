@@ -2,10 +2,10 @@
 
 {% load static %}
 
-{% block title %}PowerAutomate{% endblock %}
+{% block title %}PowerAutomate|Field-UP{% endblock %}
 
 {% block head %}
-    <meta name="description" content="PowerAutomateとはどんなものか知ることのできるページです">
+    <meta name="description" content="PowerAutomateは数年前から話題のRPAツールの中でも無料で使えるモノです。今まで無料のモノはありましたが利用制限が合ったり、難しくて使えないという方が多くいました。マイクロソフト社が出したこのRPAであれば、誰でもノーコードでプログラムを作り上げることができて、業務効率化を狙うことができます。">
     <meta name="keywords" content="プログラミング,開発,システム開発,Field-UP,フィールドアップ,FIELD-UP,アプリケーション,アプリ,PowerAutomate,AI,フレームワーク">
 {% endblock %}
 
@@ -16,15 +16,15 @@
         <h1 class="text-center">PowerAutomateDesktop</h1>
         
         {% for main in main_list %}
-        <div class="row p-3">
-            <div class="col-4 bg-light">
-                <img class="m-3" src="{{ main.thumbnail.url }}" width="50%">
+        <div class="row p-3 flexbox">
+            <div class="col-4 bg-light box1">
+                <img class="m-3" class="d-block mx-auto" alt="サムネイル" src="{{ main.thumbnail.url }}" width="50%">
             </div>
-            <div class="col-4">
+            <div class="col-4 box2">
                 <p>{{ main.summary_text }}</p>
             </div>
-            <div class="col-4">
-                <iframe width="400" height="225" src="{{ main.iframe_code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="col-4 box3">
+                <iframe width="400" height="225" class="d-block mx-auto" src="{{ main.iframe_code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         {% endfor %}

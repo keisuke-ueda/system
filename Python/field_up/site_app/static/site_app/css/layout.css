@@ -41,7 +41,7 @@ footer {
 }
 
 h1{
-  font-size:4vw;
+  font-size:50px;
   font-family: 'M+ Type-1 (general-j) Black';
   font-style: italic;
   text-shadow:
@@ -52,26 +52,30 @@ h1{
   margin: 0;
 }
 
-
 @media screen and (min-width:300px) and ( max-width:780px) {
-  
-
+  h1{
+    font-size:30px;
+  }
 }
 
-
-
 h2 {
-  font-size:2.2vw;
+  font-size:30px;
   font-family: 'M+ Type-1 (general-j) Black';
   background:linear-gradient(transparent 60%, rgb(152, 214, 243) 90%);
   font-style: italic;
 }
 
+@media screen and (min-width:300px) and ( max-width:780px) {
+  h2{
+    font-size:18px;
+  }
+}
+
+
 h2:first-letter{
   color:#344abb;
   font-size:200%;
 }
-
 
 .kind{
   font-size:50px;
@@ -115,11 +119,6 @@ table {
   font-size:1.2vw;
 }
 
-.btn-f{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-style: italic;
-  font-weight: 700 !important;
-}
 header{
   width: 100%;
 }
@@ -140,6 +139,12 @@ header{
   padding-top:220px;
 }
 
+@media screen and (min-width:300px) and ( max-width:780px) {
+  .content1{
+    padding-top:150px;
+  }
+}
+
 #header{
   height: 220px;
   position: fixed;
@@ -150,9 +155,11 @@ header{
   padding-top:220px;
 }
 
-
-
-
+@media screen and (min-width:300px) and ( max-width:780px) {
+  .content{
+    padding-top:150px;
+  }
+}
 
 /*========= ナビゲーションドロップダウンのためのCSS ===============*/
 /*==ナビゲーション全体の設定*/
@@ -328,17 +335,6 @@ input[type="radio"]:hover ~ .pacman:after {
   animation: waka 500ms infinite;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /*========= ハンバーガーメニュー===============*/
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
 .openbtn4{
@@ -416,13 +412,10 @@ input[type="radio"]:hover ~ .pacman:after {
 
 /* 各言語のボタン ぽよよんと跳ねる */
 .lang-link-btn {
-  font-size:2vw;
   background:#a7c3f7;
   border-radius: 5px;
-  color: white;
-  text-decoration: none;
   padding: 10px;
-  width: 20vw;
+  width: 100%;
   height: 100%;
 }
 .lang-link-btn {
@@ -512,6 +505,7 @@ a.btn1-flat:hover:before {
 }
 
 
+/* 各ページ用 */
 /*========= ナビゲーションドロップダウンのためのCSS（ハンバーガーメニュー） ===============*/
 /*==ナビゲーション全体の設定*/
 .hidden-menu {
@@ -519,17 +513,32 @@ a.btn1-flat:hover:before {
   z-index: 99;
 }
 .nav-2{
-  font-size:1vw;
+  font-size:16px;
   background:rgba(0, 0, 0, 0.6);
-  width: 340px;
+  width: 250px;
 }
+
 /*ナビゲーションを横並びに*/
 .nav-2 ul{
   list-style: none;
 }
+
 .nav-2>ul {
-  margin: 225px 0 0 60px;
+  margin: 225px 0 0 10px;
 }
+
+@media screen and (min-width:300px) and ( max-width:780px) {
+  .nav-2{
+    font-size:13px;
+    background:rgba(0, 0, 0, 0.6);
+    width: 200px;
+  }
+
+  .nav-2>ul {
+    margin: 150px 0 0 10px;
+  }
+}
+
 
 /*ナビゲーションのリンク設定*/
 .nav-2 ul li a{
@@ -547,7 +556,6 @@ a.btn1-flat:hover:before {
 .nav-2 ul li{
   position: relative;
 }
-
 
 /*==矢印の設定*/
 
@@ -608,7 +616,6 @@ a.btn1-flat:hover:before {
 }
 
 
-
 /* コンテンツ登録・更新フォーム */
 .content_form input {
   display: inline-block;
@@ -634,8 +641,6 @@ a.btn1-flat:hover:before {
 }
 
 
-
-
 /* SP用 */
 @media screen and (min-width:300px) and ( max-width:780px) {
   .flexbox {
@@ -653,11 +658,29 @@ a.btn1-flat:hover:before {
       margin-left: auto;
       margin-right: auto;
   }
+
   .flexbox .box3 {
     width: 100%;
     margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .anime01{
+    width: 130px;
+  }
+
+  .sp-logo{
+    width: 200px;
+  }
+
+  .sp-img{
+    width: 250px;
+  }
+
+  iframe{
+    width:300px;
+    height:200px;
   }
 
 }
