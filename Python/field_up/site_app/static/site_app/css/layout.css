@@ -20,7 +20,6 @@ body{
   }
 }
 
-
 /* font関連 */
 .bg-1{
     background-color: rgb(234, 255, 255);
@@ -37,18 +36,9 @@ footer {
     font-size:18px;
   }
 }
-
-
-
-
-
 .font-weight-bold {
   font-weight: 700 !important;
 }
-
-
-
-
 
 h1{
   font-size:4vw;
@@ -111,17 +101,19 @@ h3 {
   }
 }
 
-
-
-
-
 span {
-  font-size:1.4vw;
+  font-size:25px;
 }
+
+@media screen and (min-width:300px) and ( max-width:780px) {
+  span {
+    font-size:18px;
+  }
+}
+
 table {
   font-size:1.2vw;
 }
-
 
 .btn-f{
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -158,6 +150,10 @@ header{
   padding-top:220px;
 }
 
+
+
+
+
 /*========= ナビゲーションドロップダウンのためのCSS ===============*/
 /*==ナビゲーション全体の設定*/
 .nav-1{
@@ -167,14 +163,14 @@ header{
 }
 /*ナビゲーションを横並びに*/
 .nav-1 ul{
-  font-size:1.2vw;
+  font-size:25px;
   list-style: none;
   display: flex;
   justify-content: center;
 }
 /*2階層目以降は横並びにしない*/
 .nav-1 ul ul{
-  font-size:1.05vw;
+  font-size:20px;
   display: block;
 }
 
@@ -250,6 +246,15 @@ header{
   background:rgb(123, 169, 255);
 }
 
+@media screen and (min-width:300px) and ( max-width:780px) {
+  .nav-1 ul{
+    font-size:15px;
+  }
+
+  .nav-1 ul ul{
+    font-size:14px;
+  }
+}
 
 /*========= パックマンページネーション ===============*/
 .pagination {
@@ -322,6 +327,16 @@ input[type="radio"]:hover ~ .pacman:before,
 input[type="radio"]:hover ~ .pacman:after {
   animation: waka 500ms infinite;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /*========= ハンバーガーメニュー===============*/
@@ -610,8 +625,15 @@ a.btn1-flat:hover:before {
 
 /* バグどり */
 .bag01{
-  margin: 0
+  margin: 0;
 }
+
+.bag02{
+  margin: 0;
+  padding: 0;
+}
+
+
 
 
 /* SP用 */
