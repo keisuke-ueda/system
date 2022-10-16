@@ -24,8 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Noto+Serif+JP&display=swap" rel="stylesheet">
 
     <!-- 各種設定 -->
-    <title>TOPページ</title>
-    <meta name="description" content="システム開発やアプリケーション開発のことを知りたい人は必見。多くの情報をまとめてあるサイトです。">
+    <title>サイト制作・アプリ開発・プログラミング</title>
+    <meta name="description" content="近年デジタル要素が増えていく中で、システムや、プログラミングといった言葉を無視できない時代です。システム開発やアプリケーション開発のことを知りたい方は必見です。開発な流れや、どのぐらいの価格で制作ができるのかの目安まで知ることができます。">
     <meta name="keywords" content="プログラミング,開発,システム開発,Field-UP,フィールドアップ,FIELD-UP,アプリケーション,アプリ">
 
     <!-- ファビコン -->
@@ -37,7 +37,7 @@
     <header id="header1">
       <div class="row bg-1">
         <div class="col-8">
-          <a href="{% url 'site_app:top' %}"><img class="m-3" src="{% static 'site_app/img/logo.png' %}" width="25%"></a>
+          <a href="{% url 'site_app:top' %}"><img class="m-3" als="屋号ロゴ" src="{% static 'site_app/img/logo.png' %}" width="25%"></a>
         </div>
         <div class="col-1">
           
@@ -48,8 +48,8 @@
 
       </div>
       <div class="row">
-        <nav class="nav-1"> 
-          <ul>
+        <nav class="nav-1">
+          <ul class="bag02">
             <li class="p-3"><a href="{% url 'site_app:company' %}">Company</a></li>
             {% comment %} <li class="p-3"><a href="{% url 'site_app:news' %}">News</a></li> {% endcomment %}
             <li class="p-3 has-child"><a href="#">Content</a>
@@ -99,8 +99,10 @@
         {% comment %} ニュース {% endcomment %}
 
             <div class="row mb-5">
-              <h1 class="text-center mb-2">News</h1>
-              <div class="row p-2 bg-white">
+
+              <h3 class="text-center mb-2 kind">News</h3>
+
+              <div class="row p-2 bg-white bag01">
                 <div class="col-2 bg-info"></div>
                 <div class="col-8">
                     <p>2022-08-01 : システム事業サイト開設</p>
@@ -108,7 +110,7 @@
                 <div class="col-2 bg-info"></div>
               </div>
     
-              <div class="row p-2 bg-white">
+              <div class="row p-2 bg-white bag01">
                   <div class="col-2 bg-info"></div>
                     <div class="col-8">
                         <p>2022-08-01 : プログラミング言語動画各種配信中!!</p>
@@ -116,7 +118,7 @@
                   <div class="col-2 bg-info"></div>
               </div>
 
-              <div class="row p-2 bg-white">
+              <div class="row p-2 bg-white bag01">
                 <div class="col-2 bg-info"></div>
                   <div class="col-8">
                     <p>2022-10-16 : Field-UP総合サイト解説。<a href="https://www.field-up.work/" target="_blank">サイトへはコチラから</a></p>
@@ -126,27 +128,28 @@
             </div>
 
         
+
         {% comment %} コンテンツ {% endcomment %}
 
-            <div class="row">
-                <div class="col-4 bg-light">
-                  <a href="{% url 'site_app:appeal' %}"><img class="m-3" src="{% static 'site_app/img/デジタルの魅力.jpg' %}" width="100%"></a>
-                </div>
-                <div class="col-4  bg-light">
-                  <a href="{% url 'site_app:example' %}"><img class="m-3" src="{% static 'site_app/img/システム開発とは.jpg' %}" width="100%"></a>
-                </div>
-                <div class="col-4 bg-light">
-                  <a href="{% url 'site_app:lang' %}"><img class="m-3" src="{% static 'site_app/img/プログラミングとは.jpg' %}" width="100%"></a>
-                </div>
+            <div class="row flexbox">
+                  <div class="col-4 box1 mt-4">
+                    <a href="{% url 'site_app:appeal' %}"><img alt="デジタルの魅力" src="{% static 'site_app/img/デジタルの魅力.jpg' %}" width="100%"></a>
+                  </div>
+                  <div class="col-4 box2 mt-4">
+                    <a href="{% url 'site_app:example' %}"><img alt="システム開発" src="{% static 'site_app/img/システム開発とは.jpg' %}" width="100%"></a>
+                  </div>
+                  <div class="col-4 box3 mt-4">
+                    <a href="{% url 'site_app:lang' %}"><img alt="プログラミング" src="{% static 'site_app/img/プログラミングとは.jpg' %}" width="100%"></a>
+                  </div>
             </div>
     </div>
 
   {% comment %} {% block header %}{% endblock %} {% endcomment %}
   <!-- フッター -->
+  </body>
   <footer>
     {% include 'site_app/footer.html' %}
   </footer>
-  </body>
 </html>
 
 
