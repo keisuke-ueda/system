@@ -45,7 +45,6 @@ $(window).on('load', function () {
 });
 
 
-
 //スクロールすると上部に固定させるための設定を関数でまとめる
 function FixedAnime() {
   var headerH = $('#header').outerHeight(true);
@@ -66,3 +65,57 @@ $(window).scroll(function () {
 $(window).on('load', function () {
   FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
 });
+
+// デジタル文字
+$(function(){
+  $('.digital-font').hover(function(){
+    setTimeout(() => {
+      $(this).text('mpgmwpnmgep');
+      setTimeout(() => {
+        $(this).text('デpgwolpp;gwe');
+        setTimeout(() => {
+          $(this).text('デジknmpwgjpwe');
+          setTimeout(() => {
+            $(this).text('デジタkgwweew');
+            setTimeout(() => {
+              $(this).text('デジタル;l:grwgfm,we');
+              setTimeout(() => {
+                $(this).text('デジタルの,gw,:we]');
+                setTimeout(() => {
+                  $(this).text('デジタルの魅.[lgew[lg[we');
+                  setTimeout(() => {
+                    $(this).text('デジタルの魅力');
+                  }, 040);
+                }, 040);
+              }, 040);
+            }, 040); 
+          }, 040);  
+        }, 040); 
+      }, 040); 
+    }, 040);   
+  },function(){
+    $(this).text('デジタルの魅力');
+  });
+
+
+
+
+
+  $('.map a').hover(function(){
+      $(this).text('ダムマップ');
+  },function(){
+      $(this).text('Dam Map');
+  });
+  $('.diary a').hover(function(){
+      $(this).text('ダム日記');
+  },function(){
+      $(this).text('Dam Diary');
+  });
+  $('.link a').hover(function(){
+      $(this).text('ダムリンク');
+  },function(){
+      $(this).text('Dam Link');
+  });
+});
+
+
