@@ -193,7 +193,7 @@ window.addEventListener("scroll", function() {
 
     var txt = document.getElementById('digital-font03');
     //文字を表示、ランダムな文字の後表示される
-    setText(txt, "リアルでできないことでもデジタル(バーチャル)なら実現できる");
+    setText(txt, "リアルでダメでもデジタル(バーチャル)なら");
     
     //一文字一文字、ランダムな文字を表示した後に表示する
     function setText(targetText,viewText){
