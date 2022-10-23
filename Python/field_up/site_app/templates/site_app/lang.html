@@ -13,15 +13,10 @@
 
     {% comment %} コンテンツ {% endcomment %}
     <div class="container content mb-5">
-        <h1 class="text-center">プログラミング</h1>
+        <h1 class="text-center digital-font10">プログラミング</h1>
         <div class="row p-4">
-            <h2>プログラミング言語って何？</h2>
-            <div class="col-12">
-                <div class="p-2">
-                    <img class="d-block mx-auto sp-img" alt="プログラミング" src="{% static 'site_app/img/james-harrison-vpOeXr5wmR4-unsplash.jpg' %}" width="50%">
-                </div>
-            </div>
-            <div class="col-12 bg-white mt-3 p-3">
+            <h2 class="digital-font11">プログラミング言語って何？</h2>
+            <div class="col-12 mt-3 p-3 bg-lang-01 div00">
                 <p>人とPCを橋渡ししてくれる言葉のようなもので、英単語やその短縮系のような文字が繋がっている<br>
                     言語によって同じ意味合いでも単語が違ったり、文法が少し違ったりします
                 </p>
@@ -47,13 +42,8 @@
         </div>
 
         <div class="row p-4">
-            <h2>適正はあるが誰でもできる</h2>
-            <div class="col-12">
-                <div class="p-2">
-                    <img class="d-block mx-auto sp-img" alt="必ずできる" src="{% static 'site_app/img/positive-gffe556813_1920.jpg' %}" width="50%">
-                </div>
-            </div>
-            <div class="col-12 bg-white mt-3 p-3">
+            <h2 class="digital-font12">適正はあるが誰でもできる</h2>
+            <div class="col-12 mt-3 p-3 bg-lang-02 div00">
                 <p><span class="text-primary font-weight-bold">『PCを今まであまり触ってない未経験でもできますか？』</span></p>
                 <p><span class="text-primary font-weight-bold">『ウチにこんなシステム入れても使えないよ』</span></p>
                 <p>こんな声をよく聞きます</br>
@@ -66,13 +56,8 @@
         </div>
 
         <div class="row p-4">
-            <h2>アルゴリズム</h2>
-            <div class="col-12">
-                <div class="p-2">
-                    <img class="d-block mx-auto sp-img" alt="アルゴリズム" src="{% static 'site_app/img/mark-g263e4c72f_1920.jpg' %}" width="50%">
-                </div>
-            </div>
-            <div class="col-12 bg-white mt-3 p-3">
+            <h2 class="digital-font13">アルゴリズム</h2>
+            <div class="col-12 mt-3 p-3 bg-lang-03 div00">
                 <p>アルゴリズムというと難しい層と感じる人もいるかもしれませんが<span class="text-primary font-weight-bold">何かをするときに必要な手順</span>のようなもののことをアルゴリズムと言います</p>
                 <p>簡単なアルゴリズムの例を載せます</p>
                 <p><span class="text-success font-weight-bold">手順:1</span><br>
@@ -89,6 +74,15 @@
                 <p>とても簡単にですがこれがアルゴリズムの例です<br>
                     日頃やっていることや、これから作ろうとしているシステムやプログラムに<span class="text-primary font-weight-bold">どんなことを、どんな手順で実施するか</span>
                     を整理さえできれば、自身でプログラムを書くことも、誰かに依頼することもできます</p>
+            </div>
+        </div>
+
+        <div class="row p-4 flexbox">
+            <div class="col-6 box1 mt-3">
+                <a href="{% url 'site_app:appeal' %}" class="btn1 btn1-flat d-flex align-items-center"><span>デジタルの魅力</span></a>
+            </div>
+            <div class="col-6 box2 mt-3">
+                <a href="{% url 'site_app:example' %}" class="btn1 btn1-flat d-flex align-items-center"><span>システム開発</span></a>
             </div>
         </div>
 

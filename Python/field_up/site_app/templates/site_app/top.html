@@ -45,6 +45,9 @@
 
   </head>
   <body>
+
+    <div class="loader loader-wrap">Loading...</div>
+
     <!-- ヘッダー -->
     <header id="header1">
       <div class="row bg-1">
@@ -94,7 +97,7 @@
     </header>
 
     <div class="container mt-3 content1 mb-5">
-        <div class="first_view position-relative mb-5">
+        <div class="col-8 first_view position-relative d-block mx-auto mb-5 div01">
             <video autoplay muted class="w-100 movie-1">
                 <source src="{% static 'site_app/img/top_m.mp4' %}" type="video/mp4">
             </video>
@@ -105,11 +108,11 @@
     
         {% comment %} ニュース {% endcomment %}
 
-            <div class="row mb-5">
+            <div class="row mb-5 fade">
 
               <h3 class="text-center mb-2 kind">News</h3>
 
-              <div class="row p-2 bg-white bag01">
+              <div class="row p-2 bg-dark bag01">
                 <div class="col-2 bg-info"></div>
                 <div class="col-8">
                     <p>2022-08-01 : システム事業サイト開設</p>
@@ -117,15 +120,15 @@
                 <div class="col-2 bg-info"></div>
               </div>
     
-              <div class="row p-2 bg-white bag01">
+              <div class="row p-2 bg-dark bag01">
                   <div class="col-2 bg-info"></div>
                     <div class="col-8">
-                        <p>2022-08-01 : プログラミング言語動画各種配信中!!</p>
+                        <p class="">2022-08-01 : プログラミング言語動画各種配信中!!</p>
                     </div>
                   <div class="col-2 bg-info"></div>
               </div>
 
-              <div class="row p-2 bg-white bag01">
+              <div class="row p-2 bg-dark bag01">
                 <div class="col-2 bg-info"></div>
                   <div class="col-8">
                     <p>2022-10-16 : Field-UP総合サイト解説。<a href="https://www.field-up.work/" target="_blank">サイトへはコチラから</a></p>
@@ -138,14 +141,14 @@
 
         {% comment %} コンテンツ {% endcomment %}
 
-            <div class="row flexbox">
-                  <div class="col-4 box1 mt-4">
+            <div class="row flexbox fade">
+                  <div class="col-4 box1 mt-4 div01">
                     <a href="{% url 'site_app:appeal' %}"><img alt="デジタルの魅力" src="{% static 'site_app/img/デジタルの魅力.jpg' %}" width="100%"></a>
                   </div>
-                  <div class="col-4 box2 mt-4">
+                  <div class="col-4 box2 mt-4 div02">
                     <a href="{% url 'site_app:example' %}"><img alt="システム開発" src="{% static 'site_app/img/システム開発とは.jpg' %}" width="100%"></a>
                   </div>
-                  <div class="col-4 box3 mt-4">
+                  <div class="col-4 box3 mt-4 div03">
                     <a href="{% url 'site_app:lang' %}"><img alt="プログラミング" src="{% static 'site_app/img/プログラミングとは.jpg' %}" width="100%"></a>
                   </div>
             </div>
@@ -154,7 +157,7 @@
   {% comment %} {% block header %}{% endblock %} {% endcomment %}
   <!-- フッター -->
   </body>
-  <footer>
+  <footer class="bg-dark">
     {% include 'site_app/footer.html' %}
   </footer>
 </html>
