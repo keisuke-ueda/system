@@ -55,30 +55,31 @@ function FixedAnime() {
       $('#header').removeClass('fixed');//fixedというクラス名を除去
     }
 }  
-  
-// 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function () {
-  FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
-});
-  
-// ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-  FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
-});
 
-// 表示フェード
-$(function(){
-	$(window).scroll(function (){
-		$('.fade').each(function(){
-			var elemPos = $(this).offset().top;
-			var scroll = $(window).scrollTop();
-			var windowHeight = $(window).height();
-			if (scroll > elemPos - windowHeight + 200){
-				$(this).addClass('scrollin');
-			}
-		});
-	});
-});
+
+// // 画面をスクロールをしたら動かしたい場合の記述
+// $(window).scroll(function () {
+//   FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
+// });
+  
+// // ページが読み込まれたらすぐに動かしたい場合の記述
+// $(window).on('load', function () {
+//   FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
+// });
+
+// // 表示フェード
+// $(function(){
+// 	$(window).scroll(function (){
+// 		$('.fade').each(function(){
+// 			var elemPos = $(this).offset().top;
+// 			var scroll = $(window).scrollTop();
+// 			var windowHeight = $(window).height();
+// 			if (scroll > elemPos - windowHeight + 200){
+// 				$(this).addClass('scrollin');
+// 			}
+// 		});
+// 	});
+// });
 
 
 
