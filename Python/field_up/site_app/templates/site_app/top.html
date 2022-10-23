@@ -15,8 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="{% static 'site_app/js/layout.js' %}"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    
+   
     <!-- フォト -->
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
@@ -108,7 +107,7 @@
     
         {% comment %} ニュース {% endcomment %}
 
-            <div class="row mb-5">
+            <div class="row mb-5 fade">
 
               <h3 class="text-center mb-2 kind">News</h3>
 
@@ -141,7 +140,7 @@
 
         {% comment %} コンテンツ {% endcomment %}
 
-            <div class="row flexbox">
+            <div class="row flexbox fade">
                   <div class="col-4 box1 mt-4 div01">
                     <a href="{% url 'site_app:appeal' %}"><img alt="デジタルの魅力" src="{% static 'site_app/img/デジタルの魅力.jpg' %}" width="100%"></a>
                   </div>
