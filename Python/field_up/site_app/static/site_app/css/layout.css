@@ -13,15 +13,6 @@ body{
     font-family: "M PLUS 1p";
     font-size:16px;
     color:#fff;
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(0, 217, 255),
-    0 0 82px rgb(0, 217, 255),
-    0 0 92px rgb(0, 217, 255),
-    0 0 102px rgb(0, 217, 255),
-    0 0 151px rgb(0, 217, 255);
 }
 
 @media screen and (min-width:300px) and ( max-width:780px) {
@@ -47,7 +38,7 @@ footer {
 
 .font-weight-bold {
   font-weight: 700 !important;
-  color:#ffffff;
+  color:#260eff;
   text-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
@@ -173,28 +164,68 @@ header{
 }
 
 .bg-appeal-01 {
-  background-image:url('/static/site_app/img/greg-rakozy-oMpAz-DN-9I-unsplash.jpg');
-  object-fit: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  url('/static/site_app/img/greg-rakozy-oMpAz-DN-9I-unsplash.jpg');
   color:#ffffff;
-  background-color: rgba(255, 255, 255, 0.562);
+  background-size:50% auto;
 }
 
 
+.bg-appeal-02 {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  url('/static/site_app/img/バーチャル.jpg');
+  color:#ffffff;
+  background-size:50% auto;
+}
 
+.bg-appeal-03 {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  url('/static/site_app/img/convertkit-Ky2YPCpnmK0-unsplash.jpg');
+  color:#ffffff;
+  background-size:50% auto;
+}
 
+.bg-exsmple-01 {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  url('/static/site_app/img/開発とは.jpg');
+  color:#ffffff;
+  background-size:50% auto;
+}
 
+.bg-exsmple-02 {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  url('/static/site_app/img/devops.jpg');
+  color:#ffffff;
+  background-size:50% auto;
+}
 
+.bg-exsmple-03 {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  url('/static/site_app/img/コスト.jpg');
+  color:#ffffff;
+  background-size:50% auto;
+}
 
+.bg-lang-01 {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  url('/static/site_app/img/james-harrison-vpOeXr5wmR4-unsplash.jpg');
+  color:#ffffff;
+  background-size:50% auto;
+}
 
+.bg-lang-02 {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  url('/static/site_app/img/positive-gffe556813_1920.jpg');
+  color:#ffffff;
+  background-size:50% auto;
+}
 
-
-
-
-
-
-
-
-
+.bg-lang-03 {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  url('/static/site_app/img/mark-g263e4c72f_1920.jpg');
+  color:#ffffff;
+  background-size:50% auto;
+}
 
 
 
@@ -277,7 +308,7 @@ header{
   transition:all .3s;
 }
 
-.nav-1 ul li a:hover{
+.nav-1 ul li a:hover,.nav-1 ul li ul li a:hover{
   color:rgb(251, 255, 43); 
 }
 
@@ -810,17 +841,19 @@ a.btn1-flat:hover:before {
   }
 }
 
+/* 表示フェード */
+.fade {
+  text-align: center;
+  opacity : 0;
+  transition: opacity 3s;
+}
+
+.fade.scrollin {
+  opacity: 1;
+}
 
 
-
-
-
-
-
-
-
-
-
+/* ロードアニメーション */
 
 
 /* SP用 */

@@ -66,31 +66,53 @@ $(window).on('load', function () {
   FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
 });
 
+// 表示フェード
+$(function(){
+	$(window).scroll(function (){
+		$('.fade').each(function(){
+			var elemPos = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight + 200){
+				$(this).addClass('scrollin');
+			}
+		});
+	});
+});
 
+// ローディングアニメーション
+$(function(){
+	var loader = $('.loader-wrap');
 
+	//ページの読み込みが完了したらアニメーションを非表示
+	$(window).on('load',function(){
+		loader.fadeOut();
+	});
 
-
-
-
+	//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+	setTimeout(function(){
+		loader.fadeOut();
+	},3000);
+});
 
 
 // デジタル文字
 $(function(){
   $('.digital-font01').hover(function(){
     setTimeout(() => {
-      $(this).text('mpgmwpnmgep');
+      $(this).text('mp@]gm@wpnm]gep');
       setTimeout(() => {
-        $(this).text('デpgwolpp;gwe');
+        $(this).text('デpg@awolpp;gwe');
         setTimeout(() => {
-          $(this).text('デジknmpwgjpwe');
+          $(this).text('デジ[we@rpvwlgerw');
           setTimeout(() => {
-            $(this).text('デジタkgwweew');
+            $(this).text('デジタk[gww[eew');
             setTimeout(() => {
               $(this).text('デジタル;l:grwgfm,we');
               setTimeout(() => {
                 $(this).text('デジタルの,gw,:we]');
                 setTimeout(() => {
-                  $(this).text('デジタルの魅.[lgew[lg[we');
+                  $(this).text('デジタルの魅[lg');
                   setTimeout(() => {
                     $(this).text('デジタルの魅力');
                   }, 040);
@@ -330,101 +352,273 @@ $(function(){
       $(this).text('多くの人がクリエーターになれる可能性が増えた');
     });
 
-    $(function(){
-      $('.digital-font05').hover(function(){
+  $(function(){
+    $('.digital-font05').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
         setTimeout(() => {
-          $(this).text('mpgmwpnmgep');
+          $(this).text('シpgwolpp;gwe');
           setTimeout(() => {
-            $(this).text('シpgwolpp;gwe');
+            $(this).text('シスknmpwgjpwe');
             setTimeout(() => {
-              $(this).text('シスknmpwgjpwe');
+              $(this).text('システkgwweew');
               setTimeout(() => {
-                $(this).text('システkgwweew');
+                $(this).text('システム;l:grwgfm,we');
                 setTimeout(() => {
-                  $(this).text('システム;l:grwgfm,we');
+                  $(this).text('システム開,gw,:we]');
                   setTimeout(() => {
-                    $(this).text('システム開,gw,:we]');
+                    $(this).text('システム開発');
+                    }, 040);
+                  }, 040);
+                }, 040);
+              }, 040); 
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('システム開発');
+    });
+
+  $(function(){
+    $('.digital-font06').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('開pgwolpp;gwe');
+          setTimeout(() => {
+            $(this).text('開発knmpwgjpwe');
+            setTimeout(() => {
+              $(this).text('開発っkgwweew');
+              setTimeout(() => {
+                $(this).text('開発って;l:grwgfm,we');
+                setTimeout(() => {
+                  $(this).text('開発ってど,gw,:we]');
+                  setTimeout(() => {
+                    $(this).text('開発ってどうehwbfe');
                     setTimeout(() => {
-                      $(this).text('システム開発');
+                      $(this).text('開発ってどう進kutahetyre');
+                      setTimeout(() => {
+                        $(this).text('開発ってどう進むehwbfe');
+                        setTimeout(() => {
+                          $(this).text('開発ってどう進むの？');
+                          }, 040);
+                        }, 040);
                       }, 040);
                     }, 040);
                   }, 040);
-                }, 040); 
-              }, 040);  
-            }, 040); 
+                }, 040);
+              }, 040); 
+            }, 040);  
           }, 040); 
-        }, 040);   
-      },function(){
-        $(this).text('システム開発');
-      });
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('開発ってどう進むの？');
+    });
 
-      $(function(){
-        $('.digital-font06').hover(function(){
+  $(function(){
+    $('.digital-font07').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('Dpgwolpp;gwe');
           setTimeout(() => {
-            $(this).text('mpgmwpnmgep');
+            $(this).text('Deknmpwgjpwe');
             setTimeout(() => {
-              $(this).text('開pgwolpp;gwe');
+              $(this).text('Devkgwweew');
               setTimeout(() => {
-                $(this).text('開発knmpwgjpwe');
+                $(this).text('Dev-;l:grwgfm,we');
                 setTimeout(() => {
-                  $(this).text('開発っkgwweew');
+                  $(this).text('Dev-O,gw,:we]');
                   setTimeout(() => {
-                    $(this).text('開発って;l:grwgfm,we');
+                    $(this).text('Dev-Opehwbfe');
                     setTimeout(() => {
-                      $(this).text('開発ってど,gw,:we]');
+                      $(this).text('Dev-Opskutahetyre');
                       setTimeout(() => {
-                        $(this).text('開発ってどうehwbfe');
+                        $(this).text('Dev-Opsっehwbfe');
                         setTimeout(() => {
-                          $(this).text('開発ってどう進kutahetyre');
+                          $(this).text('Dev-Opsってnoewnofwe');
                           setTimeout(() => {
-                            $(this).text('開発ってどう進むehwbfe');
+                            $(this).text('Dev-Opsってなonoewnnw');
                             setTimeout(() => {
-                              $(this).text('開発ってどう進むの？');
+                              $(this).text('Dev-Opsってなにqfz,@gv,wer,');
+                              setTimeout(() => {
+                                $(this).text('Dev-Opsってなに？');
+                                }, 040);
                               }, 040);
                             }, 040);
                           }, 040);
                         }, 040);
                       }, 040);
                     }, 040);
-                  }, 040); 
-                }, 040);  
+                  }, 040);
+                }, 040);
               }, 040); 
-            }, 040); 
-          }, 040);   
-        },function(){
-          $(this).text('開発ってどう進むの？');
-        });
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('Dev-Opsってなに？');
+    });
 
-        $(function(){
-          $('.digital-font07').hover(function(){
+  $(function(){
+    $('.digital-font08').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('どpgwolpp;gwe');
+          setTimeout(() => {
+            $(this).text('どのknmpwgjpwe');
             setTimeout(() => {
-              $(this).text('mpgmwpnmgep');
+              $(this).text('どのぐkgwweew');
               setTimeout(() => {
-                $(this).text('Dpgwolpp;gwe');
+                $(this).text('どのぐら;l:grwgfm,we');
                 setTimeout(() => {
-                  $(this).text('Deknmpwgjpwe');
+                  $(this).text('どのぐらい,gw,:we]');
                   setTimeout(() => {
-                    $(this).text('Devkgwweew');
+                    $(this).text('どのぐらいの.[lgew[lg[we');
                     setTimeout(() => {
-                      $(this).text('Dev-;l:grwgfm,we');
+                      $(this).text('どのぐらいの費bweobfoqwe');
                       setTimeout(() => {
-                        $(this).text('Dev-O,gw,:we]');
+                        $(this).text('どのぐらいの費用g,wr[kger[p;w');
                         setTimeout(() => {
-                          $(this).text('Dev-Opehwbfe');
+                          $(this).text('どのぐらいの費用で@kr@[pk@krwe,w');
                           setTimeout(() => {
-                            $(this).text('Dev-Opskutahetyre');
+                            $(this).text('どのぐらいの費用ででf.her[;:h[er.h');
                             setTimeout(() => {
-                              $(this).text('Dev-Opsっehwbfe');
+                              $(this).text('どのぐらいの費用でできg.wer[].h[]:e.');
                               setTimeout(() => {
-                                $(this).text('Dev-Opsってnoewnofwe');
+                                $(this).text('どのぐらいの費用でできge;rwhg');
                                 setTimeout(() => {
-                                  $(this).text('Dev-Opsってなonoewnnw');
+                                  $(this).text('どのぐらいの費用でできるrjpoer@qwrqw');
                                   setTimeout(() => {
-                                    $(this).text('Dev-Opsってなにqfz,@gv,wer,');
+                                    $(this).text('どのぐらいの費用でできるのmnpgwfwf');
                                     setTimeout(() => {
-                                      $(this).text('Dev-Opsってなに？');
-                                      }, 040);
-                                    }, 040);
+                                      $(this).text('どのぐらいの費用でできるの？');
+                                      }, 040)
+                                    }, 040)
+                                  }, 040)
+                                }, 040);
+                              }, 040);
+                            }, 040);
+                          }, 040);
+                        }, 040);
+                      }, 040);
+                    }, 040);
+                  }, 040);
+                }, 040);
+              }, 040); 
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('どのぐらいの費用でできるの？');
+    });
+
+  $(function(){
+    $('.digital-font09').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('こpgwolpp;gwe');
+          setTimeout(() => {
+            $(this).text('こんknmpwgjpwe');
+            setTimeout(() => {
+              $(this).text('こんなkgwweew');
+              setTimeout(() => {
+                $(this).text('こんなこ;l:grwgfm,we');
+                setTimeout(() => {
+                  $(this).text('こんなこと,gw,:we]');
+                  setTimeout(() => {
+                    $(this).text('こんなことがpehwbfe');
+                    setTimeout(() => {
+                      $(this).text('こんなことがでkutahetyre');
+                      setTimeout(() => {
+                        $(this).text('こんなことができehwbfe');
+                        setTimeout(() => {
+                          $(this).text('こんなことができるnoewnofwe');
+                          setTimeout(() => {
+                            $(this).text('こんなことができる!!');
+                            }, 040);
+                          }, 040);
+                        }, 040);
+                      }, 040);
+                    }, 040);
+                  }, 040);
+                }, 040);
+              }, 040); 
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('こんなことができる!!');
+    });
+
+  $(function(){
+    $('.digital-font10').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('プpgwolpp;gwe');
+          setTimeout(() => {
+            $(this).text('プロknmpwgjpwe');
+            setTimeout(() => {
+              $(this).text('プログkgwweew');
+              setTimeout(() => {
+                $(this).text('プログラ;l:grwgfm,we');
+                setTimeout(() => {
+                  $(this).text('プログラミ,gw,:we]');
+                  setTimeout(() => {
+                    $(this).text('プログラミンpehwbfe');
+                    setTimeout(() => {
+                      $(this).text('プログラミング');
+                      }, 040);
+                    }, 040);
+                  }, 040);
+                }, 040);
+              }, 040); 
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('プログラミング');
+    });
+
+  $(function(){
+    $('.digital-font11').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('プpgwolpp;gwe');
+          setTimeout(() => {
+            $(this).text('プロknmpwgjpwe');
+            setTimeout(() => {
+              $(this).text('プログkgwweew');
+              setTimeout(() => {
+                $(this).text('プログラ;l:grwgfm,we');
+                setTimeout(() => {
+                  $(this).text('プログラミ,gw,:we]');
+                  setTimeout(() => {
+                    $(this).text('プログラミンpehwbfe');
+                    setTimeout(() => {
+                      $(this).text('プログラミングkutahetyre');
+                      setTimeout(() => {
+                        $(this).text('プログラミング言ehwbfe');
+                        setTimeout(() => {
+                          $(this).text('プログラミング言語noewnofwe');
+                          setTimeout(() => {
+                            $(this).text('プログラミング言語っbndoweorqw');
+                            setTimeout(() => {
+                              $(this).text('プログラミング言語ってtryetr;:lv,er');
+                              setTimeout(() => {
+                                $(this).text('プログラミング言語って何qfwemgwe@m,');
+                                setTimeout(() => {
+                                  $(this).text('プログラミング言語って何？');
                                   }, 040);
                                 }, 040);
                               }, 040);
@@ -432,263 +626,222 @@ $(function(){
                           }, 040);
                         }, 040);
                       }, 040);
-                    }, 040); 
-                  }, 040);  
-                }, 040); 
+                    }, 040);
+                  }, 040);
+                }, 040);
               }, 040); 
-            }, 040);   
-          },function(){
-            $(this).text('Dev-Opsってなに？');
-          });
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('プログラミング言語って何？');
+    });
 
-          $(function(){
-            $('.digital-font08').hover(function(){
+  $(function(){
+    $('.digital-font12').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('適pgwolpp;gwe');
+          setTimeout(() => {
+            $(this).text('適正knmpwgjpwe');
+            setTimeout(() => {
+              $(this).text('適正はkgwweew');
               setTimeout(() => {
-                $(this).text('mpgmwpnmgep');
+                $(this).text('適正はあ;l:grwgfm,we');
                 setTimeout(() => {
-                  $(this).text('どpgwolpp;gwe');
+                  $(this).text('適正はある,gw,:we]');
                   setTimeout(() => {
-                    $(this).text('どのknmpwgjpwe');
+                    $(this).text('適正はあるがpehwbfe');
                     setTimeout(() => {
-                      $(this).text('どのぐkgwweew');
+                      $(this).text('適正はあるが誰kutahetyre');
                       setTimeout(() => {
-                        $(this).text('どのぐら;l:grwgfm,we');
+                        $(this).text('適正はあるが誰でehwbfe');
                         setTimeout(() => {
-                          $(this).text('どのぐらい,gw,:we]');
+                          $(this).text('適正はあるが誰でもnoewnofwe');
                           setTimeout(() => {
-                            $(this).text('どのぐらいの.[lgew[lg[we');
+                            $(this).text('適正はあるが誰でもでbndoweorqw');
                             setTimeout(() => {
-                              $(this).text('どのぐらいの費bweobfoqwe');
+                              $(this).text('適正はあるが誰でもできtryetr;:lv,er');
                               setTimeout(() => {
-                                $(this).text('どのぐらいの費用g,wr[kger[p;w');
-                                setTimeout(() => {
-                                  $(this).text('どのぐらいの費用で@kr@[pk@krwe,w');
-                                  setTimeout(() => {
-                                    $(this).text('どのぐらいの費用ででf.her[;:h[er.h');
-                                    setTimeout(() => {
-                                      $(this).text('どのぐらいの費用でできg.wer[].h[]:e.');
-                                      setTimeout(() => {
-                                        $(this).text('どのぐらいの費用でできge;rwhg');
-                                        setTimeout(() => {
-                                          $(this).text('どのぐらいの費用でできるrjpoer@qwrqw');
-                                          setTimeout(() => {
-                                            $(this).text('どのぐらいの費用でできるのmnpgwfwf');
-                                            setTimeout(() => {
-                                              $(this).text('どのぐらいの費用でできるの？');
-                                              }, 040)
-                                            }, 040)
-                                          }, 040)
-                                        }, 040);
-                                      }, 040);
-                                    }, 040);
-                                  }, 040);
+                                $(this).text('適正はあるが誰でもできる');
                                 }, 040);
                               }, 040);
                             }, 040);
                           }, 040);
                         }, 040);
-                      }, 040); 
-                    }, 040);  
-                  }, 040); 
-                }, 040); 
-              }, 040);   
-            },function(){
-              $(this).text('どのぐらいの費用でできるの？');
-            });
+                      }, 040);
+                    }, 040);
+                  }, 040);
+                }, 040);
+              }, 040); 
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('適正はあるが誰でもできる');
+    });
 
-            $(function(){
-              $('.digital-font09').hover(function(){
+  $(function(){
+    $('.digital-font13').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('アpgwolpp;gwe');
+          setTimeout(() => {
+            $(this).text('アルknmpwgjpwe');
+            setTimeout(() => {
+              $(this).text('アルゴkgwweew');
+              setTimeout(() => {
+                $(this).text('アルゴリ;l:grwgfm,we');
                 setTimeout(() => {
-                  $(this).text('mpgmwpnmgep');
+                  $(this).text('アルゴリズ,gw,:we]');
                   setTimeout(() => {
-                    $(this).text('こpgwolpp;gwe');
+                    $(this).text('アルゴリズム');
+                    }, 040);
+                  }, 040);
+                }, 040);
+              }, 040); 
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('アルゴリズム');
+    });
+
+  $(function(){
+    $('.digital-font14').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('Cpgwolpp;gwe');
+          setTimeout(() => {
+            $(this).text('Coknmpwgjpwe');
+            setTimeout(() => {
+              $(this).text('Comkgwweew');
+              setTimeout(() => {
+                $(this).text('Comp;l:grwgfm,we');
+                setTimeout(() => {
+                  $(this).text('Compa,gw,:we]');
+                  setTimeout(() => {
+                    $(this).text('Compan@weirw');
                     setTimeout(() => {
-                      $(this).text('こんknmpwgjpwe');
+                      $(this).text('Company');
+                      }, 040);
+                    }, 040);
+                  }, 040);
+                }, 040);
+              }, 040); 
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('Company');
+    });
+
+  $(function(){
+    $('.digital-font15').hover(function(){
+      setTimeout(() => {
+        $(this).text('mpgmwpnmgep');
+        setTimeout(() => {
+          $(this).text('やりpgwolpp;gwe');
+          setTimeout(() => {
+            $(this).text('やりたknmpwgjpwe');
+            setTimeout(() => {
+              $(this).text('やりたいkgwweew');
+              setTimeout(() => {
+                $(this).text('やりたいこ;l:grwgfm,we');
+                setTimeout(() => {
+                  $(this).text('やりたいこと夢,gw,:we]');
+                  setTimeout(() => {
+                    $(this).text('やりたいこと夢を.[lgew[lg[we');
+                    setTimeout(() => {
+                      $(this).text('やりたいこと夢を目bweobfoqwe');
                       setTimeout(() => {
-                        $(this).text('こんなkgwweew');
+                        $(this).text('やりたいこと夢を目標、g,wr[kger[p;w');
                         setTimeout(() => {
-                          $(this).text('こんなこ;l:grwgfm,we');
+                          $(this).text('やりたいこと夢を目標、現@kr@[pk@krwe,w');
                           setTimeout(() => {
-                            $(this).text('こんなこと,gw,:we]');
+                            $(this).text('やりたいこと夢を目標、現実f.her[;:h[er.h');
                             setTimeout(() => {
-                              $(this).text('こんなことがpehwbfe');
+                              $(this).text('やりたいこと夢を目標、現実へg.wer[].h[]:e.');
                               setTimeout(() => {
-                                $(this).text('こんなことがでkutahetyre');
+                                $(this).text('やりたいこと夢を目標、現実へ落ge;rwhg');
                                 setTimeout(() => {
-                                  $(this).text('こんなことができehwbfe');
+                                  $(this).text('やりたいこと夢を目標、現実へ落としrjpoer@qwrqw');
                                   setTimeout(() => {
-                                    $(this).text('こんなことができるnoewnofwe');
+                                    $(this).text('やりたいこと夢を目標、現実へ落とし込mnpgwfwf');
                                     setTimeout(() => {
-                                      $(this).text('こんなことができる!!');
-                                      }, 040);
-                                    }, 040);
-                                  }, 040);
+                                      $(this).text('やりたいこと夢を目標、現実へ落とし込んhrrerjerer');
+                                      setTimeout(() => {
+                                        $(this).text('やりたいこと夢を目標、現実へ落とし込んでnlwebobewgp');
+                                        setTimeout(() => {
+                                          $(this).text('やりたいこと夢を目標、現実へ落とし込んでいnfoewonwege');
+                                          setTimeout(() => {
+                                            $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくknmfpenwpnwe');
+                                            setTimeout(() => {
+                                              $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくたfhfowefwe');
+                                              setTimeout(() => {
+                                                $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためjfepjpefkvs');
+                                                setTimeout(() => {
+                                                  $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくための@l.[elg[wegwq');
+                                                  setTimeout(() => {
+                                                    $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプrgwgw0wjwh');
+                                                    setTimeout(() => {
+                                                      $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプロmwmognweop');
+                                                      setTimeout(() => {
+                                                        $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプロフなngewnpwen');
+                                                        setTimeout(() => {
+                                                          $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプロフェならm@f@qwe@fgeqw');
+                                                          setTimeout(() => {
+                                                            $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプロフェッなら実mpfmqwmfqwe@');
+                                                            setTimeout(() => {
+                                                              $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプロフェッシwejjwg@e@');
+                                                              setTimeout(() => {
+                                                                $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプロフェッショwfhfwqjhp');
+                                                                setTimeout(() => {
+                                                                  $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプロフェッショナl,g[we,[fweve');
+                                                                  setTimeout(() => {
+                                                                    $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプロフェッショナル');
+                                                                  }, 040);
+                                                                }, 040);
+                                                              }, 040);
+                                                            }, 040);
+                                                          }, 040);
+                                                        }, 040);
+                                                      }, 040);
+                                                    }, 040);
+                                                  }, 040);
+                                                }, 040);
+                                              }, 040);
+                                            }, 040);
+                                          }, 040);
+                                        }, 040);
+                                      }, 040)
+                                    }, 040)
+                                  }, 040)
                                 }, 040);
                               }, 040);
                             }, 040);
                           }, 040);
-                        }, 040); 
-                      }, 040);  
-                    }, 040); 
-                  }, 040); 
-                }, 040);   
-              },function(){
-                $(this).text('こんなことができる!!');
-              });
-
-              $(function(){
-                $('.digital-font10').hover(function(){
-                  setTimeout(() => {
-                    $(this).text('mpgmwpnmgep');
-                    setTimeout(() => {
-                      $(this).text('プpgwolpp;gwe');
-                      setTimeout(() => {
-                        $(this).text('プロknmpwgjpwe');
-                        setTimeout(() => {
-                          $(this).text('プログkgwweew');
-                          setTimeout(() => {
-                            $(this).text('プログラ;l:grwgfm,we');
-                            setTimeout(() => {
-                              $(this).text('プログラミ,gw,:we]');
-                              setTimeout(() => {
-                                $(this).text('プログラミンpehwbfe');
-                                setTimeout(() => {
-                                  $(this).text('プログラミング');
-                                  }, 040);
-                                }, 040);
-                              }, 040);
-                            }, 040);
-                          }, 040); 
-                        }, 040);  
-                      }, 040); 
-                    }, 040); 
-                  }, 040);   
-                },function(){
-                  $(this).text('プログラミング');
-                });
-
-                $(function(){
-                  $('.digital-font11').hover(function(){
-                    setTimeout(() => {
-                      $(this).text('mpgmwpnmgep');
-                      setTimeout(() => {
-                        $(this).text('プpgwolpp;gwe');
-                        setTimeout(() => {
-                          $(this).text('プロknmpwgjpwe');
-                          setTimeout(() => {
-                            $(this).text('プログkgwweew');
-                            setTimeout(() => {
-                              $(this).text('プログラ;l:grwgfm,we');
-                              setTimeout(() => {
-                                $(this).text('プログラミ,gw,:we]');
-                                setTimeout(() => {
-                                  $(this).text('プログラミンpehwbfe');
-                                  setTimeout(() => {
-                                    $(this).text('プログラミングkutahetyre');
-                                    setTimeout(() => {
-                                      $(this).text('プログラミング言ehwbfe');
-                                      setTimeout(() => {
-                                        $(this).text('プログラミング言語noewnofwe');
-                                        setTimeout(() => {
-                                          $(this).text('プログラミング言語っbndoweorqw');
-                                          setTimeout(() => {
-                                            $(this).text('プログラミング言語ってtryetr;:lv,er');
-                                            setTimeout(() => {
-                                              $(this).text('プログラミング言語って何qfwemgwe@m,');
-                                              setTimeout(() => {
-                                                $(this).text('プログラミング言語って何？');
-                                                }, 040);
-                                              }, 040);
-                                            }, 040);
-                                          }, 040);
-                                        }, 040);
-                                      }, 040);
-                                    }, 040);
-                                  }, 040);
-                                }, 040);
-                              }, 040);
-                            }, 040); 
-                          }, 040);  
-                        }, 040); 
-                      }, 040); 
-                    }, 040);   
-                  },function(){
-                    $(this).text('プログラミング言語って何？');
-                  });
-
-                  $(function(){
-                    $('.digital-font12').hover(function(){
-                      setTimeout(() => {
-                        $(this).text('mpgmwpnmgep');
-                        setTimeout(() => {
-                          $(this).text('適pgwolpp;gwe');
-                          setTimeout(() => {
-                            $(this).text('適正knmpwgjpwe');
-                            setTimeout(() => {
-                              $(this).text('適正はkgwweew');
-                              setTimeout(() => {
-                                $(this).text('適正はあ;l:grwgfm,we');
-                                setTimeout(() => {
-                                  $(this).text('適正はある,gw,:we]');
-                                  setTimeout(() => {
-                                    $(this).text('適正はあるがpehwbfe');
-                                    setTimeout(() => {
-                                      $(this).text('適正はあるが誰kutahetyre');
-                                      setTimeout(() => {
-                                        $(this).text('適正はあるが誰でehwbfe');
-                                        setTimeout(() => {
-                                          $(this).text('適正はあるが誰でもnoewnofwe');
-                                          setTimeout(() => {
-                                            $(this).text('適正はあるが誰でもでbndoweorqw');
-                                            setTimeout(() => {
-                                              $(this).text('適正はあるが誰でもできtryetr;:lv,er');
-                                              setTimeout(() => {
-                                                $(this).text('適正はあるが誰でもできる');
-                                                }, 040);
-                                              }, 040);
-                                            }, 040);
-                                          }, 040);
-                                        }, 040);
-                                      }, 040);
-                                    }, 040);
-                                  }, 040);
-                                }, 040);
-                              }, 040); 
-                            }, 040);  
-                          }, 040); 
-                        }, 040); 
-                      }, 040);   
-                    },function(){
-                      $(this).text('適正はあるが誰でもできる');
-                    });
-
-                    $(function(){
-                      $('.digital-font13').hover(function(){
-                        setTimeout(() => {
-                          $(this).text('mpgmwpnmgep');
-                          setTimeout(() => {
-                            $(this).text('アpgwolpp;gwe');
-                            setTimeout(() => {
-                              $(this).text('アルknmpwgjpwe');
-                              setTimeout(() => {
-                                $(this).text('アルゴkgwweew');
-                                setTimeout(() => {
-                                  $(this).text('アルゴリ;l:grwgfm,we');
-                                  setTimeout(() => {
-                                    $(this).text('アルゴリズ,gw,:we]');
-                                    setTimeout(() => {
-                                      $(this).text('アルゴリズム');
-                                      }, 040);
-                                    }, 040);
-                                  }, 040);
-                                }, 040); 
-                              }, 040);  
-                            }, 040); 
-                          }, 040); 
-                        }, 040);   
-                      },function(){
-                        $(this).text('アルゴリズム');
-                      });
+                        }, 040);
+                      }, 040);
+                    }, 040);
+                  }, 040);
+                }, 040);
+              }, 040); 
+            }, 040);  
+          }, 040); 
+        }, 040); 
+      }, 040);   
+    },function(){
+      $(this).text('やりたいこと夢を目標、現実へ落とし込んでいくためのプロフェッショナル');
+    });
+  });
 
 
 
@@ -696,4 +849,6 @@ $(function(){
 
 
   });
-  
+
+
+
