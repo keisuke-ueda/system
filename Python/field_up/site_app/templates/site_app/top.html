@@ -44,11 +44,10 @@
   </head>
   <body>
 
-    <div class="loader loader-wrap">Loading...</div>
-
+    {% comment %} <div class="loader loader-wrap">Loading...</div> {% endcomment %}
     <!-- ヘッダー -->
     <header id="header1">
-      <div class="row bg-1">
+      <div class="row bg-white">
         <div class="col-12">
           <a href="{% url 'site_app:top' %}"><img class="m-3 sp-logo" als="屋号ロゴ" src="{% static 'site_app/img/logo.png' %}" width="350px"></a>
           <video autoplay muted loop src="{% static 'site_app/img/mini_anime.mp4' %}" width="250px" class="float-end anime01">
@@ -56,7 +55,7 @@
       </div>
 
       <div class="row">
-        <nav class="nav-1">
+        <nav class="nav-1 bg-info">
           <ul class="bag02">
             <li class="p-3"><a href="{% url 'site_app:company' %}" class="digital-font18" id="digital-font18">Company</a></li>
             {% comment %} <li class="p-3"><a href="{% url 'site_app:news' %}">News</a></li> {% endcomment %}
@@ -110,7 +109,7 @@
 
               <h3 class="text-center mb-2 kind digital-font17" id="digital-font17">News</h3>
 
-              <div class="row p-2 bg-dark bag01">
+              <div class="row p-2 border border-3 border-secondary bag01">
                 <div class="col-2 bg-info"></div>
                 <div class="col-8">
                     <p>2022-08-01 : システム事業サイト開設</p>
@@ -118,7 +117,7 @@
                 <div class="col-2 bg-info"></div>
               </div>
     
-              <div class="row p-2 bg-dark bag01">
+              <div class="row p-2 border border-3 border-secondary bag01">
                   <div class="col-2 bg-info"></div>
                     <div class="col-8">
                         <p class="">2022-08-01 : プログラミング言語動画各種配信中!!</p>
@@ -126,7 +125,7 @@
                   <div class="col-2 bg-info"></div>
               </div>
 
-              <div class="row p-2 bg-dark bag01">
+              <div class="row p-2 border border-3 border-secondary bag01">
                 <div class="col-2 bg-info"></div>
                   <div class="col-8">
                     <p>2022-10-16 : Field-UP総合サイト解説。<a href="https://www.field-up.work/" target="_blank">サイトへはコチラから</a></p>
@@ -155,7 +154,7 @@
   {% comment %} {% block header %}{% endblock %} {% endcomment %}
   <!-- フッター -->
   </body>
-  <footer class="bg-dark">
+  <footer class="bg-white border-top border-3 border-info">
     {% include 'site_app/footer.html' %}
   </footer>
 </html>
