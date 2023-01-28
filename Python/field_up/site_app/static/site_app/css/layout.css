@@ -9,10 +9,10 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(93, 98, 99);
+    background-color: rgb(255, 255, 255);
     font-family: "M PLUS 1p";
     font-size:16px;
-    color:#fff;
+    color:rgb(97, 93, 93);
 }
 
 @media screen and (min-width:300px) and ( max-width:780px) {
@@ -36,20 +36,6 @@ footer {
   }
 }
 
-.font-weight-bold {
-  font-weight: 700 !important;
-  color:#00eeff;
-  /* text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(0, 217, 255),
-    0 0 82px rgb(0, 217, 255),
-    0 0 92px rgb(0, 217, 255),
-    0 0 102px rgb(0, 217, 255),
-    0 0 151px rgb(0, 217, 255); */
-}
-
 li a { 
   color: #fbff00; 
 }
@@ -59,18 +45,13 @@ a:hover{
 } 
 
 h1{
-  font-size:50px;
-  color: rgb(255, 255, 255);
-  font-family: 'M+ Type-1 (general-j) Black';
+  font-size:70px;
+  color:rgb(54, 104, 240);
+  /* font-family: 'M+ Type-1 (general-j) Black'; */
   font-style: italic;
-  text-shadow:
-            3px 3px 0px rgb(0, 214, 214), -3px -3px 0px rgb(0, 214, 214),
-           -3px 3px 0px rgb(0, 214, 214),  3px -3px 0px rgb(0, 214, 214),
-            3px 0px 0px rgb(0, 214, 214), -3px -0px 0px rgb(0, 214, 214),
-            0px 3px 0px rgb(0, 214, 214),  0px -3px 0px rgb(0, 214, 214);
+  font-weight: bold;
   margin: 0;
 }
-
 @media screen and (min-width:300px) and ( max-width:780px) {
   h1{
     font-size:30px;
@@ -79,15 +60,11 @@ h1{
 
 h2 {
   font-size:30px;
-  color: rgb(255, 255, 255);
+  color: rgb(81, 96, 117);
   font-family: 'M+ Type-1 (general-j) Black';
-  background:linear-gradient(transparent 60%, rgb(152, 214, 243) 90%);
+  background:linear-gradient(transparent 60%, rgb(80, 194, 247) 90%);
   font-style: italic;
-  /* text-shadow:
-            3px 3px 0px rgb(0, 214, 214), -3px -3px 0px rgb(0, 214, 214),
-           -3px 3px 0px rgb(0, 214, 214),  3px -3px 0px rgb(0, 214, 214),
-            3px 0px 0px rgb(0, 214, 214), -3px -0px 0px rgb(0, 214, 214),
-            0px 3px 0px rgb(0, 214, 214),  0px -3px 0px rgb(0, 214, 214); */
+  font-weight: bold;
 }
 
 @media screen and (min-width:300px) and ( max-width:780px) {
@@ -96,21 +73,17 @@ h2 {
   }
 }
 
-
 h2:first-letter{
-  color:rgb(7, 255, 243);
+  color:rgb(54, 104, 240);
   font-size:200%;
+  font-weight: bold;
 }
 
 .kind{
   font-size:50px;
   font-family: 'M+ Type-1 (general-j) Black';
   font-style: italic;
-  text-shadow:
-            3px 3px 0px rgb(0, 214, 214), -3px -3px 0px rgb(0, 214, 214),
-           -3px 3px 0px rgb(0, 214, 214),  3px -3px 0px rgb(0, 214, 214),
-            3px 0px 0px rgb(0, 214, 214), -3px -0px 0px rgb(0, 214, 214),
-            0px 3px 0px rgb(0, 214, 214),  0px -3px 0px rgb(0, 214, 214);
+  font-weight: bold;
   margin: 0;
 }
 
@@ -122,16 +95,8 @@ h2:first-letter{
 
 h3 {
   font-size:20px;
-  color: rgb(255, 255, 255);
-  text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(0, 217, 255),
-    0 0 82px rgb(0, 217, 255),
-    0 0 92px rgb(0, 217, 255),
-    0 0 102px rgb(0, 217, 255),
-    0 0 151px rgb(0, 217, 255);
+  color:rgb(54, 104, 240);
+  font-weight: bold;
 }
 
 @media screen and (min-width:300px) and ( max-width:780px) {
@@ -141,13 +106,17 @@ h3 {
 }
 
 span {
-  font-size:25px;
+  font-size:20px;
 }
 
 @media screen and (min-width:300px) and ( max-width:780px) {
   span {
-    font-size:18px;
+    font-size:16px;
   }
+}
+
+.b-text {
+  color:rgb(54, 104, 240);
 }
 
 table {
@@ -268,7 +237,7 @@ header{
 /*========= ナビゲーションドロップダウンのためのCSS ===============*/
 /*==ナビゲーション全体の設定*/
 .nav-1{
-  background:rgb(107, 135, 151);
+  /* background:rgb(107, 135, 151); */
   text-align: center;
   color: #fff;
   text-shadow:
@@ -759,7 +728,6 @@ a.btn1-flat:hover:before {
 .bag01 p{
   margin: 10px;
 }
-
 .bag02{
   margin: 0;
   padding: 0;
@@ -843,7 +811,6 @@ a.btn1-flat:hover:before {
 
 /* 表示フェード */
 .fade {
-  text-align: center;
   opacity : 0;
   transition: opacity 3s;
 }
