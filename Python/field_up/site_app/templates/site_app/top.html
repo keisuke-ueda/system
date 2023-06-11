@@ -44,7 +44,6 @@
   </head>
   <body>
 
-    {% comment %} <div class="loader loader-wrap">Loading...</div> {% endcomment %}
     <!-- ヘッダー -->
     <header id="header1">
       <div class="row bg-white">
@@ -57,9 +56,8 @@
       <div class="row">
         <nav class="nav-1 bg-info">
           <ul class="bag02">
-            <li class="p-3"><a href="{% url 'site_app:company' %}" class="digital-font18" id="digital-font18">Company</a></li>
-            {% comment %} <li class="p-3"><a href="{% url 'site_app:news' %}">News</a></li> {% endcomment %}
-            <li class="p-3 has-child"><a href="#" class="digital-font19" id="digital-font19">Content</a>
+            <li class="p-3"><a href="{% url 'site_app:company' %}">Company</a></li>
+            <li class="p-3 has-child"><a href="#">Content</a>
               <ul>
                 <li class="p-1"><a href="{% url 'site_app:appeal' %}">デジタルの魅力</a></li>
                 <li class="p-1 has-child"><a href="{% url 'site_app:example' %}">システム開発</a>
@@ -87,26 +85,27 @@
                 </li>
               </ul>
             </li>
-            <li class="p-3"><a href="{% url 'site_app:contacts_faq' %}" class="digital-font20" id="digital-font20">Contacts & FAQ</a></li>
+            <li class="p-3"><a href="{% url 'site_app:contacts_faq' %}">Contacts & FAQ</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <div class="container mt-3 content1 mb-5">
-      <div class="col-10 first_view position-relative d-block mx-auto mb-5 div01 mt-5">
-        <video autoplay muted class="w-100 movie-1">
-            <source src="{% static 'site_app/img/top_m4.mp4' %}" type="video/mp4">
-        </video>
-        <video autoplay muted loop class="w-100 d-none movie-2">
-            <source src="{% static 'site_app/img/top_m4.mp4' %}" type="video/mp4">
-        </video>
-      </div>
+    {% comment %} ファーストビュービデオ {% endcomment %}
+    <div class="fast-mov first_view mb-2">
+      <video autoplay muted class="w-100 movie-1">
+        <source src="{% static 'site_app/img/top_m4.mp4' %}" type="video/mp4">
+      </video>
+      <video autoplay muted loop class="w-100 d-none movie-2">
+          <source src="{% static 'site_app/img/top_m4.mp4' %}" type="video/mp4">
+      </video>
+    </div>
     
+
+    <div class="container content1 mb-5">
         {% comment %} ニュース {% endcomment %}
 
             <div class="row mb-5 fade">
-
               <h3 class="text-center mb-2 kind digital-font17" id="digital-font17">News</h3>
 
               <div class="row p-2 border border-3 border-secondary bag01">
