@@ -11,7 +11,7 @@ body{
     min-height: 100vh;
     background-color: rgb(255, 255, 255);
     font-family: "M PLUS 1p";
-    font-size:16px;
+    font-size:18px;
     color:rgb(97, 93, 93);
 }
 
@@ -105,6 +105,27 @@ h3 {
   }
 }
 
+h4 {
+  font-size:30px;
+  color: rgb(81, 96, 117);
+  font-family: 'M+ Type-1 (general-j) Black';
+  background:linear-gradient(transparent 60%, rgb(248, 137, 137) 90%);
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media screen and (min-width:300px) and ( max-width:780px) {
+  h4{
+    font-size:18px;
+  }
+}
+
+h4:first-letter{
+  color:rgb(240, 54, 54);
+  font-size:200%;
+  font-weight: bold;
+}
+
 span {
   font-size:20px;
 }
@@ -117,6 +138,7 @@ span {
 
 .b-text {
   color:rgb(54, 104, 240);
+  font-weight: bold;
 }
 
 table {
@@ -132,71 +154,6 @@ header{
   align-items: center;
 }
 
-.bg-appeal-01 {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-  url('/static/site_app/img/greg-rakozy-oMpAz-DN-9I-unsplash.jpg');
-  color:#ffffff;
-  background-size:50% auto;
-}
-
-
-.bg-appeal-02 {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-  url('/static/site_app/img/バーチャル.jpg');
-  color:#ffffff;
-  background-size:50% auto;
-}
-
-.bg-appeal-03 {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-  url('/static/site_app/img/convertkit-Ky2YPCpnmK0-unsplash.jpg');
-  color:#ffffff;
-  background-size:50% auto;
-}
-
-.bg-exsmple-01 {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-  url('/static/site_app/img/開発とは.jpg');
-  color:#ffffff;
-  background-size:50% auto;
-}
-
-.bg-exsmple-02 {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-  url('/static/site_app/img/devops.jpg');
-  color:#ffffff;
-  background-size:50% auto;
-}
-
-.bg-exsmple-03 {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-  url('/static/site_app/img/コスト.jpg');
-  color:#ffffff;
-  background-size:50% auto;
-}
-
-.bg-lang-01 {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-  url('/static/site_app/img/james-harrison-vpOeXr5wmR4-unsplash.jpg');
-  color:#ffffff;
-  background-size:50% auto;
-}
-
-.bg-lang-02 {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-  url('/static/site_app/img/positive-gffe556813_1920.jpg');
-  color:#ffffff;
-  background-size:50% auto;
-}
-
-.bg-lang-03 {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-  url('/static/site_app/img/mark-g263e4c72f_1920.jpg');
-  color:#ffffff;
-  background-size:50% auto;
-}
-
-
 /* TOPページ */
 .fast-mov {
   margin-top: 200px;
@@ -206,11 +163,6 @@ header{
     margin-top: 130px;
   }
 }
-
-
-
-
-
 
 
 
@@ -609,7 +561,7 @@ a.btn1-flat:hover:before {
 }
 .nav-2{
   font-size:16px;
-  background:rgba(0, 0, 0, 0.6);
+  background:rgba(0, 0, 0, 0.8);
   width: 250px;
   color:white;
   text-shadow:
@@ -621,15 +573,17 @@ a.btn1-flat:hover:before {
     0 0 92px rgb(0, 217, 255),
     0 0 102px rgb(0, 217, 255),
     0 0 151px rgb(0, 217, 255);
+    padding-top: 120px;
 }
 
 /*ナビゲーションを横並びに*/
 .nav-2 ul{
   list-style: none;
+  padding:0 0 0 10px;
 }
 
 .nav-2>ul {
-  margin: 225px 0 0 10px;
+  margin: 100px 0 0 10px;
 }
 
 @media screen and (min-width:300px) and ( max-width:780px) {
@@ -637,6 +591,7 @@ a.btn1-flat:hover:before {
     font-size:13px;
     background:rgba(0, 0, 0, 0.6);
     width: 200px;
+    padding-top: 20px;
   }
 
   .nav-2>ul {
@@ -657,68 +612,14 @@ a.btn1-flat:hover:before {
   color:rgb(251, 255, 43); 
 }
 
-/*下の階層のulや矢印の基点にするためliにrelativeを指定*/
-.nav-2 ul li{
-  position: relative;
-}
-
-/*==矢印の設定*/
-
-/*2階層目を持つliの矢印の設定*/
-.nav-2 ul li.has-child::before{
-  content:'';
-  position: absolute;
-  left:0px;
-  top:8px;
-  width:6px;
-  height:6px;
-  border-top: 2px solid rgb(255, 255, 255);
-  border-right:2px solid rgb(255, 255, 255);
-  transform: rotate(135deg);
-}
-
-/*3階層目を持つliの矢印の設定*/
-.nav-2 ul ul li.has-child::before{
-  content:'';
-  position: absolute;
-  left:0px;
-  top:10px;
-  width:6px;
-  height:6px;
-  border-top: 2px solid rgb(255, 255, 255);
-  border-right:2px solid rgb(255, 255, 255);
-  transform: rotate(45deg);
-}
-
-/*== 2・3階層目の共通設定 */
-/*下の階層を持っているulの指定*/
-.nav-2 li.has-child ul{
-  width:200px;
-  display: none;
-  opacity: 0;
-  transition: all .3s;
-  z-index: 4;
-  padding-left: 10px;
-}
-.nav-2 li.has-child ul ul{
-  width: 130px;
-}
-
-/*hoverしたら表示*/
-.nav-2 li.has-child:hover > ul,
-.nav-2 li.has-child ul li:hover > ul,
-.nav-2 li.has-child:active > ul,
-.nav-2 li.has-child ul li:active > ul{
-  display: block;
-  opacity: 1;
-}
-
 
 /*ナビゲーションaタグの形状*/
 .nav-2 li.has-child ul ul li a{
   border-bottom:solid 1px rgb(255, 255, 255);
   text-align: center;
 }
+
+
 
 
 /* コンテンツ登録・更新フォーム */
@@ -882,13 +783,3 @@ a.btn1-flat:hover:before {
 }
 
 
-
-
-
-/* text-shadow:
-            3px 3px 0px rgb(0, 214, 214), -3px -3px 0px rgb(0, 214, 214),
-           -3px 3px 0px rgb(0, 214, 214),  3px -3px 0px rgb(0, 214, 214),
-            3px 0px 0px rgb(0, 214, 214), -3px -0px 0px rgb(0, 214, 214),
-            0px 3px 0px rgb(0, 214, 214),  0px -3px 0px rgb(0, 214, 214);
-
-             */
