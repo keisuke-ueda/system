@@ -11,77 +11,80 @@
 
 {% block contents %}
 
-
     {% comment %} コンテンツ {% endcomment %}
     <div class="container content">
-        <h1 class="text-center digital-font05" id="digital-font05">システム開発</h1>
+        <h1 class="text-center right cont-h">システム開発</h1>
         <div class="row p-4">
-            <h2>開発ってどう進むの？</h2>
+            <h2 class="right">開発ってどう進むの？</h2>
 
             <div class="col-12 bg-white mt-2 p-3">
-                <p>こんなことを感じている方が多いのではないですか？<br>
-                    <span class="b-text">『何かを作り出すのは大変じゃないの？』</span><br>
-                    <span class="b-text">『新しいものを生み出せるのは特別な才能のある人だけなんじゃない?』</span><br>
-                    知らないことを不安に感じることはいたって普通のことです<br>
-                    なので開発とは何かを説明します
-                </p>
-                <h3 class="h3 fw-bold">開発の流れ</h3>
-                <ul>
-                    <li><span class="text-danger b-text">要求定義</span></li>
-                    <p>システムに求める仕様を決めていくことで、クライエントからどんなものが欲しいかの要求を出しいてもらう工程</p>
-                    <li><span class="text-danger  b-text">要件定義</span></li>
-                    <p>システムを動かすための仕様を決めていくことで、開発側が要求定義書の要求をシステムに落としい込んでいく工程</p>
-                    <li><span class="text-danger  b-text">設計</span></li>
-                    <p>設計と大まかにはありますがユーザーが使いやすいように見た目を決めていくUI設計、細かなシステムの仕組みを決めていく詳細設計など多岐に分かれる</p>
-                    <li><span class="text-danger  b-text">プログラミング</span></li>
-                    <p>設計で決めた通りにプログラムコードを書いていくこと<br>
-                        最近ではノーコード、ローコードでプログラミングができる仕組みもある</p>
-                    <li><span class="text-danger  b-text">テスト</span></li>
-                    <p>出来上がったらテストを行い、動作に問題ないか、ユーザーの要望どおりになっているかを確認<br>
-                        モジュール事に行う単体テスト、モジュール同士を組合わせて行う結合テスト、実際の利用を想定した運用テストなどがある</p>
-                    <li><span class="text-danger  b-text">リリース</span></li>
-                    <p>作ったシステムを運用できる形に仕上げる工程<br>
-                        デスクトップアプリならexeやフォルダの配置、WEBサイトやアプリならサーバーへのデプロイを行う</p>
-                    <li><span class="text-danger  b-text">保守</span></li>
-                    <p>システムが正常に作動するかを定期的に確認し、トラブルが起きないようにすること</p>
-                </ul>
-                <p>開発の種類として<br>
-                    <span class="b-text">ウォーターフォール型</span>と<span class="b-text">アジャイル型</span>に大きく分かれます<br>
-                    上記で説明した開発の流れを順番に進めていくことと、少しずつ作り上げながら何度も何度も繰り返しいながら仕上げていく違いがある<br>
-                    さらに既存のパッケージなどを使わない<span class="b-text">スクラッチ開発</span>があり<br>
-                    世界で一つだけの完全オリジナルのシステムを作り上げる開発もある
-                </p>
+                <div class="ro-X">
+                    <p>こんなことを感じている方が多いのではないですか？<br>
+                        <span class="b-text">『何かを作り出すのは大変じゃないの？』</span><br>
+                        <span class="b-text">『新しいものを生み出せるのは特別な才能のある人だけなんじゃない?』</span><br>
+                        知らないことを不安に感じることはいたって普通のことです<br>
+                        なので開発とは何かを説明します
+                    </p>
+                </div>
+                <div class="ro-X">
+                    <h3 class="h3 fw-bold">開発の流れ</h3>
+                    <ul>
+                        <li><span class="text-danger b-text">要求定義</span></li>
+                        <p>システムに求める仕様を決めていくことで、クライエントからどんなものが欲しいかの要求を出しいてもらう工程</p>
+                        <li><span class="text-danger  b-text">要件定義</span></li>
+                        <p>システムを動かすための仕様を決めていくことで、開発側が要求定義書の要求をシステムに落としい込んでいく工程</p>
+                        <li><span class="text-danger  b-text">設計</span></li>
+                        <p>設計と大まかにはありますがユーザーが使いやすいように見た目を決めていくUI設計、細かなシステムの仕組みを決めていく詳細設計など多岐に分かれる</p>
+                        <li><span class="text-danger  b-text">プログラミング</span></li>
+                        <p>設計で決めた通りにプログラムコードを書いていくこと<br>
+                            最近ではノーコード、ローコードでプログラミングができる仕組みもある</p>
+                        <li><span class="text-danger  b-text">テスト</span></li>
+                        <p>出来上がったらテストを行い、動作に問題ないか、ユーザーの要望どおりになっているかを確認<br>
+                            モジュール事に行う単体テスト、モジュール同士を組合わせて行う結合テスト、実際の利用を想定した運用テストなどがある</p>
+                        <li><span class="text-danger  b-text">リリース</span></li>
+                        <p>作ったシステムを運用できる形に仕上げる工程<br>
+                            デスクトップアプリならexeやフォルダの配置、WEBサイトやアプリならサーバーへのデプロイを行う</p>
+                        <li><span class="text-danger  b-text">保守</span></li>
+                        <p>システムが正常に作動するかを定期的に確認し、トラブルが起きないようにすること</p>
+                    </ul>
+                    <p>開発の種類として<br>
+                        <span class="b-text">ウォーターフォール型</span>と<span class="b-text">アジャイル型</span>に大きく分かれます<br>
+                        上記で説明した開発の流れを順番に進めていくことと、少しずつ作り上げながら何度も何度も繰り返しいながら仕上げていく違いがある<br>
+                        さらに既存のパッケージなどを使わない<span class="b-text">スクラッチ開発</span>があり<br>
+                        世界で一つだけの完全オリジナルのシステムを作り上げる開発もある
+                    </p>
+                </div>
             </div>
-            <div class="col-12 mt-2 p-3 fade">
+            <div class="col-12 mt-2 p-3 fadeup">
                 <img class="d-block mx-auto" alt="開発とは" src="{% static 'site_app/img/dev.jpg' %}" width="100%">
             </div>
         </div>
 
-        <div class="row p-4">
-            <h2 class="fade text-start">Dev-Opsってなに？</h2>
+        <div class="row p-4 faderight">
+            <h2 class="text-start">Dev-Opsってなに？</h2>
 
-            <div class="col-12 bg-white mt-2 p-3 fade">
+            <div class="col-12 bg-white mt-2 p-3">
                 <p>システムは開発して作り上げたら終わりではありません<br>
                     運用しながら<span class="b-text">『もっとこうしていきたい!!』</span>、<span class="b-text">『運用してみてこんなことに気づいた!!』</span><br>
                     こんな時にシステムをどんどん良くしていくために開発の流れを何度も回してシステムをより良くしていく概念をDev-Opsと表現されています
                 </p>
             </div>
-            <div class="col-12 mt-2 p-3 fade">
+            <div class="col-12 mt-2 p-3 fadeup">
                 <img class="d-block mx-auto" alt="開発" src="{% static 'site_app/img/devops.jpg' %}" width="100%">
             </div>
         </div>
 
-        <div class="row p-4">
-            <h2 class="fade text-start">どのぐらいの費用でできるの？</h2>
+        <div class="row p-4 ">
+            <h2 class="text-start faderight">どのぐらいの費用でできるの？</h2>
             
-            <div class="col-12 bg-white mt-2 p-3 fade">
+            <div class="col-12 bg-white mt-2 p-3 fadeup">
                 <p>開発費用は一概には決められませんが、主な価格設定の基準は<span class="b-text">人件費</span>です<br>
                     <span class="b-text">そのシステムを作るのにどれだけの時間がかかるか</span>で大まかな費用が決まりそれを<span class="b-text">何人体制で作るか</span>が決め手となります<br>
                     保守に関しては月単位で価格を決めることが一般的です
                     とはいえ<span class="b-text">作るシステムやアプリの相場はある</span>ので下記の表を参考にしてください
                 </p>
             </div>
-            <div class="col-12 mt-2 p-3 fade">
+            <div class="col-12 mt-2 p-3 ro-Y bg-white">
                 <table class="table text-dark">
                     <thead>
                         <tr>
@@ -135,31 +138,38 @@
             </div>
         </div>
 
-        <div class="row p-4 flexbox">
-            <h2 class="digital-font09 mb-4 fade text-start" id="digital-font09">こんなことができる!!</h2>
+        <div class="row p-4 faderight">
+            <h2 class="mb-4 text-start">こんなことができる!!</h2>
             
-            <div class="col-4 bg-light box1 div00 fade">
-                <a href="https://field-up.work/energy_test/index.html" target="_blank"><img class="m-3" alt="開発事例1" src="{% static 'site_app/img/開発例1.jpg' %}" width="90%"></a>
+            <div class="col-md-4 bg-white ro-Y">
+                <a href="https://www.youtube.com/watch?v=aTx8wclrYVo" target="_blank">
+                    <img class="m-3" alt="アプリ利用" src="{% static 'site_app/img/アプリコンビネーション.jpg' %}" width="90%">
+                    <p class="text-center">アプリケーションを組合わせて映像制作</p>
+                </a>
             </div>
-            <div class="col-4 bg-light box2 div00 fade">
-                <a href="https://field-up.work/demo_room/main.html" target="_blank"><img class="m-3" alt="開発事例2" src="{% static 'site_app/img/開発例2.jpg' %}" width="90%"></a>
+            <div class="col-md-4 bg-white ro-X">
+                <a href="https://field-up.work/demo_room/main.html" target="_blank">
+                    <img class="m-3" alt="VR開発" src="{% static 'site_app/img/vr技術.jpg' %}" width="90%">
+                    <p class="text-center">VR技術を駆使したアプリケーション</p>
+                </a>
             </div>
-            <div class="col-4 bg-light box3 div00 fade">
-                <a href="https://field-up.work/bound_demo/" target="_blank"><img class="m-3" alt="開発事例3" src="{% static 'site_app/img/開発例3.jpg' %}" width="90%"></a>
+            <div class="col-md-4 bg-white ro-Y">
+                <a href="https://field-up.work/bound_demo/" target="_blank">
+                    <img class="m-3" alt="ゲーム開発" src="{% static 'site_app/img/ゲームサムネ.jpg' %}" width="90%">
+                    <p class="text-center">簡単なゲームなら意外とすぐにできる!!</p>
+                </a>
             </div>
 
         </div>
 
         <div class="row p-4 flexbox">
-            <div class="col-6 box1 mt-3">
-                <a href="{% url 'site_app:appeal' %}" class="btn1 btn1-flat d-flex align-items-center"><span>デジタルの魅力</span></a>
+            <div class="col-md-6 box1 mt-3">
+                <a href="{% url 'site_app:appeal' %}" class="btn1 btn1-flat d-flex align-items-center"><span>>>>デジタルの魅力</span></a>
             </div>
-            <div class="col-6 box2 mt-3">
-                <a href="{% url 'site_app:lang' %}" class="btn1 btn1-flat d-flex align-items-center"><span>プログラミング</span></a>
+            <div class="col-md-6 box2 mt-3">
+                <a href="{% url 'site_app:lang' %}" class="btn1 btn1-flat d-flex align-items-center"><span>>>>プログラミング</span></a>
             </div>
         </div>
-
-        
     </div>
 
 {% endblock %}

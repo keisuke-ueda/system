@@ -13,17 +13,17 @@
 
     {% comment %} コンテンツ {% endcomment %}
     <div class="container content">
-        <h1 class="text-center">HTML</h1>
+        <h1 class="text-center cont-h">HTML</h1>
         
         {% for main in main_list %}
-        <div class="row p-3 flexbox">
-            <div class="col-4 bg-light box1 div00">
+        <div class="row pt-3 flexbox">
+            <div class="col-4 bg-light box1">
                 <img class="m-3" class="d-block mx-auto" alt="サムネイル" src="{{ main.thumbnail.url }}" width="50%">
             </div>
-            <div class="col-4 box2 px-5">
+            <div class="col-4 box2">
                 <p>{{ main.summary_text }}</p>
             </div>
-            <div class="col-4 box3 div00">
+            <div class="col-4 box3">
                 <iframe width="400" height="225" class="d-block mx-auto" src="{{ main.iframe_code }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>

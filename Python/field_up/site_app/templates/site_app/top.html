@@ -1,5 +1,5 @@
 {% load static %}
-
+<!DOCTYPE html>
 <html lang="jp">
   <head>
     <!-- Required meta tags -->
@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'site_app/css/layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'site_app/css/layout.scss' %}">
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -22,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=DotGothic16' rel='stylesheet'>
 
     <!-- 各種設定 -->
     <title>Field-UP|サイト制作・アプリ開発・プログラミング</title>
@@ -42,132 +44,294 @@
       gtag('config', 'UA-167968304-8');
     </script>
   </head>
+
   <body>
+
+    <div id="splash">
+      <div id="splash_text"></div>
+      <div class="loader_cover loader_cover-up"></div>
+      <div class="loader_cover loader_cover-down"></div>
+    </div>
 
     <!-- ヘッダー -->
     <header id="header1">
-      <div class="row bg-white">
-        <div class="col-12">
-          <a href="{% url 'site_app:top' %}"><img class="m-3 sp-logo" als="屋号ロゴ" src="{% static 'site_app/img/logo.png' %}" width="350px"></a>
-          <video autoplay muted loop src="{% static 'site_app/img/mini_anime.mp4' %}" width="250px" class="float-end anime01">
+      {% include 'site_app/header.html' %}
+    </header>
+
+    <div class="teto">
+      <canvas></canvas>
+
+      {% comment %} ファーストビュービデオ {% endcomment %}
+      <div class="first_view mb-2">
+        {% comment %} <video autoplay muted class="w-100 movie-1">
+          <source src="{% static 'site_app/img/top_m4.mp4' %}" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="w-100 d-none movie-2">
+          <source src="{% static 'site_app/img/top_m4.mp4' %}" type="video/mp4">
+        </video> {% endcomment %}
+
+        <img src="{% static 'site_app/img/system_bag.svg' %}">
+
+        {% comment %} インパクトワード {% endcomment %}
+        <div class="foo fadeup">
+          <span class="letter" data-letter="D">D</span>
+          <span class="letter" data-letter="i">i</span>
+          <span class="letter" data-letter="g">g</span>
+          <span class="letter" data-letter="i">i</span>
+          <span class="letter" data-letter="t">t</span>
+          <span class="letter" data-letter="a">a</span>
+          <span class="letter" data-letter="l">l</span>
         </div>
       </div>
 
-      <div class="row">
-        <nav class="nav-1 bg-info">
-          <ul class="bag02">
-            <li class="p-3"><a href="{% url 'site_app:company' %}">Company</a></li>
-            <li class="p-3 has-child"><a href="#">Content</a>
-              <ul>
-                <li class="p-1"><a href="{% url 'site_app:appeal' %}">デジタルの魅力</a></li>
-                <li class="p-1 has-child"><a href="{% url 'site_app:example' %}">システム開発</a>
-                  <ul>
-                    <li class="py-1"><a href="https://field-up.work/energy_test/index.html" target="_blank">開発例:1</a></li>
-                      <li class="pb-1"><a href="https://field-up.work/demo_room/main.html" target="_blank">開発例:2</a></li>
-                      <li class=""><a href="https://field-up.work/bound_demo/" target="_blank">開発例:3</a></li>
-                  </ul>
-                </li>
-                <li class="p-1 has-child"><a href="{% url 'site_app:lang' %}">プログラミング</a>
-                  <ul>
-                    <li class="p-1"><a href="{% url 'site_app:vba' %}">VBA</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:python' %}">Python</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:java' %}">Java</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:powerautomate' %}">PowerAutomate</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:kotlin' %}">Kotlin</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:css' %}">CSS</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:php' %}">PHP</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:swift' %}">Swift</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:html' %}">HTML</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:javascript' %}">JavaScript</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:go' %}">Go</a></li>
-                    <li class="p-1"><a href="{% url 'site_app:c_sharp' %}">C#</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="p-3"><a href="{% url 'site_app:contacts_faq' %}">Contacts & FAQ</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
-    {% comment %} ファーストビュービデオ {% endcomment %}
-    <div class="fast-mov first_view mb-2">
-      <video autoplay muted class="w-100 movie-1">
-        <source src="{% static 'site_app/img/top_m4.mp4' %}" type="video/mp4">
-      </video>
-      <video autoplay muted loop class="w-100 d-none movie-2">
-          <source src="{% static 'site_app/img/top_m4.mp4' %}" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="container content1 mb-5">
+      <div class="container content1 mb-5">
         {% comment %} ニュース {% endcomment %}
-
-            <div class="row mb-5 fade">
-              <h3 class="text-center mb-2 kind digital-font17" id="digital-font17">News</h3>
-
-              <div class="row p-2 border border-3 border-secondary bag01">
-                <div class="col-2 bg-info"></div>
-                  <div class="col-8">
-                    <p>2022-6-12 : 『THE INNOVATOR』に載りました。<a href="https://the-innovator.jp/interviewees/ueda_keisuke/" target="_blank">サイトへはコチラから</a></p>
-                  </div>
-                <div class="col-2 bg-info"></div>
-              </div>
-
-              <div class="row p-2 border border-3 border-secondary bag01">
-                <div class="col-2 bg-info"></div>
-                  <div class="col-8">
-                    <p>2022-10-16 : Field-UP総合サイト開設。<a href="https://www.field-up.work/" target="_blank">サイトへはコチラから</a></p>
-                  </div>
-                <div class="col-2 bg-info"></div>
-              </div>
-
-              <div class="row p-2 border border-3 border-secondary bag01">
-                <div class="col-2 bg-info"></div>
-                <div class="col-8">
-                    <p>2022-08-01 : システム事業サイト開設</p>
-                </div>
-                <div class="col-2 bg-info"></div>
-              </div>
-    
-              <div class="row p-2 border border-3 border-secondary bag01">
-                  <div class="col-2 bg-info"></div>
-                    <div class="col-8">
-                        <p class="">2022-08-01 : プログラミング言語動画各種配信中!!</p>
-                    </div>
-                  <div class="col-2 bg-info"></div>
-              </div>
-
-            </div>
-
-            <div class="mt-3 mb-5 fade">
-              <a title="THE INNOVATOR Field-UP 上田敬介" href="https://the-innovator.jp/interviewees/ueda_keisuke/" target="_blank">
-                  <img src="https://the-innovator.jp/img/banner/TI_banner01.jpg" alt="Field-UP 上田敬介" class="d-block mx-auto" width="70%"  border="0"/>
-              </a>
-            </div>
+        <div class="row mb-5 fadeup news-row">
+          <h3 class="text-center mb-2 kind">News</h3>
+          {% include 'site_app/news.html' %}
+        </div>
+        
+        {% comment %} 記事コンテンツ {% endcomment %}
+        <div class="mt-3 mb-5 ro-Y">
+          <a title="THE INNOVATOR Field-UP 上田敬介" href="https://the-innovator.jp/interviewees/ueda_keisuke/" target="_blank">
+            <img src="https://the-innovator.jp/img/banner/TI_banner01.jpg" alt="Field-UP 上田敬介" class="d-block mx-auto" width="40%"  border="0"/>
+          </a>
+        </div>
 
         {% comment %} コンテンツ {% endcomment %}
+        <div class="row main-content">
+          {% comment %} <div class="col-md div01">
+            <a href="{% url 'site_app:appeal' %}"><img alt="デジタルの魅力" src="{% static 'site_app/img/デジタルの魅力.jpg' %}"></a>
+          </div>
+          <div class="col-md div02">
+            <a href="{% url 'site_app:example' %}"><img alt="システム開発" src="{% static 'site_app/img/システム開発とは.jpg' %}"></a>
+          </div>
+          <div class="col-md div03">
+            <a href="{% url 'site_app:lang' %}"><img alt="プログラミング" src="{% static 'site_app/img/プログラミングとは.jpg' %}"></a>
+          </div> {% endcomment %}
 
-            <div class="row flexbox fade">
-                  <div class="col-4 box1 mt-4 div01">
-                    <a href="{% url 'site_app:appeal' %}"><img alt="デジタルの魅力" src="{% static 'site_app/img/デジタルの魅力.jpg' %}" width="100%"></a>
-                  </div>
-                  <div class="col-4 box2 mt-4 div02">
-                    <a href="{% url 'site_app:example' %}"><img alt="システム開発" src="{% static 'site_app/img/システム開発とは.jpg' %}" width="100%"></a>
-                  </div>
-                  <div class="col-4 box3 mt-4 div03">
-                    <a href="{% url 'site_app:lang' %}"><img alt="プログラミング" src="{% static 'site_app/img/プログラミングとは.jpg' %}" width="100%"></a>
-                  </div>
+          
+          <div class="fadeleft mt-2">
+            <h3 class="top-cont text-center">デジタルの魅力</h3>
+            <div class="div00">
+              <p>今の時代ではデジタル技術が関わっていないものはないです。<br>
+              でもデジタル技術の使い方は、分野や設計者によって多種多様に表現、実現されています。</p>
+              <p>その理由としては、他社が採用した技術を自分も採用しても同じ結果や成果が得られないというところにあります。</p>
+              
+              <div class="mt-3">
+                <a href="{% url 'site_app:appeal' %}" class="btn1 btn1-flat d-flex align-items-center"><span>>>>デジタルの魅力</span></a>
+              </div>
+
+              <section class="loop">
+                <div class="loop__box">
+                    <img src="{% static 'site_app/img/top-cont2.jpg' %}" alt="デジタルは素晴らしい">
+                    <img src="{% static 'site_app/img/top-cont2.jpg' %}" alt="デジタルは素晴らしい">
+                </div>
+              </section>
             </div>
+          </div>
+
+          <div class="faderight mt-3">
+            <h3 class="top-cont text-center">システム開発</h3>
+            <div class="div00">
+              <p>カッコイイサイトが欲しい。業務をシステム化したいなど世の中には多くの課題を抱えている企業や個人の方々がいます。<br>
+              Field-UPはそんな課題に真摯に向き合って、既存の技術を活用するだけでなく、それらを組合せた新たな価値を生み出すお手伝いをしています。</p>
+              <p>新しい発想のきっかけを作り上げ、それを形作ります。</p>
+              
+              <div class="mt-3">
+                <a href="{% url 'site_app:example' %}" class="btn1 btn1-flat d-flex align-items-center"><span>>>>システム開発</span></a>
+              </div>
+
+              <section class="loop">
+                <div class="loop__box">
+                    <img src="{% static 'site_app/img/top-cont3.jpg' %}" alt="システム開発ならお任せ">
+                    <img src="{% static 'site_app/img/top-cont3.jpg' %}" alt="システム開発ならお任せ">
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="fadeleft mt-3">
+            <h3 class="top-cont text-center">プログラミング</h3>
+            <div class="div00">
+              <p>これからエンジニアになりたいけど、どんな勉強をしたらよいかわからない。エンジニアスクールに通って勉強したけど、現場に出て上手くいかない。そんなエンジニアと出会う機会が増えてきた気がします。<br>
+              今は現場の数も増えてきましたが、求められるスキルも多様化してきています。だからこそ学ぶ範囲や、学び方を正しく選択していく必要があります。</p>
+              <p>エンジニアとしての学習の基礎作りをお手伝いします。</p>
+              
+              <div class="mt-3">
+                <a href="{% url 'site_app:lang' %}" class="btn1 btn1-flat d-flex align-items-center"><span>>>>プログラミング</span></a>
+              </div>
+
+              <section class="loop">
+                <div class="loop__box">
+                    <img src="{% static 'site_app/img/top-cont1.jpg' %}" alt="プログラミング学習を楽しもう">
+                    <img src="{% static 'site_app/img/top-cont1.jpg' %}" alt="プログラミング学習を楽しもう">
+                </div>
+              </section>
+            </div>
+          </div>
+
+
+          <div class="mt-4">
+            <h3 class="top-cont text-center ro-X">お問合せと世の中の声</h3>
+            <div class="button-holder ro-X">
+             <a href="{% url 'site_app:contacts_faq' %}"> <button class="faq_btn">Contact ＆ FAQ</button></a>
+            
+              <div class="div00">
+                <img src="{% static 'site_app/img/alexander-shatov-PEJtZfT6C1Q-unsplash.jpg' %}" alt="相談はお気軽に">
+                <p class="mt-4">今まで会ったお客様や、エンジニアからの声を掲載しています。<br>
+                  仕事のご依頼だけでなく、疑問点に関してもお気軽に質問していただければお答えできる範囲でお答えいたします。</p>
+                <p>どうするかはその後考えましょう</p>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-  {% comment %} {% block header %}{% endblock %} {% endcomment %}
-  <!-- フッター -->
+
+
+    <!-- フッター -->
   </body>
   <footer class="bg-white border-top border-3 border-info">
     {% include 'site_app/footer.html' %}
   </footer>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+  <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-3/js/4-1-3.js"></script>
+
+  {% comment %} ヘッダーアニメーション {% endcomment %}
+  <script>
+    // ヘッダーアニメ
+    const CLASSNAME = "-visible";
+    const TIMEOUT = 2500;
+    const $target = $(".title");
+
+    setInterval(() => {
+      $target.addClass(CLASSNAME);
+      setTimeout(() => {
+        $target.removeClass(CLASSNAME);
+      }, TIMEOUT);
+    }, TIMEOUT * 2);
+  </script>
+
+
+
+  {% comment %} 背景アニメ {% endcomment %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
+  <script>
+    var mouseX = 0,
+        mouseY = 0,
+        windowHalfX = window.innerWidth / 2,
+        windowHalfY = window.innerHeight / 2,
+        SEPARATION = 200,
+        AMOUNTX = 10,
+        AMOUNTY = 10,
+        camera,
+        scene,
+        renderer;
+    init();
+    animate();
+
+    function init() {
+      var container,
+          separation = 100,
+          amountX = 50,
+          amountY = 50,
+          particle;
+      
+      container = document.createElement( 'div' );
+      document.body.appendChild( container );
+      scene = new THREE.Scene();
+      renderer = new THREE.CanvasRenderer({ alpha: true }); // gradient; this can be swapped for WebGLRenderer
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      container.appendChild( renderer.domElement );
+      camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        1,
+        10000
+      );
+      camera.position.z = 100;
+      // particles
+      var PI2 = Math.PI * 2;
+      var material = new THREE.SpriteCanvasMaterial({
+        color: 0x0db6ff,
+        program: function ( context ) {
+          context.beginPath();
+          context.arc( 0, 0, 0.5, 0, PI2, true );
+          context.fill();
+        }
+      });
+      var geometry = new THREE.Geometry();
+      for ( var i = 0; i < 100; i ++ ) {
+        particle = new THREE.Sprite( material );
+        particle.position.x = Math.random() * 2 - 1;
+        particle.position.y = Math.random() * 2 - 1;
+        particle.position.z = Math.random() * 2 - 1;
+        particle.position.normalize();
+        particle.position.multiplyScalar( Math.random() * 10 + 450 );
+        particle.scale.x = particle.scale.y = 10;
+        scene.add( particle );
+        geometry.vertices.push( particle.position );
+      }
+      // lines
+      var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0x0db6ff, opacity: 0.3 } ) );
+      scene.add( line );
+      // mousey
+      document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+      document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+      document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+      window.addEventListener( 'resize', onWindowResize, false );
+    } // end init();
+
+    function onWindowResize() {
+      windowHalfX = window.innerWidth / 2;
+      windowHalfY = window.innerHeight / 2;
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+    }
+
+    function onDocumentMouseMove(event) {
+      mouseX = event.clientX - windowHalfX;
+      mouseY = event.clientY - windowHalfY;
+    }
+
+    function onDocumentTouchStart( event ) {
+      if ( event.touches.length > 1 ) {
+        event.preventDefault();
+        mouseX = event.touches[ 0 ].pageX - windowHalfX;
+        mouseY = event.touches[ 0 ].pageY - windowHalfY;
+      }
+    }
+    function onDocumentTouchMove( event ) {
+      if ( event.touches.length == 1 ) {
+        event.preventDefault();
+        mouseX = event.touches[ 0 ].pageX - windowHalfX;
+        mouseY = event.touches[ 0 ].pageY - windowHalfY;
+      }
+    }
+    function animate() {
+      requestAnimationFrame( animate );
+      render();
+    }
+    function render() {
+      camera.position.x += ( mouseX - camera.position.x ) * .05;
+      camera.position.y += ( - mouseY + 200 - camera.position.y ) * .05;
+      camera.lookAt( scene.position );
+      renderer.render( scene, camera );
+    }
+  </script>
+
+
 </html>
 
 
