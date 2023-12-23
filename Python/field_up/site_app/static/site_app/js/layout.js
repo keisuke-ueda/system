@@ -66,468 +66,130 @@ $(window).on('load', function () {
   FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
 });
 
-// 表示フェード
+
+// 表示フェードトリガー
 $(function(){
 	$(window).scroll(function (){
-		$('.fade').each(function(){
-			var elemPos = $(this).offset().top;
+		$('.fadeup').each(function(){
+			var elemPos = $(this).offset().top+200;
 			var scroll = $(window).scrollTop();
 			var windowHeight = $(window).height();
-			if (scroll > elemPos - windowHeight + 200){
-				$(this).addClass('scrollin');
-			}
+      console.log(scroll);
+      console.log(windowHeight);
+			if (scroll > elemPos - windowHeight){
+				$(this).addClass('up');
+			}else{
+        $(this).removeClass('up');
+      }
 		});
+
+    $('.faderight').each(function(){
+			var elemPos = $(this).offset().top+200;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight){
+				$(this).addClass('right');
+			}else{
+        $(this).removeClass('right');
+      }
+		});
+
+    $('.fadeleft').each(function(){
+			var elemPos = $(this).offset().top+200;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight){
+				$(this).addClass('left');
+			}else{
+        $(this).removeClass('left');
+      }
+		});
+
+    $('.ro-X').each(function(){
+			var elemPos = $(this).offset().top+200;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight){
+				$(this).addClass('rotateX');
+			}else{
+        $(this).removeClass('rotateX');
+      }
+		});
+
+    $('.ro-Y').each(function(){
+			var elemPos = $(this).offset().top+200;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight){
+				$(this).addClass('rotateY');
+			}else{
+        $(this).removeClass('rotateY');
+      }
+		});
+
+
+
+
+
+
+
+
+
+
 	});
 });
 
 
 
-// // デジタル文字
-var once01 = false;
-window.addEventListener("load", function() {
-  taeget_position = document.querySelector('#digital-font01').getBoundingClientRect().top;
-  if (taeget_position <= window.innerHeight && once01 !== true) {
-    once01 = true;
 
-    var txt = document.getElementById('digital-font01');
-    //文字を表示、ランダムな文字の後表示される
-    setText(txt, "デジタルの魅力");
-    
-    //一文字一文字、ランダムな文字を表示した後に表示する
-    function setText(targetText,viewText){
-      var counter = 0;
-      var ary = divText(viewText);
-      var resultText="";
-      
-      var timerId = setInterval(function(){
-          resultText += randomText(targetText, ary[counter],resultText);
-          counter++;
-          if(counter == ary.length){
-            clearInterval(timerId);
-          }
-      }, 300);
-    }
-    
-    //ランダムな一文字を指定回数表示し、指定した一文字を表示する
-    function randomText(text, result, resultText){
-      var counter = 0;
-      var timerId = setInterval(function(){
-          rand = Math.floor(Math.random()*93)+33;
-          text.innerText = resultText +String.fromCharCode(rand);
-          counter++;
-          if(counter==8){
-            clearInterval(timerId);
-            text.innerText = resultText + result;
-          }
-      },20);
-      return result;
-    }
- 
-    //文字列を分割して配列に格納する
-    function divText(text){
-      var ary = [];
-      ary=text.split('');
-            return ary;
-      }
+
+
+
+
+
+
+
+//テキストのカウントアップ+バーの設定
+var bar = new ProgressBar.Line(splash_text, {//id名を指定
+  easing: 'easeInOut',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
+  duration: 1500,//時間指定(1000＝1秒)
+  strokeWidth: 0.3,//進捗ゲージの太さ
+  color: '#999',//進捗ゲージのカラー
+  trailWidth: 0.2,//ゲージベースの線の太さ
+  trailColor: '#333',//ゲージベースの線のカラー
+  text: {//テキストの形状を直接指定       
+    style: {//天地中央に配置
+      position: 'absolute',
+      left: '50%',
+      top: '50%',
+      padding: '0',
+      margin: '-30px 0 0 0',//バーより上に配置
+      transform:'translate(-50%,-50%)',
+      'font-size':'1rem',
+      color: '#fff',
+    },
+    autoStyleContainer: false //自動付与のスタイルを切る
+  },
+  step: function(state, bar) {
+    bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
   }
-  });
+});
+//アニメーションスタート
+bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
+  $("#splash_text").fadeOut(10);//フェイドアウトでローディングテキストを削除
+  $(".loader_cover-up").addClass("coveranime");//カバーが上に上がるクラス追加
+  $(".loader_cover-down").addClass("coveranime");//カバーが下に下がるクラス追加
+  $("#splash").fadeOut();//#splashエリアをフェードアウト
+});
 
-// scroll
-var once05 = false;
-window.addEventListener("load", function() {
-  taeget_position = document.querySelector('#digital-font05').getBoundingClientRect().top;
-  if (taeget_position <= window.innerHeight && once05 !== true) {
-    once05 = true;
 
-    var txt = document.getElementById('digital-font05');
-    //文字を表示、ランダムな文字の後表示される
-    setText(txt, "システム開発");
-    
-    //一文字一文字、ランダムな文字を表示した後に表示する
-    function setText(targetText,viewText){
-      var counter = 0;
-      var ary = divText(viewText);
-      var resultText="";
-      
-      var timerId = setInterval(function(){
-          resultText += randomText(targetText, ary[counter],resultText);
-          counter++;
-          if(counter == ary.length){
-            clearInterval(timerId);
-          }
-      }, 300);
-    }
-    
-    //ランダムな一文字を指定回数表示し、指定した一文字を表示する
-    function randomText(text, result, resultText){
-      var counter = 0;
-      var timerId = setInterval(function(){
-          rand = Math.floor(Math.random()*93)+33;
-          text.innerText = resultText +String.fromCharCode(rand);
-          counter++;
-          if(counter==8){
-            clearInterval(timerId);
-            text.innerText = resultText + result;
-          }
-      },20);
-      return result;
-    }
- 
-    //文字列を分割して配列に格納する
-    function divText(text){
-      var ary = [];
-      ary=text.split('');
-            return ary;
-      }
-  }
-  });
 
-// scroll
-var once08 = false;
-window.addEventListener("scroll", function() {
-  taeget_position = document.querySelector('#digital-font08').getBoundingClientRect().top;
-  if (taeget_position <= window.innerHeight && once08 !== true) {
-    once08 = true;
 
-    var txt = document.getElementById('digital-font08');
-    //文字を表示、ランダムな文字の後表示される
-    setText(txt, "どのぐらいの費用でできるの？");
-    
-    //一文字一文字、ランダムな文字を表示した後に表示する
-    function setText(targetText,viewText){
-      var counter = 0;
-      var ary = divText(viewText);
-      var resultText="";
-      
-      var timerId = setInterval(function(){
-          resultText += randomText(targetText, ary[counter],resultText);
-          counter++;
-          if(counter == ary.length){
-            clearInterval(timerId);
-          }
-      }, 300);
-    }
-    
-    //ランダムな一文字を指定回数表示し、指定した一文字を表示する
-    function randomText(text, result, resultText){
-      var counter = 0;
-      var timerId = setInterval(function(){
-          rand = Math.floor(Math.random()*93)+33;
-          text.innerText = resultText +String.fromCharCode(rand);
-          counter++;
-          if(counter==8){
-            clearInterval(timerId);
-            text.innerText = resultText + result;
-          }
-      },20);
-      return result;
-    }
- 
-    //文字列を分割して配列に格納する
-    function divText(text){
-      var ary = [];
-      ary=text.split('');
-            return ary;
-      }
-  }
-  });
 
-// scroll
-var once09 = false;
-window.addEventListener("scroll", function() {
-  taeget_position = document.querySelector('#digital-font09').getBoundingClientRect().top;
-  if (taeget_position <= window.innerHeight && once09 !== true) {
-    once09 = true;
 
-    var txt = document.getElementById('digital-font09');
-    //文字を表示、ランダムな文字の後表示される
-    setText(txt, "こんなことができる!!");
-    
-    //一文字一文字、ランダムな文字を表示した後に表示する
-    function setText(targetText,viewText){
-      var counter = 0;
-      var ary = divText(viewText);
-      var resultText="";
-      
-      var timerId = setInterval(function(){
-          resultText += randomText(targetText, ary[counter],resultText);
-          counter++;
-          if(counter == ary.length){
-            clearInterval(timerId);
-          }
-      }, 300);
-    }
-    
-    //ランダムな一文字を指定回数表示し、指定した一文字を表示する
-    function randomText(text, result, resultText){
-      var counter = 0;
-      var timerId = setInterval(function(){
-          rand = Math.floor(Math.random()*93)+33;
-          text.innerText = resultText +String.fromCharCode(rand);
-          counter++;
-          if(counter==8){
-            clearInterval(timerId);
-            text.innerText = resultText + result;
-          }
-      },20);
-      return result;
-    }
- 
-    //文字列を分割して配列に格納する
-    function divText(text){
-      var ary = [];
-      ary=text.split('');
-            return ary;
-      }
-  }
-  });
 
-// scroll
-var once10 = false;
-window.addEventListener("load", function() {
-  taeget_position = document.querySelector('#digital-font10').getBoundingClientRect().top;
-  if (taeget_position <= window.innerHeight && once10 !== true) {
-    once10 = true;
+// 背景アニメーション
 
-    var txt = document.getElementById('digital-font10');
-    //文字を表示、ランダムな文字の後表示される
-    setText(txt, "プログラミング");
-    
-    //一文字一文字、ランダムな文字を表示した後に表示する
-    function setText(targetText,viewText){
-      var counter = 0;
-      var ary = divText(viewText);
-      var resultText="";
-      
-      var timerId = setInterval(function(){
-          resultText += randomText(targetText, ary[counter],resultText);
-          counter++;
-          if(counter == ary.length){
-            clearInterval(timerId);
-          }
-      }, 300);
-    }
-    
-    //ランダムな一文字を指定回数表示し、指定した一文字を表示する
-    function randomText(text, result, resultText){
-      var counter = 0;
-      var timerId = setInterval(function(){
-          rand = Math.floor(Math.random()*93)+33;
-          text.innerText = resultText +String.fromCharCode(rand);
-          counter++;
-          if(counter==8){
-            clearInterval(timerId);
-            text.innerText = resultText + result;
-          }
-      },20);
-      return result;
-    }
- 
-    //文字列を分割して配列に格納する
-    function divText(text){
-      var ary = [];
-      ary=text.split('');
-            return ary;
-      }
-  }
-  });
 
-// scroll
-var once14 = false;
-window.addEventListener("load", function() {
-  taeget_position = document.querySelector('#digital-font14').getBoundingClientRect().top;
-  if (taeget_position <= window.innerHeight && once14 !== true) {
-    once14 = true;
 
-    var txt = document.getElementById('digital-font14');
-    //文字を表示、ランダムな文字の後表示される
-    setText(txt, "Company");
-    
-    //一文字一文字、ランダムな文字を表示した後に表示する
-    function setText(targetText,viewText){
-      var counter = 0;
-      var ary = divText(viewText);
-      var resultText="";
-      
-      var timerId = setInterval(function(){
-          resultText += randomText(targetText, ary[counter],resultText);
-          counter++;
-          if(counter == ary.length){
-            clearInterval(timerId);
-          }
-      }, 300);
-    }
-    
-    //ランダムな一文字を指定回数表示し、指定した一文字を表示する
-    function randomText(text, result, resultText){
-      var counter = 0;
-      var timerId = setInterval(function(){
-          rand = Math.floor(Math.random()*93)+33;
-          text.innerText = resultText +String.fromCharCode(rand);
-          counter++;
-          if(counter==8){
-            clearInterval(timerId);
-            text.innerText = resultText + result;
-          }
-      },20);
-      return result;
-    }
- 
-    //文字列を分割して配列に格納する
-    function divText(text){
-      var ary = [];
-      ary=text.split('');
-            return ary;
-      }
-  }
-  });
 
-// scroll
-var once15 = false;
-window.addEventListener("load", function() {
-  taeget_position = document.querySelector('#digital-font15').getBoundingClientRect().top;
-  if (taeget_position <= window.innerHeight && once15 !== true) {
-    once15 = true;
-
-    var txt = document.getElementById('digital-font15');
-    //文字を表示、ランダムな文字の後表示される
-    setText(txt, "やりたいこと夢を目標、現実へ落とし込んでいくためのプロフェッショナル");
-    
-    //一文字一文字、ランダムな文字を表示した後に表示する
-    function setText(targetText,viewText){
-      var counter = 0;
-      var ary = divText(viewText);
-      var resultText="";
-      
-      var timerId = setInterval(function(){
-          resultText += randomText(targetText, ary[counter],resultText);
-          counter++;
-          if(counter == ary.length){
-            clearInterval(timerId);
-          }
-      }, 300);
-    }
-    
-    //ランダムな一文字を指定回数表示し、指定した一文字を表示する
-    function randomText(text, result, resultText){
-      var counter = 0;
-      var timerId = setInterval(function(){
-          rand = Math.floor(Math.random()*93)+33;
-          text.innerText = resultText +String.fromCharCode(rand);
-          counter++;
-          if(counter==8){
-            clearInterval(timerId);
-            text.innerText = resultText + result;
-          }
-      },20);
-      return result;
-    }
- 
-    //文字列を分割して配列に格納する
-    function divText(text){
-      var ary = [];
-      ary=text.split('');
-            return ary;
-      }
-  }
-  });
-
-  // scroll
-var once16 = false;
-window.addEventListener("scroll", function() {
-  taeget_position = document.querySelector('#digital-font16').getBoundingClientRect().top;
-  if (taeget_position <= window.innerHeight && once16 !== true) {
-    once16 = true;
-
-    var txt = document.getElementById('digital-font16');
-    //文字を表示、ランダムな文字の後表示される
-    setText(txt, "Kind");
-    
-    //一文字一文字、ランダムな文字を表示した後に表示する
-    function setText(targetText,viewText){
-      var counter = 0;
-      var ary = divText(viewText);
-      var resultText="";
-      
-      var timerId = setInterval(function(){
-          resultText += randomText(targetText, ary[counter],resultText);
-          counter++;
-          if(counter == ary.length){
-            clearInterval(timerId);
-          }
-      }, 300);
-    }
-    
-    //ランダムな一文字を指定回数表示し、指定した一文字を表示する
-    function randomText(text, result, resultText){
-      var counter = 0;
-      var timerId = setInterval(function(){
-          rand = Math.floor(Math.random()*93)+33;
-          text.innerText = resultText +String.fromCharCode(rand);
-          counter++;
-          if(counter==8){
-            clearInterval(timerId);
-            text.innerText = resultText + result;
-          }
-      },20);
-      return result;
-    }
- 
-    //文字列を分割して配列に格納する
-    function divText(text){
-      var ary = [];
-      ary=text.split('');
-            return ary;
-      }
-  }
-  });
-
-  // scroll
-  var once17 = false;
-  window.addEventListener("scroll", function() {
-    taeget_position = document.querySelector('#digital-font17').getBoundingClientRect().top;
-    if (taeget_position <= window.innerHeight && once17 !== true) {
-      once17 = true;
-  
-      var txt = document.getElementById('digital-font17');
-      //文字を表示、ランダムな文字の後表示される
-      setText(txt, "News");
-      
-      //一文字一文字、ランダムな文字を表示した後に表示する
-      function setText(targetText,viewText){
-        var counter = 0;
-        var ary = divText(viewText);
-        var resultText="";
-        
-        var timerId = setInterval(function(){
-            resultText += randomText(targetText, ary[counter],resultText);
-            counter++;
-            if(counter == ary.length){
-              clearInterval(timerId);
-            }
-        }, 300);
-      }
-      
-      //ランダムな一文字を指定回数表示し、指定した一文字を表示する
-      function randomText(text, result, resultText){
-        var counter = 0;
-        var timerId = setInterval(function(){
-            rand = Math.floor(Math.random()*93)+33;
-            text.innerText = resultText +String.fromCharCode(rand);
-            counter++;
-            if(counter==8){
-              clearInterval(timerId);
-              text.innerText = resultText + result;
-            }
-        },20);
-        return result;
-      }
-   
-      //文字列を分割して配列に格納する
-      function divText(text){
-        var ary = [];
-        ary=text.split('');
-              return ary;
-        }
-    }
-    });

@@ -1,0 +1,62 @@
+{% load static %}
+
+
+<div class="row bg-white">
+    <div>
+    <a href="{% url 'site_app:top' %}"><img class="m-3 sp-logo" als="屋号ロゴ" src="{% static 'site_app/img/logo.png' %}" width="350px"></a>
+    {% comment %} <video autoplay muted loop src="{% static 'site_app/img/mini_anime.mp4' %}" width="250px" class="float-end anime01"> {% endcomment %}
+        <h1 class="title">
+        <span>T</span>
+        <span>E</span>
+        <span>C</span>
+        <span>H</span>
+        <span>N</span>
+        <span>O</span>
+        <span>L</span>
+        <span>O</span>
+        <span>G</span>
+        <span>Y</span>
+        {% comment %} <span>&nbsp;</span>
+        <span>I</span>
+        <span>d</span>
+        <span>N</span> {% endcomment %}
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <nav class="nav-1 bg-info">
+    <ul class="bag02">
+        <li class="p-3"><a href="{% url 'site_app:company' %}">Company</a></li>
+        <li class="p-3 has-child"><a href="#">Content</a>
+        <ul>
+            <li class="p-1"><a href="{% url 'site_app:appeal' %}">デジタルの魅力</a></li>
+            <li class="p-1 has-child"><a href="{% url 'site_app:example' %}">システム開発</a>
+            <ul>
+                <li class="p-1"><a href="https://www.youtube.com/watch?v=aTx8wclrYVo" target="_blank">映像開発</a></li>
+                <li class="p-1"><a href="https://field-up.work/demo_room/main.html" target="_blank">VR開発</a></li>
+                <li class=""><a href="https://field-up.work/bound_demo/" target="_blank">簡易ゲーム開発</a></li>
+            </ul>
+            </li>
+            <li class="p-1 has-child"><a href="{% url 'site_app:lang' %}">プログラミング</a>
+            <ul>
+                <li class="p-1"><a href="{% url 'site_app:vba' %}">VBA</a></li>
+                <li class="p-1"><a href="{% url 'site_app:python' %}">Python</a></li>
+                <li class="p-1"><a href="{% url 'site_app:java' %}">Java</a></li>
+                <li class="p-1"><a href="{% url 'site_app:powerautomate' %}">PowerAutomate</a></li>
+                <li class="p-1"><a href="{% url 'site_app:kotlin' %}">Kotlin</a></li>
+                <li class="p-1"><a href="{% url 'site_app:css' %}">CSS</a></li>
+                <li class="p-1"><a href="{% url 'site_app:php' %}">PHP</a></li>
+                <li class="p-1"><a href="{% url 'site_app:swift' %}">Swift</a></li>
+                <li class="p-1"><a href="{% url 'site_app:html' %}">HTML</a></li>
+                <li class="p-1"><a href="{% url 'site_app:javascript' %}">JavaScript</a></li>
+                <li class="p-1"><a href="{% url 'site_app:go' %}">Go</a></li>
+                <li class="p-1"><a href="{% url 'site_app:c_sharp' %}">C#</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li class="p-3"><a href="{% url 'site_app:contacts_faq' %}">Contacts & FAQ</a></li>
+    </ul>
+    </nav>
+</div>

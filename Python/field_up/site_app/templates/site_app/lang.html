@@ -13,11 +13,11 @@
 
     {% comment %} コンテンツ {% endcomment %}
     <div class="container content mb-5">
-        <h1 class="text-center digital-font10" id="digital-font10">プログラミング</h1>
+        <h1 class="text-center right cont-h">プログラミング</h1>
         <div class="row p-4">
-            <h2>プログラミング言語って何？</h2>
+            <h2 class="right">プログラミング言語って何？</h2>
 
-            <div class="col-12 mt-2 p-3">
+            <div class="col-12 mt-2 p-3 bg-white ro-Y">
                 <p>今世の中にある<span class="b-text">プログラミング言語の種類は200以上</span>あるといわれています<br>
                     ただその中でも実際に使われているものは10%程度です
                     なぜプログラミング言語が複数あるのかというと得意な範囲が違うことと<br>
@@ -39,9 +39,9 @@
         </div>
 
         <div class="row p-4">
-            <h2 class="fade text-start">適正はあるが誰でもできる</h2>
+            <h2 class="text-start faderight">適正はあるが誰でもできる</h2>
             
-            <div class="col-12 mt-2 p-3 fade">
+            <div class="col-12 mt-2 p-3 ro-X">
                 <p><span class="b-text">『PCを今まであまり触ってない未経験でもできますか？』</span><span class="b-text">『ウチにこんなシステム入れても使えないよ』</span></p>
                 <p>こんな声をよく聞きます</br>
                     結論から話すと<span class="b-text">できます</span>
@@ -51,17 +51,18 @@
                    それぞれのペースで進めていければよいと思います
                 </p>
             </div>
-            <div class="col-12 mt-2 p-3 fade">
+            <div class="col-12 mt-2 p-3 ro-Y">
                 <img class="d-block mx-auto" alt="誰でもできる" src="{% static 'site_app/img/james-harrison-vpOeXr5wmR4-unsplash.jpg' %}" width="100%">
             </div>
         </div>
 
         <div class="row p-4">
-            <h2 class="fade text-start">アルゴリズム</h2>
-            <p>アルゴリズムというと難しい層と感じる人もいるかもしれませんが<span class="b-text">何かをするときに必要な手順</span>のようなもののことをアルゴリズムと言います</p>
-            <p>簡単なアルゴリズムの例を載せます</p>
-
-            <div class="col-md-6 mt-2 p-3 fade">
+            <h2 class="text-start faderight">アルゴリズム</h2>
+            <div class="fadeup bg-white">
+                <p>アルゴリズムというと難しい層と感じる人もいるかもしれませんが<span class="b-text">何かをするときに必要な手順</span>のようなもののことをアルゴリズムと言います</p>
+                <p>簡単なアルゴリズムの例を載せます</p>
+            </div>
+            <div class="col-md-6 mt-2 p-3 ro-Y bg-white">
                 
                 <p><span class="b-text">手順:1</span><br>
                     メールの文面を作成し、内容の確認をする</p>
@@ -75,20 +76,23 @@
                     他の人にも同じメールを送る場合には手順:3に戻る<br>
                     そうでなければ終了</p>
             </div>
-            <div class="col-md-6 mt-2 p-3 fade">
+            <div class="col-md-6 mt-2 p-3 ro-Y">
                 <img class="d-block mx-auto" alt="アルゴリズム" src="{% static 'site_app/img/mark-g263e4c72f_1920.jpg' %}" width="100%">
             </div>
-            <p>とても簡単にですがこれがアルゴリズムの例です<br>
-                日頃やっていることや、これから作ろうとしているシステムやプログラムに<span class="b-text">どんなことを、どんな手順で実施するか</span>
-                を整理さえできれば、自身でプログラムを書くことも、誰かに依頼することもできます</p>
+
+            <div class="fadeup bg-white">
+                <p>とても簡単にですがこれがアルゴリズムの例です<br>
+                    日頃やっていることや、これから作ろうとしているシステムやプログラムに<span class="b-text">どんなことを、どんな手順で実施するか</span>
+                    を整理さえできれば、自身でプログラムを書くことも、誰かに依頼することもできます</p>
+            </div>
         </div>
 
         <div class="row p-4 flexbox">
-            <div class="col-6 box1 mt-3">
-                <a href="{% url 'site_app:appeal' %}" class="btn1 btn1-flat d-flex align-items-center"><span>デジタルの魅力</span></a>
+            <div class="col-md-6 box1 mt-3">
+                <a href="{% url 'site_app:appeal' %}" class="btn1 btn1-flat d-flex align-items-center"><span>>>>デジタルの魅力</span></a>
             </div>
-            <div class="col-6 box2 mt-3">
-                <a href="{% url 'site_app:example' %}" class="btn1 btn1-flat d-flex align-items-center"><span>システム開発</span></a>
+            <div class="col-md-6 box2 mt-3">
+                <a href="{% url 'site_app:example' %}" class="btn1 btn1-flat d-flex align-items-center"><span>>>>システム開発</span></a>
             </div>
         </div>
 
