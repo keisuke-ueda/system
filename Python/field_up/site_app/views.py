@@ -1,5 +1,3 @@
-# from lib2to3.pgen2.pgen import generate_grammar
-from django.shortcuts import render
 from django.views import generic
 from .forms import ContactForm
 from django.urls import reverse_lazy
